@@ -5,7 +5,7 @@ import Main from './components';
 
 function App() {
   return (
-    <div>
+    <div style={{backgroundColor: '#1d1d1d', height: '100vh'}}>
       <Main />
     </div>
   );
