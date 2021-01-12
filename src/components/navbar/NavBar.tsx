@@ -1,12 +1,11 @@
 import React, { useState } from 'react'
 import './nav.sass'
+import { Link, animateScroll as scroll } from "react-scroll";
 
 function NavBar() {
-  const [fake, setFake] = useState(false)
-
   return (
     <nav className="navbar is-fixed-top nav-container" role="navigation" aria-label="main navigation">
-      <div style={{ width: '60vw', display: 'flex' }}>
+      <div className='nav-width'>
         <div className="navbar-start">
           <a className='email'>
             @daniel.
@@ -15,9 +14,15 @@ function NavBar() {
         </div>
 
         <div className="button-container">
-              <a className='button-text'>About Me</a>
-              <a className='button-text'>Projects</a>
-              <a className='button-text'>Contact Me</a>
+          <Link className='button-text' to="about" spy={true} smooth={true} offset={50} duration={500}>
+            About Me
+          </Link>
+          <Link className='button-text' to="projects" spy={true} smooth={true} offset={50} duration={500}>
+            Projects
+          </Link>
+          <Link className='button-text' to="contact" spy={true} smooth={true} offset={50} duration={500}>
+            Contact Me
+          </Link>
         </div>
       </div>
     </nav>

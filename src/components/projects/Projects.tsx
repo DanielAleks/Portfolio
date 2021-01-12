@@ -1,6 +1,8 @@
 import React from 'react'
 import Keyboard from '../../assets/images/keyboard.jpg'
 import { ProjectCard, ProjectCardT } from '../../reusables/ProjectDy'
+import { MdDesktopWindows } from 'react-icons/md';
+import { IoMdPhonePortrait } from 'react-icons/io';
 import './projects.sass'
 
 function Projects() {
@@ -8,7 +10,8 @@ function Projects() {
   const projData: ProjectCardT[] = [
     {
       header: 'TodoList',
-      text: 'Lorem ipsum m veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate'
+      text: 'Lorem ipsum m veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate',
+      image: Keyboard
     },
     {
       header: 'TodoList',
@@ -25,12 +28,12 @@ function Projects() {
   ]
 
   return (
-    <section className="section">
+    <section id='projects' className="section">
 
       <div className='project-container'>
-          <p className='top-label'>Projects</p>
+        <p className='top-label'>Projects</p>
 
-        <div style={{ display: 'flex', flexDirection: 'column'}}>
+        <div style={{ display: 'flex', flexDirection: 'column' }}>
           <div className='desktop-card'>
             <img className='desktop-image' src={Keyboard} />
             <ProjectCard projData={projData[0]} />

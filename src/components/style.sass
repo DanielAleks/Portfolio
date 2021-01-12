@@ -1,13 +1,26 @@
 @import "../../node_modules/bulma/bulma.sass"
 
 @font-face
-  font-family: 'Barlow-Black'
-  src: url('../assets/fonts/Barlow-Black.ttf')
+  font-family: 'Barlow-Bold'
+  src: url('../assets/fonts/Barlow-Bold.ttf')
+@font-face
+  font-family: 'Barlow-MediumI'
+  src: url('../assets/fonts/Barlow-MediumItalic.ttf')
+@font-face
+  font-family: 'Barlow-Medium'
+  src: url('../assets/fonts/Barlow-Medium.ttf')
 
 body
-  font-family: Barlow-Black
+  font-family: Barlow-Medium
   letter-spacing: 1px
 
+html
+  scroll-behavior: smooth
+
 hr
-  border: 1px solid #383838
   width: 100%
+  border: 1px solid #383838
+
+.container-html
+  overflow: hidden
+  height: 100%

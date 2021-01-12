@@ -1,11 +1,11 @@
 import React from 'react'
 import './contact.sass'
 import FooterDesign from './FooterDesign'
+import { Link, animateScroll as scroll } from "react-scroll";
 
 function Contact() {
   return (
-    <div className='ctt-container'>
-
+    <div id='contact' className='ctt-container contactC'>
 
       <section className="ctt-width section">
         <p className='header'>Contact Me</p>
