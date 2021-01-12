@@ -1,0 +1,112 @@
+.desktop-card
+  display: flex
+  justify-content: center
+  width: 65vw
+
+.desktop-container
+  margin-right: 1vw
+  height: 35vh
+  width: 30vw
+  border-radius: 20px
+
+.desktop-image
+  margin-right: 1vw
+  height: 35vh
+  width: 30vw
+  border-radius: 20px
+
+.card-info
+  display: flex
+  flex-direction: column
+  justify-content: center
+  padding-left: 2%
+  width: 40%
+
+.proj-header
+  text-align: start
+  align-self: start
+  justify-content: start
+  margin-bottom: 30px
+  font-weight: bold
+  font-family: Barlow-MediumI
+  font-size: 30px
+  color: #d6d6d6
+
+.proj-text
+  color: #808080
+
+.icons-container
+  justify-content: center
+  display: flex
+  position: absolute
+  z-index: 2
+  bottom: 1.5vh
+  width: 100%
+
+.shaded-box
+  position: absolute
+  z-index: 1
+  bottom: 0px
+  height: 100px
+  width: 100%
+  opacity: 50%
+  background: black
+  border-bottom-right-radius: 20px
+  border-bottom-left-radius: 20px
+
+.shaded-deactivate
+  animation-name: deactivate
+
+@keyframes deactivate
+  from
+    background: blue
+  to
+    background: red
+
+.shaded-active
+  animation-name: active
+
+@keyframes active
+  from
+    background: blue
+  to
+    background: red
+
+.icon-proj
+  display: flex
+  justify-content: center
+  align-items: center
+  background: #CE7E3D
+  padding: 20px
+  margin-left: 20px
+  margin-right: 20px
+  border-radius: 100px
+
+.info-buttons-container
+  padding-right: 10%
+  padding-top: 10%
+
+.button-spacing
+  margin-right: 4vw
+
+.device-container
+  display: flex
+  flex-direction: column
+
+.device-margin
+  margin: 10px
+
+.device-margin:hover
+  color: #CE7E3D
+
+.my-pink
+  background: #d05353 !important
+  border-style: none !important
+  font-family: Barlow-Medium
+  color: #fdfdfd !important
+
+.my-gray
+  background: #373737 !important
+  border-style: none !important
+  font-family: Barlow-Medium
+  color: #cacaca !important

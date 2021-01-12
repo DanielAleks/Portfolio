@@ -3,6 +3,7 @@ import About from './about/About'
 import Contact from './contact/Contact'
 import Intro from './introduction/Intro'
 import NavBar from './navbar/NavBar'
+import Preview from './projects/Preview'
 import Projects from './projects/Projects'
 import './style.sass'
 
@@ -13,6 +14,7 @@ function Main() {
       <Intro />
       <About />
       <hr />
+      <Preview />
       <Projects />
       <Contact />
     </div>
