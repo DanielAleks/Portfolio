@@ -4,12 +4,14 @@
   width: 65vw
 
 .desktop-container
+  position: relative
   margin-right: 1vw
   height: 35vh
   width: 30vw
   border-radius: 20px
 
 .desktop-image
+  position: absolute
   margin-right: 1vw
   height: 35vh
   width: 30vw
@@ -35,14 +37,6 @@
 .proj-text
   color: #808080
 
-.icons-container
-  justify-content: center
-  display: flex
-  position: absolute
-  z-index: 2
-  bottom: 1.5vh
-  width: 100%
-
 .shaded-box
   position: absolute
   z-index: 1
@@ -54,32 +48,23 @@
   border-bottom-right-radius: 20px
   border-bottom-left-radius: 20px
 
-.shaded-deactivate
-  animation-name: deactivate
-
-@keyframes deactivate
-  from
-    background: blue
-  to
-    background: red
-
-.shaded-active
-  animation-name: active
-
-@keyframes active
-  from
-    background: blue
-  to
-    background: red
+.icons-container
+  justify-content: center
+  display: flex
+  position: absolute
+  z-index: 2
+  bottom: 1.5vh
+  width: 100%
 
 .icon-proj
   display: flex
   justify-content: center
   align-items: center
   background: #CE7E3D
-  padding: 20px
-  margin-left: 20px
-  margin-right: 20px
+  height: 70px
+  width: 70px
+  margin-left: 10px
+  margin-right: 10px
   border-radius: 100px
 
 .info-buttons-container

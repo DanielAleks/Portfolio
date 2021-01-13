@@ -6,7 +6,7 @@ import { MdDesktopWindows } from 'react-icons/md';
 import { IoMdPhonePortrait } from 'react-icons/io';
 import './projects.sass'
 import './proj-dy.sass'
-import Preview from './Preview';
+import Preview from './preview-modal/Preview';
 
 function Projects() {
 
