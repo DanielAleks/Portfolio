@@ -1,7 +1,7 @@
 import React from 'react'
 import './contact.sass'
-import FooterDesign from './FooterDesign'
-import { Link, animateScroll as scroll } from "react-scroll";
+import FooterDesign from './footer/FooterDesign'
+import Links from './Links'
 
 function Contact() {
   return (
@@ -41,12 +41,8 @@ function Contact() {
           <button className="button is-link">Submit</button>
         </div>
 
+        <Links />
 
-        <div className='links'>
-          <a href="https://github.com/" target='_blank'>Github</a>
-          <a href="https://mail.google.com/" target='_blank' className='link-margin'>Email</a>
-          <a href="https://www.linkedin.com/" target='_blank'>LinkedIn</a>
-        </div>
       </section>
 
       <FooterDesign />

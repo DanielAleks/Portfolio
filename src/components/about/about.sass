@@ -22,13 +22,32 @@
 .icon-container
   display: flex
   margin-top: 30px
+  width: 100%
+  flex-wrap: wrap
 
 .icon-tech
   display: flex
   justify-content: center
   align-items: center
   background: #CE7E3D
-  padding: 20px
+  height: 80px
+  width: 80px
   margin-left: 20px
   margin-right: 20px
   border-radius: 100px
+
+@media (max-width: 620px)
+  .about-section
+    height: 110vh
+
+  .about-container
+    width: 70vw
+
+  .icon-container
+    display: flex
+    justify-content: center
+
+  .icon-tech
+    margin-top: 30px
+    height: 70px
+    width: 70px

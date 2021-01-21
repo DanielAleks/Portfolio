@@ -1,0 +1,36 @@
+.desktop-card
+  display: flex
+  justify-content: center
+  width: 65vw
+
+.icon-proj
+  display: flex
+  justify-content: center
+  align-items: center
+  background: #CE7E3D
+  height: 70px
+  width: 70px
+  margin-left: 10px
+  margin-right: 10px
+  border-radius: 100px
+
+.device-container
+  display: flex
+
+.device-margin
+  margin: 10px
+
+@media (max-width: 620px)
+  .desktop-card
+    display: flex
+    flex-direction: column
+    justify-content: center
+    width: 80vw
+  .device-container
+    position: absolute
+    margin-top: 13vh
+    right: 10vw
+
+@media (min-width: 620px)
+  .device-container
+    flex-direction: column

@@ -1,12 +1,9 @@
 import React from 'react'
 import Keyboard from '../../assets/images/keyboard.jpg'
 import Paper from '../../assets/images/paper.jpg'
-import { ProjectCard, ProjectCardT } from './ProjectDy'
-import { MdDesktopWindows } from 'react-icons/md';
-import { IoMdPhonePortrait } from 'react-icons/io';
+import { ProjectCard, ProjectCardT } from './proj-dynamic/ProjectDy'
 import './projects.sass'
-import './proj-dy.sass'
-import Preview from './preview-modal/Preview';
+import './proj-dynamic/projDy.sass'
 
 function Projects() {
 
@@ -48,12 +45,11 @@ function Projects() {
 
           <ProjectCard projData={projData[2]} />
           <hr className='proj-hr' />
-
+ 
           <ProjectCard projData={projData[3]} />
           <hr className='proj-hr' />
         </div>
       </div>
-
     </section>
   )
 }

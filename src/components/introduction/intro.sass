@@ -11,6 +11,8 @@
   height: 60vh
   width: 100vw
 
+  // $breakpoint-tablet: ;
+
 .bg-image-cover
   position: relative
   z-index: 100
@@ -29,3 +31,34 @@
 
 .bg-card-color
   background-color: #ce7e3d !important
+
+@media (max-width: 620px)
+  .intro-bg-image
+    height: 85vh
+    border-bottom-left-radius: 0%
+    border-bottom-right-radius: 0%
+
+  .bg-image-cover
+    border-bottom-right-radius: 0%
+    border-bottom-left-radius: 0%
+
+  .card-container
+    width: 70%
+    top: 30%
+    left: 15%
+
+@media (min-width: 620px)
+  .intro-bg-image
+    height: 70vh
+    border-bottom-left-radius: 20%
+    border-bottom-right-radius: 20%
+
+  .bg-image-cover
+    border-bottom-right-radius: 20%
+    border-bottom-left-radius: 20%
+    background: #000000
+
+  .card-container
+    width: 70%
+    top: 30%
+    left: 15%

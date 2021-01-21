@@ -1,0 +1,41 @@
+.desktop-container
+  position: relative
+  margin-right: 1vw
+  height: 35vh
+  width: 30vw
+  border-radius: 20px
+
+.desktop-image
+  position: absolute
+  margin-right: 1vw
+  height: 35vh
+  width: 30vw
+  border-radius: 20px
+
+.shaded-box
+  position: absolute
+  z-index: 1
+  bottom: 0px
+  height: 100px
+  width: 100%
+  opacity: 50%
+  background: black
+  border-bottom-right-radius: 20px
+  border-bottom-left-radius: 20px
+
+.icons-container
+  justify-content: center
+  display: flex
+  position: absolute
+  z-index: 2
+  bottom: 1.5vh
+  width: 100%
+
+@media (max-width: 620px)
+  .desktop-image
+    height: 40vh
+    width: 100%
+
+  .desktop-container
+    height: 40vh
+    width: 100%

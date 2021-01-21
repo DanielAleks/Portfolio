@@ -7,6 +7,7 @@ import { SiRedux } from 'react-icons/si'
 import { TiDelete } from 'react-icons/ti'
 import Keyboard from '../../../assets/images/keyboard.jpg'
 import { Icon, IconT } from '../../../reusables/Icons'
+import PreviewInfo from './prev-info/PreviewInfo'
 import './preview.sass'
 
 function Preview({ setIsPreview }) {
@@ -29,36 +30,10 @@ function Preview({ setIsPreview }) {
           <img src={Keyboard} />
         </div>
 
-        <div className='info-prev-container'>
-          <TiDelete 
-          size={30} 
-          color='#2e2e2e' 
-          className='close-modal-x'
-          onClick={() => setIsPreview(false)}
-          />
-          <div style={{ width: '80%' }}>
-
-            <div>
-              <p className='prev-header'>Description:</p>
-              <p className='prev-description'>'Lorem ipsum m veniam, quis nostrud exercitation ullamco laborisamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate'</p>
-            </div>
-
-            <div style={{ marginTop: 10 }}>
-              <p className='prev-header'>Technologies:</p>
-              <div className='icons-preview-container'>
-                <Icon iconData={iconData[0]} />
-                <Icon iconData={iconData[1]} />
-                <Icon iconData={iconData[2]} />
-                <Icon iconData={iconData[3]} />
-                <Icon iconData={iconData[4]} />
-              </div>
-            </div>
-
-            <button className="prev-visit-button button my-gray">Visit Site</button>
-
-
-          </div>
-        </div>
+        <PreviewInfo
+          iconData={iconData}
+          setIsPreview={setIsPreview}
+        />
       </div>
     </div>
   )
