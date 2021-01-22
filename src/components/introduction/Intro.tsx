@@ -14,7 +14,6 @@ function Intro() {
           </article>
         </div>
       </div>
-
     </div>
   )
 }
