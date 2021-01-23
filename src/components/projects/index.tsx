@@ -36,18 +36,14 @@ function Projects() {
       <div className='project-container'>
         <p className='top-label'>Projects</p>
 
+
         <div className='proj-cards-container'>
-          <ProjectCard projData={projData[0]} />
-          <hr className='proj-hr' />
-
-          <ProjectCard projData={projData[1]} />
-          <hr className='proj-hr' />
-
-          <ProjectCard projData={projData[2]} />
-          <hr className='proj-hr' />
- 
-          <ProjectCard projData={projData[3]} />
-          <hr className='proj-hr' />
+          {projData.map((item) =>
+            <div>
+              <ProjectCard projData={item} />
+              <hr className='proj-hr' />
+            </div>
+          )}
         </div>
       </div>
     </section>

@@ -14,8 +14,8 @@ export interface ProjectCardT {
   header, text, image?
 }
 export const ProjectCard = ({ projData }: { projData: ProjectCardT }) => {
-  const [isActive, setIsActive] = useState(false)
   const [isPreview, setIsPreview] = useState(false)
+  const [switchDevice, setSwitchDevice] = useState(false)
 
   const iconData: IconT[] = [
     { icon: AiFillHtml5, iconStyle: 'icon-proj' },
@@ -29,12 +29,11 @@ export const ProjectCard = ({ projData }: { projData: ProjectCardT }) => {
     <div className='desktop-card'>
       <ProjectImage
         projData={projData}
-        isActive={isActive}
         iconData={iconData}
       />
 
       <div className='device-container'>
-        <MdDesktopWindows size={40} className='device-margin' onClick={() => setIsActive(prev => !prev)} />
+        <MdDesktopWindows size={40} className='device-margin' onClick={() => setSwitchDevice(prev => !prev)} />
         <IoMdPhonePortrait size={40} className='device-margin' />
       </div>
 
