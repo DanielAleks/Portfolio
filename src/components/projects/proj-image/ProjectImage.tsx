@@ -2,9 +2,8 @@ import React, { useEffect, useRef, useState } from 'react'
 import { Icon } from '../../../reusables/Icons'
 import './proj-image.sass'
 
-function ProjectImage({ projData, iconData }) {
+function ProjectImage({ projData, iconData, hovered, setHovered }) {
   const [isActive, setIsActive] = useState(false)
-  const [hovered, setHovered] = useState(false)
 
   return (
     <div className='desktop-container'
@@ -12,18 +11,16 @@ function ProjectImage({ projData, iconData }) {
       onMouseLeave={() => setHovered(false)}
     >
       <img src={projData.image} className='desktop-image' />
-      {hovered &&
         <div>
           <div className='icons-container'>
-            <Icon iconData={iconData[0]} />
+            <Icon iconData={iconData[0]} /> 
             <Icon iconData={iconData[1]} />
             <Icon iconData={iconData[2]} />
             <Icon iconData={iconData[3]} />
             <Icon iconData={iconData[4]} />
           </div>
-          <div className={`shaded-box ${isActive ? 'shaded-active' : 'shaded-deactivate'}`}></div>
+          <div className={`shaded-box ${hovered ? 'shaded-active' : 'shaded-box'}`}></div>
         </div>
-      }
     </div>
   )
 }

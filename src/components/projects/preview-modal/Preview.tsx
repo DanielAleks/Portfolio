@@ -20,7 +20,7 @@ function Preview({ setIsPreview }) {
   ]
 
   return (
-    <div className='preview-container'>
+    <div className='preview-container' >
       <div className='preview-outside-bg' onClick={() => setIsPreview(false)}></div>
       <div className='modal-bg'>
         <img src={Keyboard} className='preview-main-image' />
