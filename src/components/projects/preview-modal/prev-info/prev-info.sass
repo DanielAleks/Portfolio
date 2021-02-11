@@ -3,40 +3,75 @@
   flex-direction: column
   justify-content: center
   align-items: center
-  margin-left: 30px
+  margin-left: 3rem
   background-color: #CE7E3D
   height: 100%
   box-shadow: -1px 0px 10px 0px #373737
-  border-top-right-radius: 20px
-  border-bottom-right-radius: 20px
+  border-top-right-radius: 2rem
+  border-bottom-right-radius: 2rem
+
+.prev-width
+  width: 45rem
+  justify-content: center
+  display: flex
 
 .icons-preview-container
   display: flex
   justify-content: center
-  margin-top: 20px
+  margin-top: 2rem
   div
-    margin-left: 10px
-    margin-right: 10px
+    margin-left: 1rem
+    margin-right: 1rem
 
 .prev-header
   font-family: Barlow-Bold
-  font-size: 30px
+  font-size: 3.5rem
   color: #2e2e2e
 
 .prev-description
   margin-top: 20px
+  font-size: 2rem
 
 .prev-visit-button
-  margin-left: 35%
-  margin-top: 60px
+  align-self: center
+  display: flex
+  transform: scale(2)
+  margin-top: 5rem
+  margin-left: 40%
+
+.info-width
+  width: 80%
+
+
+@media (max-width: 1400px)
+  .info-width
+    width: 80%
+  .prev-width
+    width: 35rem
+  .prev-description
+    margin-top: 2rem
+    font-size: 1.6rem
+  .prev-visit-button
+    margin-top: 2rem
+    transform: scale(1.5)
+  .prev-header
+    font-size: 2.5rem
+
+
+@media (max-width: 1000px)
+  .prev-width
+    width: 28rem
+
 
 @media (max-width: 620px)
   .info-prev-container
     width: 100%
     align-self: flex-end
     display: flex
-    border-top-right-radius: 0px 
-    border-bottom-left-radius: 20px 
+    border-top-right-radius: 0rem
+    border-bottom-left-radius: 2rem
   .prev-visit-button
-    margin-top: 20px
-    margin-bottom: 20px
+    margin-top: 2rem
+    margin-bottom: 2rem
+  .info-width
+    width: 60%

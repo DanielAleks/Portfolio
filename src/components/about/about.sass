@@ -3,10 +3,10 @@
   flex-direction: column
   justify-content: center
   align-items: center
-  height: 50vh
+  height: 70vh
 
 .about-container
-  width: 30vw
+  width: 40vw
 
 .about-header
   display: flex
@@ -23,7 +23,7 @@
   display: flex
   margin-top: 30px
   justify-content: center
-  width: 100%
+  width: 90%
   flex-wrap: wrap
 
 .icon-tech
@@ -33,26 +33,40 @@
   background: #CE7E3D
   height: 80px
   width: 80px
+  margin-bottom: 20px
   margin-left: 20px
   margin-right: 20px
   border-radius: 100px
 
-@media (max-width: 620px)
+
+@media (max-width: 1000px)
+  .about-section
+    height: 90vh
+
+  .about-container
+    width: 50vw
+
+@media (max-width: 700px)
   .about-section
     height: 110vh
+
+@media (max-width: 620px)
+  .about-section
+    height: 95vh
 
   .about-container
     width: 70vw
 
-  .icon-container
-    display: flex
-    justify-content: center
-
   .icon-tech
-    margin-top: 30px
-    height: 70px
     width: 70px
+    height: 70px
+    margin-left: 10px
+    margin-right: 10px
 
-@media (min-width: 620px)
-  .icon-container
-    width: 80%
+
+@media (max-width: 500px)
+  .about-section
+    height: 120vh
+
+  .about-container
+    width: 70vw

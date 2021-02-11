@@ -1,5 +1,6 @@
 .nav-container
-  justify-content: center
+  justify-content: center !important
+  display: flex
   z-index: 1000 !important
   width: 100% !important
   background-color: #D05A5A !important
@@ -19,13 +20,27 @@
 
 .button-container
   display: flex
-  align-items: center
+  align-items: center !important
 
 .button-text
   margin-left: 40px
   font-family: Barlow-Bold
   font-weight: bold
   color: #dadada
+
+.navbar-start
+  align-self: center
+
+@media (max-width: 1100px)
+  .email
+    font-size: 14px
+  .button-container
+    margin-left: 10vw
+  .button-text
+    text-align: center
+    font-size: 12px
+    width: 12vw
+    margin: 0px
 
 @media (max-width: 620px)
   .nav-container
@@ -36,3 +51,6 @@
     display: none
   .button-text
     width: 22vw
+    text-align: center
+    font-size: 12px
+    margin-left: 10px

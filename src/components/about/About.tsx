@@ -35,19 +35,9 @@ function About() {
       </div>
 
       <div className='icon-container'>
-        <Icon iconData={iconData[0]} />
-        <Icon iconData={iconData[1]} />
-        <Icon iconData={iconData[2]} />
-        <Icon iconData={iconData[3]} />
-        <Icon iconData={iconData[4]} />
-        <Icon iconData={iconData[5]} />
-        <Icon iconData={iconData[6]} />
-        <Icon iconData={iconData[7]} />
-        <Icon iconData={iconData[8]} />
-        <Icon iconData={iconData[9]} />
-        <Icon iconData={iconData[10]} />
-        <Icon iconData={iconData[11]} />
-        <Icon iconData={iconData[12]} />
+        {iconData.map((item) => 
+          <Icon iconData={item} />
+        )}
       </div>
     </section>
   )

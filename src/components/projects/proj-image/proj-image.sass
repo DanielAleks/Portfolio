@@ -5,12 +5,27 @@
   width: 30vw
   border-radius: 20px
 
+.mobile-container
+  position: relative
+  height: 0vh
+  width: 20vw
+  border-radius: 20px
+
 .desktop-image
   position: absolute
+  object-fit: cover
   margin-right: 1vw
   height: 35vh
   width: 30vw
   border-radius: 20px
+
+.mobile-image
+   position: absolute
+   right: 10px
+   margin-right: 1vw
+   height: 50vh
+   width: 15vw
+   border-radius: 20px
 
 .shaded-box
   position: absolute
@@ -37,9 +52,13 @@
 
 @media (max-width: 620px)
   .desktop-image
-    height: 40vh
+    height: 30vh
     width: 100%
 
   .desktop-container
-    height: 40vh
+    height: 30vh
     width: 100%
+
+  .shaded-box
+    height: 70px
+

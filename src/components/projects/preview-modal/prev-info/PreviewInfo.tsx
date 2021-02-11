@@ -6,13 +6,14 @@ import './prev-info.sass'
 function PreviewInfo({ iconData, setIsPreview }) {
   return (
     <div className='info-prev-container'>
+      <div className='prev-width'>
       <TiDelete
         size={30}
         color='#2e2e2e'
         className='close-modal-x'
         onClick={() => setIsPreview(false)}
       />
-      <div style={{ width: '80%' }}>
+          <div className='info-width'>
         <div>
           <p className='prev-header'>Description:</p>
           <p className='prev-description'>'Lorem ipsum m veniam, quis nostrud exercitation ullamco laborisamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate'</p>
@@ -30,6 +31,7 @@ function PreviewInfo({ iconData, setIsPreview }) {
         </div>
 
         <button className="prev-visit-button button my-gray">Visit Site</button>
+          </div>
       </div>
     </div>
   )

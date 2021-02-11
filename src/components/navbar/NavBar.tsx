@@ -3,9 +3,6 @@ import './nav.sass'
 import { Link, animateScroll as scroll } from "react-scroll";
 
 function NavBar() {
-
-
-
   return (
     <nav className="navbar is-fixed-top nav-container" role="navigation" aria-label="main navigation">
       <div className='nav-width'>
