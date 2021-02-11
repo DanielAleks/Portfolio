@@ -19,11 +19,12 @@
   border-bottom-left-radius: 40%
   height: 60vh
   width: 100vw
+  display: flex
+  justify-content: center
 
 .card-container
   position: absolute
   top: 30%
-  left: 32.5%
   width: 40vw
   box-shadow: 5px 5px 10px !important
   border-radius: 10px
@@ -31,21 +32,30 @@
 .bg-card-color
   background-color: #ce7e3d !important
 
+.title
+  font-size: 4rem !important
+  margin-bottom: 3rem !important
+
+.subtitle
+  font-size: 2.2rem !important
+
+
+
+
+
+
 @media (max-width: 1200px)
   .card-container
     width: 40% !important
-    left: 30%
 
 @media (max-width: 1000px)
   .card-container
     top: 30%
-    left: 25%
     width: 50% !important
 
 @media (max-width: 800px)
   .card-container
     top: 25%
-    left: 20%
     width: 60% !important
 
 
@@ -61,10 +71,8 @@
   .card-container
     width: 70% !important
     top: 30%
-    left: 15%
 
 @media (max-width: 400px)
   .card-container
     width: 85% !important
     top: 30%
-    left: 10%
