@@ -1,14 +1,10 @@
 .desktop-container
   position: relative
   margin-right: 1vw
-  height: 35vh
+  height: 40vh
+  display: flex
+  align-items: center
   width: 30vw
-  border-radius: 20px
-
-.mobile-container
-  position: relative
-  height: 0vh
-  width: 20vw
   border-radius: 20px
 
 .desktop-image
@@ -16,22 +12,14 @@
   object-fit: cover
   margin-right: 1vw
   height: 35vh
-  width: 30vw
+  width: 50vw
   border-radius: 20px
-
-.mobile-image
-   position: absolute
-   right: 10px
-   margin-right: 1vw
-   height: 50vh
-   width: 15vw
-   border-radius: 20px
 
 .shaded-box
   position: absolute
   z-index: 1
-  bottom: 0px
-  height: 100px
+  bottom: 2.5vh
+  height: 10rem
   width: 100%
   border-bottom-right-radius: 20px
   border-bottom-left-radius: 20px
@@ -47,18 +35,49 @@
   display: flex
   position: absolute
   z-index: 2
-  bottom: 1.5vh
+  bottom: 4vh
   width: 100%
 
-@media (max-width: 620px)
+@media (min-width: 1000px) and (max-width: 1250px)
+  .desktop-image
+    width: 100%
+  .desktop-container
+    width: 40vw
+
+
+@media (min-width: 800px) and (max-width: 1000px)
+  .desktop-image
+    width: 100%
+  .desktop-container
+    width: 50vw
+
+
+@media (max-width: 800px)
   .desktop-image
     height: 30vh
-    width: 100%
+    width: 80%
+    margin-left: 10%
 
   .desktop-container
     height: 30vh
     width: 100%
 
   .shaded-box
-    height: 70px
+    height: 7rem
 
+
+@media (max-width: 620px)
+  .desktop-image
+    height: 30vh
+    width: 100%
+    margin-left: 0%
+
+  .desktop-container
+    height: 30vh
+    width: 100%
+
+  .shaded-box
+    height: 7rem
+    bottom: 0vh
+  .icons-container
+    bottom: 1vh

@@ -51,7 +51,7 @@ export const ProjectCard = ({ projData }: { projData: ProjectCardT }) => {
   }, [isPreview]);
 
   return (
-    <div className={isMobile ? 'mobile-card' : 'desktop-card'} style={{ overflowY: isPreview ? 'hidden' : 'auto' }}>
+    <div className='desktop-card' style={{ overflowY: isPreview ? 'hidden' : 'auto' }}>
       <ProjectImage
         hovered={hovered}
         setHovered={setHovered}

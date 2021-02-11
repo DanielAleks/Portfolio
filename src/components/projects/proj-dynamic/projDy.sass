@@ -1,13 +1,8 @@
 .desktop-card
   display: flex
+  align-items: center
   justify-content: center
   width: 65vw
-
-.mobile-card
-  display: flex
-  justify-content: center
-  width: 65vw
-  height: 50vh
 
 .icon-proj
   display: flex
@@ -15,10 +10,10 @@
   align-items: center
   background: #CE7E3D
   opacity: 0%
-  height: 60px
-  width: 60px
-  margin-left: 10px
-  margin-right: 10px
+  height: 6rem
+  width: 6rem
+  margin-left: 1rem
+  margin-right: 1rem
   border-radius: 10000px
   margin-bottom: 0px
 
@@ -29,12 +24,43 @@
 .device-container
   display: flex
   flex-direction: column
+  margin-top: 5vh
 
 .device-margin
-  margin: 10px
+  margin: 1rem
 
 .device-margin:hover
   color: #CE7E3D
+
+
+@media (min-width: 1000px) and (max-width: 1250px)
+  .desktop-card
+    width: 80vw
+
+
+
+@media (min-width: 800px) and (max-width: 1000px)
+  .desktop-card
+    width: 100vw
+    height: 50vh
+
+@media (max-width: 800px)
+  .desktop-card
+    display: flex
+    flex-direction: column
+    justify-content: center
+    width: 80vw
+    height: 75vh
+  .device-container
+    flex-direction: row
+    position: absolute
+    margin-top: 5vh
+    right: 10vw
+  .icon-proj
+    margin-left: .5rem
+    margin-right: .5rem
+    height: 5rem
+    width: 5rem
 
 @media (max-width: 620px)
   .desktop-card
@@ -42,12 +68,21 @@
     flex-direction: column
     justify-content: center
     width: 80vw
+    height: 80vh
   .device-container
+    flex-direction: row
     position: absolute
-    margin-top: 13vh
+    margin-top: 5vh
     right: 10vw
   .icon-proj
-    margin-left: 5px
-    margin-right: 5px
-    height: 50px
-    width: 50px
+    margin-left: .5rem
+    margin-right: .5rem
+    height: 5rem
+    width: 5rem
+
+
+
+
+
+
+

@@ -1,5 +1,6 @@
 .card-info
   display: flex
+  align-self: center
   flex-direction: column
   justify-content: center
   padding-left: 2%
@@ -42,9 +43,20 @@
   margin-left: 1.7rem
   color: #cacaca !important
 
-@media (max-width: 620px)
+@media (min-width: 800px) and (max-width: 1000px)
   .card-info
-    width: 100%
+    width: 35%
+
+
+
+
+
+
+
+
+@media (max-width: 800px)
+  .card-info
+    width: 90%
     margin-top: 5vh
   .info-buttons-container
     display: flex
@@ -52,3 +64,4 @@
   .button-spacing
     margin-top: 5vh
     margin-left: 15vw
+    

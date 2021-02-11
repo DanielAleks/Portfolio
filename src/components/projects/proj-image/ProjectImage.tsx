@@ -5,11 +5,11 @@ import './proj-image.sass'
 function ProjectImage({ isMobile, projData, iconData, hovered, setHovered }) {
 
   return (
-    <div className={isMobile ? 'mobile-container' : 'desktop-container'}
+    <div className='desktop-container'
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
-      <img src={projData.image} className={isMobile ? 'mobile-image' : 'desktop-image'} />
+      <img src={projData.image} className='desktop-image' />
         <div>
           <div className='icons-container'>
           {iconData.map((item) => 
