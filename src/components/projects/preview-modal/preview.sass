@@ -1,4 +1,5 @@
 .preview-container
+  align-items: center
   position: fixed
   top: 0px
   left: 0px
@@ -21,7 +22,7 @@
   background: #A56531
   align-self: center
   width: 100rem
-  height: 55vh
+  height: 50rem
   border-radius: 2rem
 
 .preview-main-image
@@ -59,13 +60,10 @@
   right: 1rem
   top: 1rem
 
-
-
 @media (max-width: 1400px)
   .modal-bg
     width: 80rem
     height: 40rem
-    top: 25%
   .icon-preview
     transform: scale(1)
 
@@ -74,23 +72,15 @@
   .modal-bg
     width: 60rem
     height: 40rem
-    top: 25%
   .icon-preview
     transform: scale(1)
-
-
-
-
-
-
-
 
 
 @media (max-width: 620px)
   .modal-bg
     flex-direction: column
-    top: 15%
-    width: 70vw
+    width: 30rem
+    top: 10%
     height: 70%
   .preview-main-image
     width: 100%
@@ -108,3 +98,28 @@
       margin-top: 0px
       width: 10rem
       border-radius: 0px
+
+
+
+@media (max-height: 750px) and (max-width: 620px)
+  .modal-bg
+    flex-direction: column
+    width: 40rem
+    height: 80%
+  .image-gallary
+    flex-direction: row
+    margin: 0px
+    background: rgba(0, 0, 0, .3)
+    height: 100%
+    img
+      margin-left: .5rem
+      margin-right: .5rem
+      margin-top: 0px
+      width: 10rem
+      border-radius: 0px
+  .preview-main-image
+    width: 100%
+    height: 20rem
+    border-bottom-right-radius: 0px
+    border-bottom-left-radius: 0px
+    margin: 0px

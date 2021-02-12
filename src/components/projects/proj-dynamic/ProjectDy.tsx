@@ -14,25 +14,9 @@ export interface ProjectCardT {
   header, text, image?
 }
 
-function useWindowSize() {
-  const [size, setSize] = useState([0, 0])
-
-useLayoutEffect(() => {
-function updateSize() {
-  setSize([window.innerWidth, window.innerHeight]);
-}
-  window.addEventListener('resize', updateSize);
-  updateSize();
-  return () => window.removeEventListener('resize', updateSize);
-}, [])
-  return size;
-}
-
 export const ProjectCard = ({ projData }: { projData: ProjectCardT }) => {
-  const [height, width] = useWindowSize()
   const [isPreview, setIsPreview] = useState(false)
   const [hovered, setHovered] = useState(false)
-  const [isMobile, setIsMobile] = useState(false)
 
 
   const iconData: IconT[] = [
@@ -57,13 +41,7 @@ export const ProjectCard = ({ projData }: { projData: ProjectCardT }) => {
         setHovered={setHovered}
         projData={projData}
         iconData={iconData}
-        isMobile={isMobile}
       />
-
-      <div className='device-container'>
-        <MdDesktopWindows size={width > 600 ? 40 : 20} className='device-margin' onClick={() => setIsMobile(false)}/>
-        <IoMdPhonePortrait size={width > 600 ? 40 : 20} className='device-margin' onClick={() => setIsMobile(true)}/>
-      </div>
 
       <ProjectInfo
         projData={projData}

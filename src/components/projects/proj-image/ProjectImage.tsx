@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import { Icon } from '../../../reusables/Icons'
 import './proj-image.sass'
 
-function ProjectImage({ isMobile, projData, iconData, hovered, setHovered }) {
+function ProjectImage({ projData, iconData, hovered, setHovered }) {
 
   return (
     <div className='desktop-container'
