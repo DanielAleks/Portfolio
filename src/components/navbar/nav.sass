@@ -16,6 +16,7 @@
   align-self: center
   font-family: Barlow-MediumI
   color: #dadada
+  animation: scale-down 1s
 
 .email-colored
   color: #f7b100
@@ -30,6 +31,13 @@
   font-family: Barlow-Bold
   font-weight: bold
   color: #dadada
+  animation: scale-down 1s
+
+@keyframes slide-down
+  0%
+    transform: translateY(-10rem)
+  100%
+    transform: translateY(0rem)
 
 .navbar-start
   align-self: center

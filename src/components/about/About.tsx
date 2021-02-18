@@ -24,10 +24,22 @@ function About() {
 
   return (
     <section id='about' className="about-section">
-
       <div className='about-container'>
         <p className='about-header'>About Me</p>
-        <p className='about-desc'>I'm a Front-End Developer for ChowNow in Los Angeles, CA. I have serious passion for UI effects, animations and creating intuitive, dynamic user experiences. Let's make something special.</p>
+        <p className='about-desc'>
+          <p className="about-desc" style={{ animationDelay: '.1s' }}>
+            I'm a Self taught Front-End Developer in Spokane, Washington.
+          </p>
+          <p className="about-desc" style={{ animationDelay: '.2s' }}>
+            I have serious passion for programming and creating
+          </p>
+          <p className="about-desc" style={{ animationDelay: '.3s' }}>
+            beautiful websites with react and sass and will love to go into
+          </p>
+          <p className="about-desc" style={{ animationDelay: '.4s' }}>
+            backend to become a Mern fullstack developer someday.
+          </p>
+        </p>
       </div>
 
       <div className='icon-container'>

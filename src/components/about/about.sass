@@ -15,10 +15,30 @@
   font-size: 4rem
   margin-bottom: 30px
   color: #e4e4e4
+  animation: slide-right 1s forwards
+  opacity: 0
 
 .about-desc
   font-size: 2rem
   color: #a2a2a2
+  animation: slide-left 1s forwards
+  opacity: 0
+
+@keyframes slide-left
+  0%
+    opacity: 0
+    transform: translateX(100rem)
+  100%
+    opacity: 1
+    transform: translateX(0rem)
+
+@keyframes slide-right
+  0%
+    opacity: 0
+    transform: translateX(-100rem)
+  100%
+    opacity: 1
+    transform: translateX(0rem)
 
 .icon-container
   display: flex
@@ -67,7 +87,6 @@
     margin-left: 1rem
     margin-right: 1rem
 
-
 @media (max-width: 500px)
   .about-section
     height: 120vh
@@ -79,11 +98,9 @@
   .about-section
     height: 130vh
 
-
 @media (max-height: 620px) and (max-width: 1230px)
   .about-section
     height: 120vh
-
 
 @media (max-height: 620px) and (max-width: 705px)
   .about-section

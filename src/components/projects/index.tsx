@@ -35,7 +35,7 @@ function Projects() {
           {projData.map((item) =>
             <div>
               <ProjectCard projData={item} />
-              <hr className='proj-hr' />
+              <hr data-aos="fade-right" data-aos-once='true' className='proj-hr' />
             </div>
           )}
         </div>

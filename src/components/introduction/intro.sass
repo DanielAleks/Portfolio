@@ -28,6 +28,16 @@
   width: 40vw
   box-shadow: 5px 5px 10px !important
   border-radius: 10px
+  animation: slide-up 1s forwards
+  opacity: 0
+
+@keyframes slide-up
+  0%
+    opacity: 0
+    transform: translateY(15rem)
+  100%
+    opacity: 1
+    transform: translateY(0rem)
 
 .bg-card-color
   background-color: #ce7e3d !important

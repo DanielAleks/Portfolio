@@ -8,15 +8,13 @@ function ProjectInfo({ projData, setIsPreview }) {
 
   return (
     <div className='card-info'>
-      <p className='proj-header'>{projData.header}</p>
-      <p className='proj-text'>{projData.text} </p>
+      <p data-aos="fade-left" className='proj-header'>{projData.header}</p>
+      <p data-aos="fade-left" className='proj-text'>{projData.text} </p>
       <div className='info-buttons-container'>
-        <button className="button-spacing button my-pink" onClick={() => setIsPreview(true)}>Preview</button>
-        <button className="button-spacing button my-gray">Visit Site</button>
+        <button data-aos="fade-up" className="button-spacing button my-pink" onClick={() => setIsPreview(true)}>Preview</button>
+        <button data-aos="fade-up" className="button-spacing button my-gray">Visit Site</button>
       </div>
     </div>
-
-
   )
 }
 

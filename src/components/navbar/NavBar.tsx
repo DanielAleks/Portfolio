@@ -11,7 +11,7 @@ function NavBar() {
           <Link className='email' to="contact" spy={true} smooth={true} offset={50} duration={500}>
             @daniel.
               <p className='email-colored'>aleksandrov</p>
-                </Link>
+          </Link>
         </div>
 
         <div className="button-container">
