@@ -5,28 +5,21 @@ import { DiCss3, DiNpm } from 'react-icons/di';
 import { IoLogoSass } from 'react-icons/io';
 import { SiRedux, SiReactrouter, SiTailwindcss, SiBulma, SiStyledComponents } from 'react-icons/si';
 import { FaReact, FaYarn } from 'react-icons/fa';
-import { SiJavascript } from 'react-icons/si';
+import { SiExpo, SiJavascript } from 'react-icons/si';
 import { GiPapers } from 'react-icons/gi';
 import { SiNeovim } from 'react-icons/si';
+import { CgFigma } from 'react-icons/cg';
 import { Icon, IconT } from '../../reusables/Icons';
 
 function About() {
 
-  const iconData: IconT[] = [
-    { icon: AiFillHtml5, iconStyle: 'icon-tech' },
-    { icon: DiCss3, iconStyle: 'icon-tech' },
-    { icon: SiJavascript , iconStyle: 'icon-tech' },
-    { icon: FaReact, iconStyle: 'icon-tech' },
-    { icon: SiRedux, iconStyle: 'icon-tech' },
-    { icon: SiReactrouter, iconStyle: 'icon-tech' },
-    { icon: IoLogoSass, iconStyle: 'icon-tech' },
-    { icon: SiBulma, iconStyle: 'icon-tech' },
-    { icon: SiTailwindcss, iconStyle: 'icon-tech' },
-    { icon: SiStyledComponents, iconStyle: 'icon-tech' },
-    { icon: DiNpm, iconStyle: 'icon-tech' },
-    { icon: FaYarn, iconStyle: 'icon-tech' },
-    { icon: AiFillGithub, iconStyle: 'icon-tech' },
-    { icon: SiNeovim, iconStyle: 'icon-tech' },
+  const iconData = [
+    { icon: AiFillHtml5 }, { icon: DiCss3 }, { icon: SiJavascript },
+    { icon: FaReact }, { icon: SiRedux }, { icon: SiReactrouter },
+    { icon: IoLogoSass }, { icon: SiBulma }, { icon: SiTailwindcss },
+    { icon: SiStyledComponents }, { icon: DiNpm }, { icon: FaYarn },
+    { icon: AiFillGithub }, { icon: SiNeovim }, { icon: SiExpo },
+    { icon: CgFigma },
   ]
 
   return (
@@ -38,8 +31,12 @@ function About() {
       </div>
 
       <div className='icon-container'>
-        {iconData.map((item) => 
-          <Icon iconData={item} />
+        {iconData.map((item, id) =>
+          <div data-aos="zoom-in"
+            data-aos-delay={id * 50}
+            className='icon-tech'>
+            <item.icon size={30} color='#383838' />
+          </div>
         )}
       </div>
     </section>

@@ -8,10 +8,10 @@ function NavBar() {
       <div className='nav-width'>
 
         <div className="navbar-start">
-          <a className='email'>
+          <Link className='email' to="contact" spy={true} smooth={true} offset={50} duration={500}>
             @daniel.
               <p className='email-colored'>aleksandrov</p>
-          </a>
+                </Link>
         </div>
 
         <div className="button-container">

@@ -38,6 +38,14 @@
 
 .subtitle
   font-size: 2.2rem !important
+  animation: 1s ease-out 0s 1 fontChange
+
+@keyframes fontChange
+  0%
+    opacity: 0
+
+  100%
+    opacity: 1
 
 @media (max-width: 1200px)
   .card-container
@@ -52,7 +60,6 @@
   .card-container
     top: 25%
     width: 60% !important
-
 
 @media (max-width: 620px)
   .intro-bg-image
@@ -71,7 +78,6 @@
   .card-container
     width: 85% !important
     top: 30%
-
 
 @media (max-height: 600px)
   .bg-image-cover

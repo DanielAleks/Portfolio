@@ -1,24 +1,33 @@
 .desktop-container
   position: relative
   margin-right: 1vw
-  height: 20rem
+  height: 30rem
   display: flex
   align-items: center
   width: 30vw
   border-radius: 20px
+  overflow: hidden
 
 .desktop-image
   position: absolute
+  transform-origin: 50% 65%;
+  transition: transform 5s, filter 3s ease-in-out;
+  filter: brightness(100%);
   object-fit: cover
   margin-right: 1vw
   height: 28rem
   width: 50vw
   border-radius: 20px
 
+.desktop-image:hover
+  filter: brightness(150%);
+  transform: scale(1.2);
+  transition: transform 1s, filter 1s ease-in-out;
+  
 .shaded-box
   position: absolute
   z-index: 1
-  bottom: -5vh
+  bottom: 0vh
   height: 10rem
   width: 100%
   border-bottom-right-radius: 20px
@@ -35,7 +44,7 @@
   display: flex
   position: absolute
   z-index: 2
-  bottom: -2.5vh
+  bottom: 1vh
   width: 100%
 
 @media (min-width: 1000px) and (max-width: 1250px)
