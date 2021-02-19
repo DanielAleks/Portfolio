@@ -9,7 +9,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 AOS.init({
-  once: false
+  // once: false
 });
 
 function Main() {
@@ -19,7 +19,7 @@ function Main() {
       <Intro />
       <About />
       <hr />
-      <Projects />
+      <Projects /> 
       <Contact />
     </div>
   )

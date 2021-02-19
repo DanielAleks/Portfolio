@@ -18,7 +18,6 @@ export const ProjectCard = ({ projData }: { projData: ProjectCardT }) => {
   const [isPreview, setIsPreview] = useState(false)
   const [hovered, setHovered] = useState(false)
 
-
   const iconData: IconT[] = [
     { icon: AiFillHtml5, iconStyle: `icon-proj ${hovered ? 'icon-proj-active' : 'icon-proj'}` },
     { icon: DiCss3, iconStyle: `icon-proj ${hovered ? 'icon-proj-active' : 'icon-proj'}` },
@@ -35,7 +34,7 @@ export const ProjectCard = ({ projData }: { projData: ProjectCardT }) => {
   }, [isPreview]);
 
   return (
-    <div className='desktop-card' style={{ overflowY: 'hidden'}}>
+    <div className='desktop-card' style={{ overflowY: 'hidden' }}>
       <ProjectImage
         hovered={hovered}
         setHovered={setHovered}
@@ -44,7 +43,7 @@ export const ProjectCard = ({ projData }: { projData: ProjectCardT }) => {
       />
 
       <ProjectInfo
-        projData={projData} 
+        projData={projData}
         setIsPreview={setIsPreview}
       />
 

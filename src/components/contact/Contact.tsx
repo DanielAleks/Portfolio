@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
-import './contact.sass'
 import FooterDesign from './footer/FooterDesign'
 import Links from './Links'
 import emailjs from 'emailjs-com';
+import './contact.sass'
 
 function Contact() {
   const [messageInput, setMessageInput] = useState('')
@@ -21,7 +21,7 @@ function Contact() {
 
   return (
     <div id='contact' className='ctt-container contactC'>
-      <form className="contact-form" onSubmit={sendEmail}>
+      <form className="contact-form" onSubmit={sendEmail}> 
         <section className="ctt-width section">
           <p data-aos="fade-up" className='header'>Contact Me</p>
           <div className="field">

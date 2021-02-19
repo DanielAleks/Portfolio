@@ -33,7 +33,7 @@ function About() {
           <p className="about-desc" style={{ animationDelay: '.2s' }}>
             I have serious passion for programming and creating
           </p>
-          <p className="about-desc" style={{ animationDelay: '.3s' }}>
+          <p className="about-desc" style={{ animationDelay: '.3s' }}> 
             beautiful websites with react and sass and will love to go into
           </p>
           <p className="about-desc" style={{ animationDelay: '.4s' }}>

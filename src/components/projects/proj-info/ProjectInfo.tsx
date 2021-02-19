@@ -18,4 +18,4 @@ function ProjectInfo({ projData, setIsPreview }) {
   )
 }
 
-export default ProjectInfo
+export default ProjectInfo 
