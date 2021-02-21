@@ -6,7 +6,6 @@ import { IoLogoSass } from 'react-icons/io';
 import { SiRedux, SiReactrouter, SiTailwindcss, SiBulma, SiStyledComponents } from 'react-icons/si';
 import { FaReact, FaYarn } from 'react-icons/fa';
 import { SiExpo, SiJavascript } from 'react-icons/si';
-import { GiPapers } from 'react-icons/gi';
 import { SiNeovim } from 'react-icons/si';
 import { CgFigma } from 'react-icons/cg';
 import { Icon, IconT } from '../../reusables/Icons';

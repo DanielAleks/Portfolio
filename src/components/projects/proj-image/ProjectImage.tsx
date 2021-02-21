@@ -1,26 +1,26 @@
-import React, { useEffect, useRef, useState } from 'react'
-import { Icon } from '../../../reusables/Icons'
+import React from 'react'
 import './proj-image.sass'
 
-function ProjectImage({ projData, iconData, hovered, setHovered }) {
-
+function ProjectImage({ item, hovered, setHovered }) {
   return (
     <div data-aos="fade-right" className='desktop-container'
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
-      <img src={projData.image} className='desktop-image' />
+      <img src={item.mainImage} className='desktop-image' />
       <div>
         <div data-aos="fade-right" className='icons-container'>
-          {iconData.map((item, id) =>
-            <div style={{animationDelay: `${id * .01}s`}} className={`icon-proj ${hovered ? 'icon-proj-active' : 'icon-proj'}`}>
-              <item.icon size={30} color='#383838' />
+
+          {item.icons.map((Iitem) =>
+            <div className={`icon-proj ${hovered ? 'icon-proj-active' : 'icon-proj'}`}>
+              <Iitem size={30} color='#373737' />
             </div>
           )}
+
         </div>
         <div className={`shaded-box ${hovered ? 'shaded-active' : 'shaded-box'}`}></div>
       </div>
-    </div>
+    </div >
   )
 }
 
