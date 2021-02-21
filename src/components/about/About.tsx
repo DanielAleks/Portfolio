@@ -13,12 +13,9 @@ import { Icon, IconT } from '../../reusables/Icons';
 function About() {
 
   const iconData = [
-    { icon: AiFillHtml5 }, { icon: DiCss3 }, { icon: SiJavascript },
-    { icon: FaReact }, { icon: SiRedux }, { icon: SiReactrouter },
-    { icon: IoLogoSass }, { icon: SiBulma }, { icon: SiTailwindcss },
-    { icon: SiStyledComponents }, { icon: DiNpm }, { icon: FaYarn },
-    { icon: AiFillGithub }, { icon: SiNeovim }, { icon: SiExpo },
-    { icon: CgFigma },
+    AiFillHtml5, DiCss3, SiJavascript, FaReact, SiRedux, SiReactrouter,
+    IoLogoSass, SiBulma, SiTailwindcss, SiStyledComponents, DiNpm, FaYarn,
+    AiFillGithub, SiNeovim, SiExpo, CgFigma,
   ]
 
   return (
@@ -26,27 +23,17 @@ function About() {
       <div className='about-container'>
         <p className='about-header'>About Me</p>
         <p className='about-desc'>
-          <p className="about-desc" style={{ animationDelay: '.1s' }}>
-            I'm a Self taught Front-End Developer in Spokane, Washington.
-          </p>
-          <p className="about-desc" style={{ animationDelay: '.2s' }}>
-            I have serious passion for programming and creating
-          </p>
-          <p className="about-desc" style={{ animationDelay: '.3s' }}> 
-            beautiful websites with react and sass and will love to go into
-          </p>
-          <p className="about-desc" style={{ animationDelay: '.4s' }}>
-            backend to become a Mern fullstack developer someday.
-          </p>
+          I'm a Self-taught Front-End Developer in Spokane, Washington.
+          After learning code from my brother, I became hooked, loving every bit of it. Up until I met javascript. I spent so much time trying to understand how a simple map worked or how to simply fetch data from an API. Fortunately, I passed over the hump and became a developer with skills beyond UI/UX design. Deciding not to go to college, programming has given me a second chance to make an impact on the world. Programming is my passion and a career that I couldn't be happier to pursue.
         </p>
       </div>
 
       <div className='icon-container'>
-        {iconData.map((item, id) =>
+        {iconData.map((Item, id) =>
           <div data-aos="zoom-in"
             data-aos-delay={id * 50}
             className='icon-tech'>
-            <item.icon size={30} color='#383838' />
+            <Item size={30} color='#383838' />
           </div>
         )}
       </div>

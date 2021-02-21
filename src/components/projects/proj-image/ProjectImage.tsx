@@ -4,10 +4,10 @@ import './proj-image.sass'
 function ProjectImage({ item, hovered, setHovered }) {
   return (
     <div data-aos="fade-right" className='desktop-container'
-      onMouseEnter={() => setHovered(true)}
+      onMouseEnter={() => setHovered(true)} 
       onMouseLeave={() => setHovered(false)}
     >
-      <img src={item.mainImage} className='desktop-image' />
+      <img src={item.mainImage} className={`desktop-image ${hovered ? 'desktop-image-hovered' : 'desktop-image'}`} />
       <div>
         <div data-aos="fade-right" className='icons-container'>
 

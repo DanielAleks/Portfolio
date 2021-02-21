@@ -9,13 +9,16 @@ function ProjectInfo({ item, setIsPreview }) {
   return (
     <div className='card-info'>
       <p data-aos="fade-left" className='proj-header'>{item.header}</p>
-      <p data-aos="fade-left" className='proj-text'>{item.text} </p>
+      <p data-aos="fade-left" className='proj-text'>{item.desc} </p>
       <div className='info-buttons-container'>
         <button data-aos="fade-up" className="button-spacing button my-pink" onClick={() => setIsPreview(true)}>Preview</button>
+        <a href={item.link} target="_blank">
         <button data-aos="fade-up" className="button-spacing button my-gray">Visit Site</button>
+        </a>
       </div>
     </div>
   )
 }
 
 export default ProjectInfo 
+ 

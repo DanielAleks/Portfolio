@@ -12,7 +12,6 @@ import { isDoStatement } from 'typescript'
 
 
 function PreviewInfo({ setIsPreview, item }) {
-  const md = 'hello'
   return (
     <div className='info-prev-container'>
       <div className='prev-width'>
@@ -31,15 +30,16 @@ function PreviewInfo({ setIsPreview, item }) {
 
           <div data-aos="fade-up" style={{ marginTop: 10 }}>
             <p className='prev-header'>Technologies:</p>
-            <div className='icons-preview-container'>
+            <div className='icons-preview-container'> 
               {item.icons.map((Icon) =>
-                <Icon size={30} color='#383838' />
+                  <Icon className='preview-icon' size={30} color='#373737' />
               )}
             </div>
-
           </div>
 
-          <button data-aos="fade-left" data-aos-delay="300" className="prev-visit-button button my-gray">Visit Site</button>
+          <a href={item.link} target='_blank'>
+            <button data-aos="fade-left" data-aos-delay="300" className="prev-visit-button button my-gray">Visit Site</button>
+          </a>
         </div>
       </div>
     </div>

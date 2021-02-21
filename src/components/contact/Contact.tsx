@@ -27,13 +27,13 @@ function Contact() {
           <div className="field">
             <label data-aos="fade-up" className="label">Name</label>
             <div className="control">
-              <input data-aos="fade-up" className="input" type="text" name='name' placeholder="Text input" />
+              <input data-aos="fade-up" className="input" type="text" name='name' placeholder="Your Name..." />
             </div>
           </div>
 
           <div className="field">
             <label data-aos="fade-up" className="label">Email</label>
-            <input data-aos="fade-up" className="input" type="email" name='email' placeholder="Email input" />
+            <input data-aos="fade-up" className="input" type="email" name='email' placeholder="Your Email..." />
           </div>
 
           <div className="field">
@@ -42,7 +42,7 @@ function Contact() {
               <textarea
                 data-aos="fade-up"
                 className="textarea"
-                placeholder="Textarea"
+                placeholder="Leave me a message..."
                 name='message'
                 value={messageInput}
                 onChange={(e) => setMessageInput(e.target.value)}>

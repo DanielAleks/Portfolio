@@ -1,7 +1,7 @@
 import React from 'react'
 import { ProjectCard } from './proj-dynamic/ProjectCard'
 import './projects.sass'
-import './proj-dynamic/projDy.sass'
+import './proj-dynamic/proj-card.sass'
 import { DiCss3 } from 'react-icons/di'
 import { FaReact } from 'react-icons/fa'
 import { IoLogoSass, IoMdPhonePortrait } from 'react-icons/io'
@@ -22,33 +22,33 @@ function Projects() {
   const projData: any = [
     {
       header: 'BeachWeather',
-      text: 'I wanted to make something complex with react that both looked good and fetched a lot of data. I came up with a weather app, but a simple weather app would be boring and so I made it with a beach theme so that you will know what days you can and cannot go to the beach to play volleyball or surf.',
+      desc: 'Wanting to do more complex things with react, I heard a weather app was filled with javascript and so I made a simple weather app based on when the weather is warm enough for the beach.',
       mainImage: beachweather1,
       subImg1: beachweather2,
       subImg2: beachweather3,
-      desc: 'Lorem ipsum m veniam, quis nostrud exercitation ullamco laborisamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate',
+      link: 'https://daniel-aleksandrov-beachweather.netlify.app/',
       icons: [
         FaReact, SiBulma, IoLogoSass,
       ]
     },
     {
       header: 'Wildlife Conservation',
-      text: 'This project was where I wanted to make more than just a single paged project and so I used react navigation, then halfway I realized that I didnt have enough data to fetch to make a full second page and so I just made a modal explaining specific species and how they needed our help.',
+      desc: 'I wanted to learn how to fetch data and what way was better than to also emphasize the need to save wildlife. The API has since been removed and I had to add my own data unfortunately.',
       mainImage: wildlife1,
       subImg1: wildlife2,
       subImg2: wildlife3,
-      desc: 'Lorem ipsum m veniam, quis nostrud exercitation ullamco laborisamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate',
+      link: 'https://daniel-aleksandrov-wildlife-conservation.netlify.app/',
       icons: [
         FaReact, IoLogoSass, SiBulma, SiReactrouter,
       ]
     },
     {
       header: 'Meditation',
-      text: 'This project went through some of the basic html, css and javascript. Another create-react-app template. This was personally one of my most basic yet best because this was the first time I discovered on how much creativety gets poured into a good website. Before this, I was making very poorly and unexciting websites.',
+      desc: 'A website that illistrates a few great meditations to the stressed. This project was a turning point to my UX design and javascript, every project before this looked terible and had no javascript.',
       mainImage: meditation1,
       subImg1: meditation2,
       subImg2: meditation3,
-      desc: 'Lorem ipsum m veniam, quis nostrud exercitation ullamco laborisamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate',
+      link: 'https://daniel-aleksandrov-meditation.netlify.app/',
       icons: [
         FaReact, DiCss3, CgFigma, SiStyledComponents,
       ]
@@ -56,7 +56,7 @@ function Projects() {
   ]
 
   return (
-    <section id='projects' className="section">
+    <section id='projects' className="section"> 
       <div className='project-container'>
         <p data-aos="fade-up" className='top-label'>Projects</p>
 
@@ -64,7 +64,7 @@ function Projects() {
           {projData.map((item) =>
             <div>
               <ProjectCard item={item} />
-              <hr data-aos="fade-right" data-aos-once='true' className='proj-hr' />
+              <hr data-aos="fade-right" data-aos-once='true' className='proj-hr' /> 
             </div>
           )}
         </div>

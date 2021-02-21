@@ -29,15 +29,15 @@ export const ProjectCard = ({ item }) => {
   }, [isPreview]);
 
   return (
-    <div className='desktop-card' style={{ overflowY: 'hidden' }}>
+    <div className='desktop-card'>
       <ProjectImage
         hovered={hovered}
         setHovered={setHovered}
         item={item}
-      />
+      /> 
 
       <ProjectInfo
-        item={item}
+        item={item} 
         setIsPreview={setIsPreview}
       />
 

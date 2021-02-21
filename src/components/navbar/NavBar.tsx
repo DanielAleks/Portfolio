@@ -7,10 +7,10 @@ function NavBar() {
       <div className='nav-width'>
 
         <div className="navbar-start">
-          <Link className='email' to="contact" spy={true} smooth={true} offset={-100} duration={500}>
+          <a className='email' href='https://mail.google.com/mail/u/0/#search/daniel.aleksandrov73' target='_blank'>
             @daniel.
               <p className='email-colored'>aleksandrov</p>
-          </Link>
+          </a>
         </div>
 
         <div className="button-container">
