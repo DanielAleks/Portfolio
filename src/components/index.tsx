@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import About from './about/About'
 import Contact from './contact/Contact'
 import Intro from './introduction/Intro'
@@ -13,13 +13,18 @@ AOS.init({
 });
 
 function Main() {
+
+  useEffect(() => {
+    document.body.style.overflow = 'auto';
+  }, []);
+
   return (
     <div style={{ backgroundColor: '#181818' }}>
       <NavBar />
       <Intro />
       <About />
       <hr />
-      <Projects /> 
+      <Projects />
       <Contact />
     </div>
   )

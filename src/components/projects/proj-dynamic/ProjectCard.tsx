@@ -22,11 +22,17 @@ export const ProjectCard = ({ item }) => {
   const [hovered, setHovered] = useState(false)
 
   useEffect(() => {
-    isPreview ?
-      document.body.style.overflow = 'hidden'
-      :
-      document.body.style.overflow = 'unset'
+    if (isPreview) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
   }, [isPreview]);
+
+  useEffect(() => {
+    document.body.style.overflow = 'hidden';
+    return () => document.body.style.overflow = 'unset';
+  }, []);
 
   return (
     <div className='desktop-card'>
@@ -34,15 +40,16 @@ export const ProjectCard = ({ item }) => {
         hovered={hovered}
         setHovered={setHovered}
         item={item}
-      /> 
+      />
 
       <ProjectInfo
-        item={item} 
+        item={item}
         setIsPreview={setIsPreview}
       />
 
       {isPreview ?
         <Preview
+          isPreview={isPreview}
           setIsPreview={setIsPreview}
           item={item}
         />

@@ -1,19 +1,33 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import PreviewInfo from './prev-info/PreviewInfo'
 import './preview.sass'
 
-function Preview({ setIsPreview, item }) {
+function Preview({ isPreview, setIsPreview, item }) {
   const [main, setMain]: any = useState(item.mainImage)
 
-  const Me: any = () => {
-    if(main === 0) {
-      return(item.mainImage)
-    } else if(main === 1) {
-      return(item.subImg1) 
+  // useEffect(() => {
+  //   isPreview ?
+  //     document.body.style.overflow = 'unset'
+  //     :
+  //     document.body.style.overflow = 'hidden'
+  // }, [isPreview]);
+
+  useEffect(() => {
+    if (isPreview) {
+      document.body.style.overflow = 'hidden';
     } else {
-      return(item.subImg2)
+      document.body.style.overflow = 'unset';
     }
-  }
+  }, [isPreview]);
+
+  useEffect(() => {
+    document.body.style.overflow = 'auto';
+    return ()=> document.body.style.overflow = 'auto';
+ }, []);
+//   useEffect(() => {
+//     isPreview && document.body.style.overflow = 'hidden';
+//     !isPreview && document.body.style.overflow = 'unset';
+//  }, [isPreview ]);
 
   return (
     <div className='preview-container' >
@@ -25,7 +39,7 @@ function Preview({ setIsPreview, item }) {
             <img onClick={() => setMain(item.mainImage)} src={item.mainImage} />
             <img onClick={() => setMain(item.subImg1)} src={item.subImg1} />
             <img onClick={() => setMain(item.subImg2)} src={item.subImg2} />
-          </div> 
+          </div>
         </div>
 
         <PreviewInfo
