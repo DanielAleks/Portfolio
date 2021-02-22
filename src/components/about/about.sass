@@ -3,7 +3,8 @@
   flex-direction: column
   justify-content: center
   align-items: center
-  height: 70vh
+  height: 100%
+  margin-top: 10vh
 
 .about-container
   width: 40vw
@@ -27,18 +28,24 @@
 @keyframes slide-left
   0%
     opacity: 0
-    transform: translateX(100rem)
+    transform: translateX(100rem) skew(-10deg)
+  90%
+    opacity: 1
+    transform: translateX(-.3rem) skew(0deg)
   100%
     opacity: 1
-    transform: translateX(0rem)
+    transform: translateX(0rem) skew(0deg)
 
 @keyframes slide-right
   0%
     opacity: 0
-    transform: translateX(-100rem)
+    transform: translateX(-100rem) skew(40deg)
+  90%
+    opacity: 1
+    transform: translateX(.3rem) skew(0deg)
   100%
     opacity: 1
-    transform: translateX(0rem)
+    transform: translateX(0rem) skew(0deg)
 
 .icon-container
   display: flex
@@ -59,28 +66,17 @@
   margin-right: 2rem
   border-radius: 10rem
 
-@media (max-width: 1220px)
-  .about-section
-    height: 90vh
-
 @media (max-width: 1000px)
-  .about-section
-    height: 90vh
-
   .about-container
     width: 50vw
-
-@media (max-width: 700px)
-  .about-section
-    height: 110vh
+  .about-header
+    font-size: 3rem
+  .about-desc
+    font-size: 1.6rem
 
 @media (max-width: 620px)
-  .about-section
-    height: 95vh
-
   .about-container
     width: 70vw
-
   .icon-tech
     width: 70px
     height: 70px
@@ -88,20 +84,5 @@
     margin-right: 1rem
 
 @media (max-width: 500px)
-  .about-section
-    height: 120vh
-
   .about-container
     width: 70vw
-
-@media (max-height: 600px)
-  .about-section
-    height: 130vh
-
-@media (max-height: 620px) and (max-width: 1230px)
-  .about-section
-    height: 120vh
-
-@media (max-height: 620px) and (max-width: 705px)
-  .about-section
-    height: 150vh
