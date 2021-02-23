@@ -7,9 +7,9 @@ import { FaReact } from 'react-icons/fa'
 import { IoLogoSass, IoMdPhonePortrait } from 'react-icons/io'
 import { SiBulma, SiReactrouter, SiStyledComponents } from 'react-icons/si'
 import { CgFigma } from 'react-icons/cg'
-import beachweather1 from '../../assets/images/beachweather1.jpg'
-import beachweather2 from '../../assets/images/beachweather2.jpg'
-import beachweather3 from '../../assets/images/beachweather3.jpg'
+import quickweather1 from '../../assets/images/quickweather1.png'
+import quickweather2 from '../../assets/images/quickweather2.png'
+import quickweather3 from '../../assets/images/quickweather3.png'
 import wildlife1 from '../../assets/images/wildlife1.jpg'
 import wildlife2 from '../../assets/images/wildlife2.jpg'
 import wildlife3 from '../../assets/images/wildlife3.jpg'
@@ -21,19 +21,19 @@ function Projects() {
 
   const projData: any = [
     {
-      header: 'BeachWeather',
-      desc: 'Wanting to do more complex things with react, I heard a weather app was filled with javascript and so I made a simple weather app based on when the weather is warm enough for the beach.',
-      mainImage: beachweather1,
-      subImg1: beachweather2,
-      subImg2: beachweather3,
-      link: 'https://daniel-aleksandrov-beachweather.netlify.app/',
+      header: 'QuickWeather',
+      desc: 'A simple weather app that keeps information on the weather up to date. Wanting to do more complex things with react, I fetched data from an API and focused on client-side functionality.',
+      mainImage: quickweather1,
+      subImg1: quickweather2,
+      subImg2: quickweather3,
+      link: 'https://daniel-aleksandrov-quickweather.netlify.app/',
       icons: [
         FaReact, SiBulma, IoLogoSass,
       ]
     },
     {
       header: 'Wildlife Conservation',
-      desc: 'I wanted to learn how to fetch data and what way was better than to also emphasize the need to save wildlife. The API has since been removed and I had to add my own data unfortunately.',
+      desc: 'List of endangered species that need our help. I used an animal conservation API. The API has since been removed and I had to add my own data, unfortunately.',
       mainImage: wildlife1,
       subImg1: wildlife2,
       subImg2: wildlife3,
@@ -44,7 +44,7 @@ function Projects() {
     },
     {
       header: 'Meditation',
-      desc: 'A website that illistrates a few great meditations to the stressed. This project was a turning point to my UX design and javascript, every project before this looked terible and had no javascript.',
+      desc: 'Exhibits helpful meditations to the stressed. In this project, I was practicing UX design; responsiveness, simple animations with an animation library (AOS), and some react with a react carousel library.',
       mainImage: meditation1,
       subImg1: meditation2,
       subImg2: meditation3,

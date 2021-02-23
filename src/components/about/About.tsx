@@ -23,9 +23,7 @@ function About() {
       <div className='about-container'>
         <p className='about-header'>About Me</p>
         <p className='about-desc'>
-          I'm a Self-taught Front-End Developer in Spokane, Washington. After learning code from my brother, I became hooked, loving every bit of it. Up until I met javascript. I spent so much time
-          trying to understand how a simple map worked or how to simply fetch data from an API. Fortunately, I passed over the hump and became a developer with skills beyond UI/UX design. Deciding
-          not to go to college, programming has given me a second chance to make an impact on the world. Programming is my passion and a career that I couldn't be happier to pursue.
+          I am a Self-taught Front-End Developer in Spokane, Washington. After being introduced to programming by my brother, I have come to love the world of code. I began my journey with simple HTML and CSS, slowly honing in my UI/UX skill. Soon I came across javascript, wanting to give up on this ridiculous dream. I persisted, learning how to use arrays, maps, loops, and other fancy javascript. Eventually, it got easier and I began having fun again. I became a developer. Early on, I decided not to go to college. Programming has given me a second chance to make an impact on the world. Programming is my passion and a career I couldn't be happier to pursue.
         </p >
       </div>
 
