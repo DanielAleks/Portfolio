@@ -44,7 +44,7 @@ function Projects() {
     },
     {
       header: 'Meditation',
-      desc: 'Exhibits helpful meditations to the stressed. In this project, I was practicing UX design; responsiveness, simple animations with an animation library (AOS), and some react with a react carousel library.',
+      desc: 'Exhibits helpful meditations to the stressed. Primarily, focused on UX design; responsiveness, simple animations with an animation library (AOS), and a little bit of React with a React carousel library.',
       mainImage: meditation1,
       subImg1: meditation2,
       subImg2: meditation3,
