@@ -7,6 +7,7 @@ import Projects from './projects'
 import './style.sass'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import ReactGa from 'react-ga';
 
 AOS.init({
   once: true
@@ -18,13 +19,18 @@ function Main() {
     document.body.style.overflow = 'unset';
   }, []);
 
+  useEffect(() => {
+    ReactGa.initialize('G-GG6VSVR3B0')
+    ReactGa.pageview('/')
+  }, []);
+
   return (
     <div className='omni-container'>
       <NavBar />
       <Intro />
       <About />
       <hr />
-      <Projects /> 
+      <Projects />
       <Contact />
     </div>
   )
