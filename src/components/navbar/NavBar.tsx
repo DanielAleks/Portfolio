@@ -1,7 +1,18 @@
 import { Link } from "react-scroll";
 import './nav.sass'
+import ReactGA from 'react-ga'
 
 function NavBar() {
+
+const AboutMe = () => {
+  ReactGA.event({
+    category: 'User',
+    action: 'Created an Account'
+  });
+}
+  
+
+
   return (
     <nav className="navbar is-fixed-top nav-container" role="navigation" aria-label="main navigation">
       <div className='nav-width'>
@@ -14,7 +25,7 @@ function NavBar() {
         </div>
 
         <div className="button-container">
-          <Link className='button-text' to="about" spy={true} smooth={true} offset={-20} duration={500}>
+          <Link onClick={AboutMe} className='button-text' to="about" spy={true} smooth={true} offset={-20} duration={500}>
             About Me 
           </Link>
           <Link className='button-text' to="projects" spy={true} smooth={true} offset={0} duration={500}>
