@@ -20,7 +20,7 @@ function Main() {
   }, []);
 
   useEffect(() => {
-    ReactGa.initialize('2344120370')
+    ReactGa.initialize('UA-190747385-1')
     ReactGa.pageview('/')
   }, []);
 
