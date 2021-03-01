@@ -42,7 +42,7 @@ function Contact() {
               <textarea
                 data-aos="fade-up"
                 className="textarea"
-                placeholder="Leave me a message..."
+                placeholder="Leave a message..."
                 name='message'
                 value={messageInput}
                 onChange={(e) => setMessageInput(e.target.value)}>

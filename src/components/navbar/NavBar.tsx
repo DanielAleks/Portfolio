@@ -15,7 +15,7 @@ function NavBar() {
 
         <div className="button-container">
           <Link className='button-text' to="about" spy={true} smooth={true} offset={-20} duration={500}>
-            About Me
+            About Me 
           </Link>
           <Link className='button-text' to="projects" spy={true} smooth={true} offset={0} duration={500}>
             Projects
@@ -25,7 +25,7 @@ function NavBar() {
           </Link>
         </div>
       </div>
-    </nav>
+    </nav> 
   )
 }
 

@@ -15,19 +15,21 @@ AOS.init({
 function Main() {
 
   useEffect(() => {
-    document.body.style.overflow = 'auto';
+    document.body.style.overflow = 'unset';
   }, []);
 
   return (
-    <div style={{ backgroundColor: '#181818' }}>
+    <div className='omni-container'>
       <NavBar />
       <Intro />
       <About />
       <hr />
-      <Projects />
+      <Projects /> 
       <Contact />
     </div>
   )
 }
 
 export default Main
+
+
