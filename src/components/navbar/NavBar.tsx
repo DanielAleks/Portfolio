@@ -4,28 +4,26 @@ import ReactGA from 'react-ga'
 
 function NavBar() {
 
-const AboutMe = () => {
+const emailEventHandler = () => {
   ReactGA.event({
-    category: 'User',
-    action: 'Created an Account'
+    category: 'Navbar',
+    action: 'Went to Gmail link'
   });
 }
-  
-
 
   return (
     <nav className="navbar is-fixed-top nav-container" role="navigation" aria-label="main navigation">
       <div className='nav-width'>
 
         <div className="navbar-start">
-          <a className='email' href='https://mail.google.com/mail/u/0/#search/daniel.aleksandrov73' target='_blank'>
+          <a className='email' onClick={emailEventHandler} href='https://mail.google.com/mail/u/0/#search/daniel.aleksandrov73' target='_blank'>
             @daniel.
               <p className='email-colored'>aleksandrov</p>
           </a>
         </div>
 
         <div className="button-container">
-          <Link onClick={AboutMe} className='button-text' to="about" spy={true} smooth={true} offset={-20} duration={500}>
+          <Link className='button-text' to="about" spy={true} smooth={true} offset={-20} duration={500}>
             About Me 
           </Link>
           <Link className='button-text' to="projects" spy={true} smooth={true} offset={0} duration={500}>
