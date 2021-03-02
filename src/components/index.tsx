@@ -7,7 +7,7 @@ import Projects from './projects'
 import './style.sass'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import ReactGa from 'react-ga';
+import ReactGA from 'react-ga';
 
 AOS.init({
   once: true
@@ -20,8 +20,8 @@ function Main() {
   }, []);
 
   useEffect(() => {
-    ReactGa.initialize('UA-190747385-1')
-    ReactGa.pageview('/')
+    ReactGA.initialize('UA-190747385-1')
+    ReactGA.pageview('/')
   }, []);
 
   return (

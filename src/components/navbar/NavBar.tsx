@@ -5,6 +5,7 @@ import ReactGA from 'react-ga'
 function NavBar() {
 
 const AboutMe = () => {
+  ReactGA.initialize('UA-190747385-1')
   ReactGA.event({
     category: 'User',
     action: 'Created an Account'
