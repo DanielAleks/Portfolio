@@ -5,13 +5,6 @@ import './preview.sass'
 function Preview({ isPreview, setIsPreview, item }) {
   const [main, setMain]: any = useState(item.mainImage)
 
-  // useEffect(() => {
-  //   isPreview ?
-  //     document.body.style.overflow = 'unset'
-  //     :
-  //     document.body.style.overflow = 'hidden'
-  // }, [isPreview]);
-
   useEffect(() => {
     if (isPreview) {
       document.body.style.overflow = 'hidden';
@@ -24,10 +17,6 @@ function Preview({ isPreview, setIsPreview, item }) {
     document.body.style.overflow = 'auto';
     return ()=> document.body.style.overflow = 'auto';
  }, []);
-//   useEffect(() => {
-//     isPreview && document.body.style.overflow = 'hidden';
-//     !isPreview && document.body.style.overflow = 'unset';
-//  }, [isPreview ]);
 
   return (
     <div className='preview-container' >

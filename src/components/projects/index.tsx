@@ -20,7 +20,7 @@ import meditation3 from '../../assets/images/meditation3.jpg'
 function Projects() {
 
   const projData: any = [
-    { 
+    {
       header: 'QuickWeather',
       desc: 'A simple weather app that keeps information on the weather up to date. Wanting to do more complex things with react, I fetched data from an API and focused on client-side functionality.',
       mainImage: quickweather1,
@@ -29,7 +29,11 @@ function Projects() {
       link: 'https://daniel-aleksandrov-quickweather.netlify.app/',
       icons: [
         FaReact, SiBulma, IoLogoSass,
-      ]
+      ],
+      category: [
+        'QuickweatherVisit', 'QuickweatherPreview'
+      ],
+      action: 'Went to QuickWeather'
     },
     {
       header: 'Wildlife Conservation',
@@ -40,7 +44,11 @@ function Projects() {
       link: 'https://daniel-aleksandrov-wildlife-conservation.netlify.app/',
       icons: [
         FaReact, IoLogoSass, SiBulma, SiReactrouter,
-      ]
+      ],
+      category: [
+        'WildlifeVisit', 'WildlifePreview'
+      ],
+      action: 'Went to Wildlife'
     },
     {
       header: 'Meditation',
@@ -51,12 +59,16 @@ function Projects() {
       link: 'https://daniel-aleksandrov-meditation.netlify.app/',
       icons: [
         FaReact, DiCss3, CgFigma, SiStyledComponents,
-      ]
+      ],
+      category: [
+        'MeditationVisit', 'MeditationPreview'
+      ],
+      action: 'Went to Meditation'
     },
   ]
 
   return (
-    <section id='projects' className="section proj-omni-container"> 
+    <section id='projects' className="section proj-omni-container">
       <div className='project-container'>
         <p data-aos="fade-up" className='top-label'>Projects</p>
 
@@ -64,7 +76,7 @@ function Projects() {
           {projData.map((item) =>
             <div>
               <ProjectCard item={item} />
-              <hr data-aos="fade-down" className='proj-hr' /> 
+              <hr data-aos="fade-down" className='proj-hr' />
             </div>
           )}
         </div>
