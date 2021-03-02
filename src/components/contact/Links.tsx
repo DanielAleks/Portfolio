@@ -1,5 +1,5 @@
 import React from 'react'
-import { AiFillLinkedin, AiFillGithub } from 'react-icons/ai'
+import { AiFillGithub } from 'react-icons/ai'
 import { CgMail } from 'react-icons/cg'
 
 function Links() {

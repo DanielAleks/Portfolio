@@ -1,7 +1,3 @@
-import React, { useState } from 'react'
-import { IoMdPhonePortrait } from 'react-icons/io'
-import { MdDesktopWindows } from 'react-icons/md'
-import Preview from '../preview-modal/Preview'
 import './proj-info.sass'
 import ReactGA from 'react-ga'
 

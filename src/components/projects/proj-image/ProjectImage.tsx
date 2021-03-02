@@ -1,4 +1,3 @@
-import React from 'react'
 import './proj-image.sass'
 
 function ProjectImage({ item, hovered, setHovered }) {

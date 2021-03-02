@@ -1,17 +1,17 @@
 import React from 'react'
 import { TiDelete } from 'react-icons/ti'
-import { Icon } from '../../../../reusables/Icons'
-import { AiFillHtml5 } from 'react-icons/ai'
-import { FaReact } from 'react-icons/fa'
-import { IoLogoSass } from 'react-icons/io'
 import './prev-info.sass'
-import { SiRedux, SiReactrouter, SiTailwindcss, SiBulma, SiStyledComponents } from 'react-icons/si';
-import { DiCss3, DiNpm } from 'react-icons/di';
-import { CgFigma } from 'react-icons/cg';
-import { isDoStatement } from 'typescript'
-
+import ReactGA from 'react-ga'
 
 function PreviewInfo({ setIsPreview, item }) {
+
+  const onVisitHandler = () => {
+    ReactGA.event({
+      category: item.category[1],
+      action: item.action
+    });
+  }
+
   return (
     <div className='info-prev-container'>
       <div className='prev-width'>
@@ -38,7 +38,8 @@ function PreviewInfo({ setIsPreview, item }) {
           </div>
 
           <a href={item.link} target='_blank'>
-            <button data-aos="fade-left" data-aos-delay="300" className="prev-visit-button button my-gray">Visit Site</button>
+            <button onClick={onVisitHandler} className="prev-visit-button button my-gray" 
+            data-aos="fade-left" data-aos-delay="300">Visit Site</button>
           </a>
         </div>
       </div>

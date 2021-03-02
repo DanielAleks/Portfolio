@@ -1,4 +1,3 @@
-import React from 'react'
 import './intro.sass'
 
 function Intro() {
