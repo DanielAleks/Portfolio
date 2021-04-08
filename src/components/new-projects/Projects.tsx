@@ -129,11 +129,11 @@ function Projects() {
               More Details
           </button>
 
-          <div className='popup-tech'>
+          {/* <div className='popup-tech'>
             {images[accessor].icons.map((item, id) =>
               <img className={iconHandler(id)} src={item} />
             )}
-          </div>
+          </div> */}
 
           <div className='popup-info'>
             <h1>{images[accessor].title}</h1>

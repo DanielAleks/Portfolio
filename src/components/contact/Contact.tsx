@@ -3,6 +3,8 @@ import FooterDesign from './footer/FooterDesign'
 import Links from './Links'
 import emailjs from 'emailjs-com';
 import './contact.sass'
+import { AiFillGithub, AiOutlinePhone } from 'react-icons/ai'
+import { CgMail } from 'react-icons/cg'
 
 function Contact() {
   const [messageInput, setMessageInput] = useState('')
@@ -20,7 +22,15 @@ function Contact() {
 
   return (
     <div id='contact' className='ctt-container contactC'>
-      <form className="contact-form" onSubmit={sendEmail}> 
+
+      <div className="contact-information">
+        <h1>Contact Information:</h1>
+        <p><b>Phone Number</b>: (503)-997-4024</p>
+        <p><b>Email</b>: <p className='underline-me'>daniel.aleksandrov73</p></p>
+        <p>Go to my <b>Github</b></p>
+      </div>
+
+      <form className="contact-form" onSubmit={sendEmail}>
         <section className="ctt-width section">
           <p data-aos="fade-up" className='header'>Contact Me</p>
           <div className="field">
@@ -53,7 +63,7 @@ function Contact() {
             <button
               data-aos="fade-up"
               className="button is-link"
-              value='Send' onClick={() => 
+              value='Send' onClick={() =>
                 alert('Email was sent')
               }>Submit</button>
           </div>
