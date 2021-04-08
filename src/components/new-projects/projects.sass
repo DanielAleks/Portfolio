@@ -7,18 +7,59 @@
   align-items: center
   flex-wrap: wrap
   img
-    height: 40rem
+    height: 34rem
     width: 60rem
     margin: 5rem
     object-fit: cover
     border-radius: 20px
 
-.active-overlay
+.popup-container
   position: fixed
+  height: 100vh
+  bottom: 0px
+  width: 100%
+
+.active-overlay
+  position: absolute
   bottom: 0px
   height: 100vh
   width: 100%
   background: rgba(0, 0, 0, .8)
+
+.popup-tech
+  height: 20rem
+  width: 100rem
+  position: absolute
+  background: rgba(0, 61, 58, .1)
+  box-shadow: 1px 1px 10px 1px white
+  left: 20vw
+  top: 10vh
+  z-index: 1
+  img
+    height: 10rem
+    width: 15rem
+
+.popup-info
+  height: 30rem
+  width: 50rem
+  background: #003d3a
+  position: absolute
+  right: 35vw
+  bottom: 10vh
+  z-index: 1
+  display: flex
+  justify-content: center
+  flex-direction: column
+  align-items: center
+  border-radius: 10px
+  h1
+    font-size: 4rem
+    color: #e4e4e4
+    margin-bottom: 2rem
+  p
+    width: 80%
+    font-size: 1.8rem
+    color: #a7a7a7
 
 .desktop-popup-container
   position: absolute
@@ -30,7 +71,7 @@
   height: 100vh
   overflow-y: scroll
   img
-    height: 25rem
+    height: 23rem
     margin: 3rem
     border-radius: 20px
     width: 40rem
@@ -39,7 +80,7 @@
 .mobile-popup-container
   position: absolute
   left: 5rem
-  z-index: 100
+  z-index: 1
   display: flex
   flex-direction: column
   background: #003d3a
