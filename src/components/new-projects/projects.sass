@@ -1,0 +1,54 @@
+.project-container
+  width: 100%
+
+.main-images
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-wrap: wrap
+  img
+    height: 40rem
+    width: 60rem
+    margin: 5rem
+    object-fit: cover
+    border-radius: 20px
+
+.active-overlay
+  position: fixed
+  bottom: 0px
+  height: 100vh
+  width: 100%
+  background: rgba(0, 0, 0, .8)
+
+.desktop-popup-container
+  position: absolute
+  right: 5rem
+  z-index: 100
+  display: flex
+  flex-direction: column
+  background: #003d3a
+  height: 100vh
+  overflow-y: scroll
+  img
+    height: 25rem
+    margin: 3rem
+    border-radius: 20px
+    width: 40rem
+    object-fit: cover
+
+.mobile-popup-container
+  position: absolute
+  left: 5rem
+  z-index: 100
+  display: flex
+  flex-direction: column
+  background: #003d3a
+  overflow-y: scroll
+  height: 100vh
+
+  img
+    height: 45rem
+    margin: 3rem
+    border-radius: 20px
+    width: 20rem
+    object-fit: cover
