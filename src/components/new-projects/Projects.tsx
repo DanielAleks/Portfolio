@@ -88,9 +88,21 @@ function Projects() {
   const [active, setActive] = useState(false)
   const [accessor, setAccessor] = useState(0)
 
-  const mainImageHandler = (id) => {
+  const mainImageHandler = (id): any => {
     setActive(!active)
     setAccessor(id)
+  }
+
+  const iconHandler: any = (id) => {
+    if (id === 1) {
+      return (
+        'main-icon'
+      )
+    } else {
+      return (
+        'regular-icon'
+      )
+    }
   }
 
   return (
@@ -113,9 +125,13 @@ function Projects() {
             )}
           </div>
 
+          <button className='button-more-info'>
+              More Details
+          </button>
+
           <div className='popup-tech'>
-            {images[accessor].icons.map((item) =>
-              <img src={item} />
+            {images[accessor].icons.map((item, id) =>
+              <img className={iconHandler(id)} src={item} />
             )}
           </div>
 
