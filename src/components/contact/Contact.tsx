@@ -18,7 +18,6 @@ function Contact() {
       });
   }
 
-
   return (
     <div id='contact' className='ctt-container contactC'>
       <form className="contact-form" onSubmit={sendEmail}> 

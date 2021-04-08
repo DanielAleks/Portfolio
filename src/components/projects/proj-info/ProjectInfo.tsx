@@ -9,6 +9,7 @@ function ProjectInfo({ item, setIsPreview }) {
       action: item.action
     });
   }
+
   const onPreviewHandler = () => {
     ReactGA.event({
       category: item.category[1],
@@ -20,7 +21,6 @@ function ProjectInfo({ item, setIsPreview }) {
     onPreviewHandler()
     setIsPreview(true)
   }
-  
 
   return (
     <div className='card-info'>

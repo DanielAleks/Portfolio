@@ -7,7 +7,7 @@ function PreviewInfo({ setIsPreview, item }) {
 
   const onVisitHandler = () => {
     ReactGA.event({
-      category: item.category[1],
+      category: item.category[0],
       action: item.action
     });
   }
