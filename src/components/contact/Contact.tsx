@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
-import FooterDesign from './footer/FooterDesign'
 import Links from './Links'
 import emailjs from 'emailjs-com';
 import './contact.sass'
 import { AiFillGithub, AiOutlinePhone } from 'react-icons/ai'
 import { CgMail } from 'react-icons/cg'
+import ContactCards from './contact-cards/ContactCards';
 
 function Contact() {
   const [messageInput, setMessageInput] = useState('')
@@ -23,12 +23,7 @@ function Contact() {
   return (
     <div id='contact' className='ctt-container contactC'>
 
-      <div className="contact-information">
-        <h1>Contact Information:</h1>
-        <p><b>Phone Number</b>: (503)-997-4024</p>
-        <p><b>Email</b>: <p className='underline-me'>daniel.aleksandrov73</p></p>
-        <p>Go to my <b>Github</b></p>
-      </div>
+      <ContactCards />
 
       <form className="contact-form" onSubmit={sendEmail}>
         <section className="ctt-width section">
@@ -72,8 +67,6 @@ function Contact() {
 
         </section>
       </form>
-
-      <FooterDesign />
     </div>
   )
 }
