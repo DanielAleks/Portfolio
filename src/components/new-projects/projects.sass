@@ -1,6 +1,16 @@
 .project-container
   width: 100%
 
+.project-city-bg
+  position: absolute
+  z-index: -1
+  filter: opacity(.2) saturate(0) brightness(.6) contrast(1)   
+  height: 100%
+  width: 100%
+  background: url('../../assets/images/portfolio/city.jpeg')
+  background-repeat: no-repeat
+  background-size: cover
+
 .main-images
   display: flex
   justify-content: center
@@ -82,7 +92,7 @@
     margin: 3rem
     border-radius: 20px
     width: 40rem
-    object-fit: cover 
+    object-fit: cover
 
 .button-more-info
   position: absolute
@@ -94,7 +104,7 @@
   font-weight: 500
   color: #e4e4e4
   background: #003d3a
-  box-shadow: inset 0 -7px 9px -4px rgba(0,0,0,0.4);
+  box-shadow: inset 0 -7px 9px -4px rgba(0,0,0,0.4)
   right: 46rem
   transform: rotate(-90deg)
 

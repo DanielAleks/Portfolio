@@ -107,6 +107,7 @@ function Projects() {
 
   return (
     <div className="project-container">
+      <div className='project-city-bg' />
       <div className='main-images'>
         {images.map((item, id) =>
           <img onClick={() => mainImageHandler(id)} src={item.main} />
@@ -126,7 +127,7 @@ function Projects() {
           </div>
 
           <button className='button-more-info'>
-              More Details
+            More Details
           </button>
 
           {/* <div className='popup-tech'>
