@@ -1,32 +1,41 @@
 import React from 'react'
 import './technologies.sass'
-import { AiFillHtml5, AiFillGithub } from 'react-icons/ai';
-import { DiCss3, DiNpm, DiVim } from 'react-icons/di';
-import { IoLogoSass } from 'react-icons/io';
-import { SiRedux, SiReactrouter, SiTailwindcss, SiBulma, SiStyledComponents, SiTypescript } from 'react-icons/si';
-import { FaReact, FaYarn } from 'react-icons/fa';
-import { SiExpo, SiJavascript } from 'react-icons/si';
-import { CgFigma } from 'react-icons/cg';
-import { Icon, IconT } from '../../reusables/Icons';
+import ReactLogo from '../../assets/images/icons/react-Logo.png'
+import AngularLogo from '../../assets/images/icons/angular.png'
+import VueLogo from '../../assets/images/icons/vue.png'
+import Bulma from '../../assets/images/icons/bulma-logo.png'
+import Css from '../../assets/images/icons/css.png'
+import Expo from '../../assets/images/icons/expoLogo.png'
+import Figma from '../../assets/images/icons/Figma.png'
+import GA from '../../assets/images/icons/gaLogo.png'
+import Github from '../../assets/images/icons/github.png'
+import Html from '../../assets/images/icons/html.png'
+import Js from '../../assets/images/icons/javascript.png'
+import Netlify from '../../assets/images/icons/netlify.png'
+import Npm from '../../assets/images/icons/npm.png'
+import Paper from '../../assets/images/icons/paper.png'
+import Spring from '../../assets/images/icons/react-spring.png'
+import Redux from '../../assets/images/icons/redux.png'
+import Sass from '../../assets/images/icons/sassLogo.png'
+import StyledC from '../../assets/images/icons/styled-Components.png'
+import Tailwind from '../../assets/images/icons/tailwind.png'
+import TS from '../../assets/images/icons/typescript.png'
+import Yarn from '../../assets/images/icons/yarn-logo.png'
 
 function Technologies() {
 
   const iconData = [
-    AiFillHtml5, DiCss3, SiJavascript, FaReact, SiTypescript, SiRedux,
-    SiReactrouter, IoLogoSass, SiBulma, SiTailwindcss,
-    SiStyledComponents, SiExpo, DiNpm, FaYarn, AiFillGithub, DiVim, CgFigma
+    ReactLogo, AngularLogo, VueLogo, Github, TS, Redux, Sass, Figma, Bulma, Yarn,
+    Paper, GA, Expo, Spring, Css, Html, Js, Netlify, Npm, StyledC, Tailwind
   ]
 
   return (
     <div className='tech-container'>
-      {iconData.map((Item, id) =>
-        <div data-aos="zoom-in"
-          data-aos-delay={id * 50}
-          className='icon-tech'>
-          <Item size={30} color='#383838' />
+      {iconData.map((item) =>
+        <div>
+          <img src={item} />
         </div>
       )}
-      <h1>hielo</h1>
     </div>
   )
 }
