@@ -14,10 +14,10 @@ function InfoModals({ accessor, images }) {
         Chance
           </button>
 
-      <a href="google.com">
+      <a href={images[accessor].website} target='_blank'>
         <button className='button-visit-site'>Visit Site</button>
       </a>
-      <a href="facebook.com">
+      <a href={images[accessor].repo} target='_blank'>
         <button className='button-view-repo'>View Repo</button>
       </a>
 

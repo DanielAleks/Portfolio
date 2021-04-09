@@ -46,7 +46,6 @@ import StyledC from '../../assets/images/icons/styled-Components.png'
 import Css from '../../assets/images/icons/css.png'
 import Spring from '../../assets/images/icons/react-spring.png'
 
-
 import './projects.sass'
 import Modals from './modals/Modals'
 
@@ -57,7 +56,9 @@ const images: any = [
     mobile: [JapanM, CaliM, AfghanistanM],
     title: 'QuickWeather',
     desc: 'A simple weather app that keeps information on the weather up to date. Wanting to do more complex things with react, I fetched data from an API and focused on client-side functionality.',
-    icons: [Sass, ReactLogo, Figma]
+    icons: [Sass, ReactLogo, Figma],
+    website: 'https://daniel-aleksandrov-quickweather.netlify.app/',
+    repo: 'https://github.com/DanielAleks/weather-app'
   },
   {
     main: WLHomeD,
@@ -65,7 +66,9 @@ const images: any = [
     mobile: [WLHomeM, WLHomeBottomM, WLArticlesM, WLGalleryM],
     title: 'Wildlife Conservation',
     desc: 'List of endangered species that need our help. I used an animal conservation API. The API has since been removed and I had to add my own data, unfortunately.',
-    icons: [Sass, ReactLogo, Figma, Spring]
+    icons: [Sass, ReactLogo, Figma, Spring],
+    website: 'https://daniel-aleksandrov-savewildlife.netlify.app/',
+    repo: 'https://github.com/DanielAleks/save-wildlife'
   },
   {
     main: BBHomeD,
@@ -73,7 +76,9 @@ const images: any = [
     mobile: [BBHomeM, BBRecipesM, BBFreezingM, BBBenefitsM, BBRecipesModalM],
     title: 'Blueberry Tribute',
     desc: 'A tribute to the most glorious and yummiest fruit out there! Displays a few recipes made with blueberries, instructions on how to freeze blueberries properly, and the health benefits of them.',
-    icons: [Sass, VueLogo, Figma]
+    icons: [Sass, VueLogo, Figma],
+    website: 'https://daniel-aleksandrov-blueberrytribute.netlify.app/',
+    repo: 'https://github.com/DanielAleks/Blueberry-Tribute'
   },
   {
     main: Meditation1D,
@@ -81,7 +86,9 @@ const images: any = [
     mobile: [Meditation1M, Meditation2M, Meditation3M],
     title: 'Meditation',
     desc: 'Exhibits helpful meditations to the stressed. Primarily focused on UX design; responsiveness, simple animations with an animation library (AOS), and a little bit of React with a React carousel library.',
-    icons: [Css, ReactLogo, Figma, StyledC]
+    icons: [Css, ReactLogo, Figma, StyledC],
+    website: 'https://daniel-aleksandrov-meditation.netlify.app/',
+    repo: 'https://github.com/DanielAleks/metta',
   },
 ]
 
@@ -96,7 +103,7 @@ function Projects() {
 
   return (
     <div className="project-container">
-      <div className='project-city-bg' /> 
+      <div className='project-city-bg' />
       <div className='main-images'>
         {images.map((item, id) =>
           <img onClick={() => mainImageHandler(id)} src={item.main} />
