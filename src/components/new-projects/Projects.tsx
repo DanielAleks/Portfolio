@@ -48,6 +48,7 @@ import Spring from '../../assets/images/icons/react-spring.png'
 
 
 import './projects.sass'
+import Modals from './modals/Modals'
 
 const images: any = [
   {
@@ -93,21 +94,9 @@ function Projects() {
     setAccessor(id)
   }
 
-  const iconHandler: any = (id) => {
-    if (id === 1) {
-      return (
-        'main-icon'
-      )
-    } else {
-      return (
-        'regular-icon'
-      )
-    }
-  }
-
   return (
     <div className="project-container">
-      <div className='project-city-bg' />
+      <div className='project-city-bg' /> 
       <div className='main-images'>
         {images.map((item, id) =>
           <img onClick={() => mainImageHandler(id)} src={item.main} />
@@ -115,38 +104,9 @@ function Projects() {
       </div>
 
       {active &&
-        <div className='popup-container'>
-          <div className='active-overlay'
-            onClick={() => setActive(false)}
-          />
-
-          <div className='desktop-popup-container'>
-            {images[accessor].desktop.map((item) =>
-              <img src={item} />
-            )}
-          </div>
-
-          <button className='button-more-info'>
-            More Details
-          </button>
-
-          {/* <div className='popup-tech'>
-            {images[accessor].icons.map((item, id) =>
-              <img className={iconHandler(id)} src={item} />
-            )}
-          </div> */}
-
-          <div className='popup-info'>
-            <h1>{images[accessor].title}</h1>
-            <p>{images[accessor].desc}</p>
-          </div>
-
-          <div className='mobile-popup-container'>
-            {images[accessor].mobile.map((item) =>
-              <img src={item} />
-            )}
-          </div>
-        </div>
+        <Modals
+          accessor={accessor} images={images} setActive={setActive}
+        />
       }
     </div>
   )

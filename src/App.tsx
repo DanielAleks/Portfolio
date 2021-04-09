@@ -12,35 +12,25 @@ import Technologies from './components/technologies/Technologies';
 import Projects from './components/new-projects/Projects';
 import About from './components/about/About';
 import Contact from './components/contact/Contact';
+import './navbar.sass'
+import Home from './components/home/Home';
 
 
 function App() {
   return (
     <Router>
-      <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-            <li>
-              <Link to="/projects">Projects</Link>
-            </li>
-            <li>
-              <Link to="/tech">Technologies</Link>
-            </li>
-            <li>
-              <Link to="/contact">Contact</Link>
-            </li>
-          </ul>
+      <div >
+        <nav className='nav-container'>
+          <Link className='nav-item' to="/">Home</Link>
+          <Link className='nav-item' to="/about">About</Link>
+          <Link className='nav-item' to="/projects">Projects</Link>
+          <Link className='nav-item' to="/tech">Technologies</Link>
+          <Link className='nav-item' to="/contact">Contact</Link>
         </nav>
 
         <Switch>
           <Route exact path="/">
-            <Main />
+            <Home />
           </Route>
           <Route path="/projects">
             <Projects />

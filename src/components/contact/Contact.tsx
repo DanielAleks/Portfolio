@@ -25,6 +25,8 @@ function Contact() {
 
       <ContactCards />
 
+      <p className='OR'>OR</p>
+
       <form className="contact-form" onSubmit={sendEmail}>
         <section className="ctt-width section">
           <p data-aos="fade-up" className='header'>Contact Me</p>

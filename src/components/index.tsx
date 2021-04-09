@@ -21,7 +21,7 @@ function Main() {
 
   return (
     <div className='omni-container'> 
-      <p>hi</p>
+    
     </div>
   )
 }
