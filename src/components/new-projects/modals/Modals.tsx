@@ -1,11 +1,7 @@
-import React, { useState } from 'react'
+import InfoModals from './info-modals/InfoModals'
 import './modals.sass'
 
 function Modals({ accessor, images, setActive }) {
-
-  const [tech, setTech] = useState(false)
-  const [details, setDetails] = useState(false)
-
   return (
     <div className='popup-container'>
       <div className='active-overlay'
@@ -18,28 +14,7 @@ function Modals({ accessor, images, setActive }) {
         )}
       </div>
 
-      <button onClick={() => setDetails(!details)} className='button-more-info'>
-        Community Chest
-          </button>
-      <button onClick={() => setTech(!tech)} className='button-view-tech'>
-        Chance
-          </button>
-
-      {tech &&
-        <div className='popup-tech'>
-          <p>Technologies</p>
-          {images[accessor].icons.map((item, id) =>
-            <img className="tech-icons1" src={item} />
-          )}
-        </div>
-      }
-
-      {details &&
-        <div className='popup-info'>
-          <h1>{images[accessor].title}</h1>
-          <p>{images[accessor].desc}</p>
-        </div>
-      }
+      <InfoModals accessor={accessor} images={images} />
 
       <div className='mobile-popup-container'>
         {images[accessor].mobile.map((item) =>
