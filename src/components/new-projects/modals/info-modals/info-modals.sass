@@ -1,4 +1,4 @@
-.button-view-tech, .button-more-info,.button-view-repo, .button-visit-site
+.button-view-tech, .button-more-info,.button-view-repo, .button-visit-site, .activate-90
   position: absolute
   border: none
   font-size: 2rem
@@ -10,18 +10,82 @@
   box-shadow: inset 0 -7px 9px -4px rgba(0,0,0,0.4)
   border-top-right-radius: 5px
   border-top-left-radius: 5px
+  cursor: pointer
 
 .button-visit-site, .button-more-info
   transform: rotate(-90deg)
   right: 46rem
 
-.button-more-info
+.button-more-info, .activate-90
   bottom: 15rem
+  height: 7rem
+
+.activate-90
+  // animation: eat-ice 1s
+
+@keyframes eat-ice
+  0%
+    transform: translateX(-2rem)
+  100%
+    transform: translateX(-50rem)
+//***********************************
+
+.ativate-blue
+  animation: eat-ice 1s forwards
+
+.details-popup-container, .ativate-blue
+  height: 30rem
+  width: 57rem
+  position: absolute
+  bottom: 10rem
+  right: -2.5rem
+  display: flex
+  align-items: flex-end
+
+.popup-info
+  height: 100%
+  width: 50rem
+  background: #003d3a
+  z-index: 1
+  display: flex
+  justify-content: center
+  flex-direction: column
+  align-items: center
+  border-radius: 10px
+  border-bottom-left-radius: 0px
+  animation: slide-left-popup 2s forwards
+  opacity: 0
+  h1
+    font-size: 4rem
+    color: #e4e4e4
+    margin-bottom: 2rem
+  p
+    width: 80%
+    font-size: 1.8rem
+    color: #a7a7a7
+
+.fornowButton
+  border: none
+  font-size: 2rem
+  width: 7rem
+  height: 20rem
+  font-weight: 500
+  color: #e4e4e4
+  background: #003d3a
+  box-shadow: inset -7px 0px 9px -4px rgba(0,0,0,0.4)
+  border-bottom-left-radius: 5px
+  border-top-left-radius: 5px
+  cursor: pointer
+  margin: 0px
+  padding: 0px
+  p
+    transform: rotate(-90deg)
+
+//????????????????????????????????
 .button-visit-site
   bottom: 33rem
   right: 51rem
   width: 10rem
-
 
 .button-view-tech, .button-view-repo
   transform: rotate(90deg)
@@ -43,27 +107,13 @@
   margin-right: 5px
   margin-bottom: 2rem
 
-.popup-info
-  height: 30rem
-  width: 50rem
-  background: #003d3a
-  position: absolute
-  right: 35vw
-  bottom: 10vh
-  z-index: 1
-  display: flex
-  justify-content: center
-  flex-direction: column
-  align-items: center
-  border-radius: 10px
-  h1
-    font-size: 4rem
-    color: #e4e4e4
-    margin-bottom: 2rem
-  p
-    width: 80%
-    font-size: 1.8rem
-    color: #a7a7a7
+@keyframes slide-left-popup
+  0%
+    opacity: 0
+    transform: translateX(70rem)
+  100%
+    opacity: 1
+    transform: translateX(0rem)
 
 .popup-tech
   background: #003d3a

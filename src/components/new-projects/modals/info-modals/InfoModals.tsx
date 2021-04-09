@@ -7,9 +7,29 @@ function InfoModals({ accessor, images }) {
 
   return (
     <>
-      <button onClick={() => setDetails(!details)} className='button-more-info'>
-        Community Chest
-          </button>
+      <div className={ details ? 'ativate-blue':'details-popup-container' }>
+        <button onClick={() => setDetails(!details)} className='fornowButton'>
+          <p>Community Chest</p>
+        </button>
+        <div className='popup-info'>
+          <h1>{images[accessor].title}</h1>
+          <p>{images[accessor].desc}</p>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       <button onClick={() => setTech(!tech)} className='button-view-tech'>
         Chance
           </button>
@@ -30,12 +50,7 @@ function InfoModals({ accessor, images }) {
         </div>
       }
 
-      {details &&
-        <div className='popup-info'>
-          <h1>{images[accessor].title}</h1>
-          <p>{images[accessor].desc}</p>
-        </div>
-      }
+
     </>
   )
 }
