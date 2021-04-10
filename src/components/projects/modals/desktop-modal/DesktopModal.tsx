@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import './desktop-modal.sass'
 import Jail from '../../../../assets/images/portfolio/jailclear.png'
 import Chest from '../../../../assets/images/portfolio/chest.png'
+import Parking from '../../../../assets/images/portfolio/freeParkingClear.png'
 
 function DesktopPopup({ accessor, images }) {
   const [details, setDetails] = useState(true)
@@ -16,6 +17,7 @@ function DesktopPopup({ accessor, images }) {
 
       <a href={images[accessor].website} target='_blank'>
         <button className='b-visit-site'>
+          <img src={Parking} />
           <p>Visit Site</p>
         </button>
       </a>

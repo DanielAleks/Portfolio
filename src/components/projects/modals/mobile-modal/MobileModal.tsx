@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import './mobile-modal.sass'
 import Chance from '../../../../assets/images/portfolio/chanceclear.png'
-import Spaces from '../../../../assets/images/portfolio/spaces3clear.png'
+import Spaces from '../../../../assets/images/portfolio/spaces3ClearResized.png'
+import PassGo from '../../../../assets/images/portfolio/passGoClear.png'
 
 function MobilePopup({ accessor, images }) {
   const [tech, setTech] = useState(false)
@@ -15,6 +16,7 @@ function MobilePopup({ accessor, images }) {
       </div>
       <a href={images[accessor].repo} target='_blank'>
         <button className='b-view-repo'>
+          <img src={PassGo} />
           <p>View Repo</p>
         </button>
       </a>
