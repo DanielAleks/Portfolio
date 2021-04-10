@@ -45,6 +45,7 @@
       color: white
       font-size: 2rem
       width: 60rem
+
   @media (max-width: 1550px)
     div
       h1
@@ -125,15 +126,79 @@
     width: 40rem
 @media (max-width: 500px)
   .red-dice-bg
-    background: url('../../assets/images/portfolio/red-dice-flipped.png')
-    background-repeat: no-repeat
-    background-size: contain
-    bottom: 15rem
+    bottom: 10%
     height: 40rem
-    width: 30rem
+    width: 40rem
   .home-green-container
     div
       h1
         font-size: 3.5rem
       p
         width: 40rem
+
+@media (max-height: 750px)
+  .red-dice-bg
+    left: 3%
+    bottom: 5%
+    position: absolute
+    margin: 0px
+    padding: 0px
+    display: flex
+    align-self: center
+    justify-self: center
+    height: 50rem
+    width: 60rem
+
+@media (max-height: 550px)
+  .home-green-container
+    div
+      margin-top: 10rem
+
+@media (max-width: 1550px) and (max-height: 750px)
+  .red-dice-bg
+    left: 10%
+    display: flex
+    align-self: center
+    justify-self: center
+    margin: 0px
+    bottom: auto
+
+@media (max-width: 1300px) and (max-height: 750px)
+  .home-green-container
+    width: 45%
+    div
+      margin-left: -5rem
+  .red-dice-bg
+    display: flex
+    align-self: center
+    justify-self: center
+    position: relative
+    bottom: auto
+    left: 5%
+
+@media (max-width: 1050px) and (max-height: 750px)
+  .home-green-container
+    width: 70%
+
+
+@media (max-width: 900px) and (max-height: 750px)
+  .home-green-container
+    width: 100%
+  .red-dice-bg
+    display: flex
+    align-self: center
+    justify-self: center
+    position: relative
+    bottom: auto
+    left: auto
+    height: 40rem
+    bottom: -5rem
+    width: 45rem
+
+@media (max-width: 500px) and (max-height: 750px)
+  .home-green-container
+    height: 30rem
+  .red-dice-bg
+    bottom: 5%
+    height: 40rem
+    width: 40rem
