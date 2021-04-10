@@ -1,0 +1,112 @@
+.mobile-outer-popup-container
+  position: absolute
+  left: 0rem
+
+.mobile-popup-container
+  position: absolute
+  display: flex
+  flex-direction: column
+  background: #003d3a
+  height: 100vh
+  z-index: 100
+  box-shadow: 4px 0px 9px -4px rgba(0,0,0,0.4)
+  img
+    height: 45rem
+    margin: 3rem
+    border-radius: 20px
+    width: 20rem
+    object-fit: cover
+
+@keyframes slide-right-tech
+  0%
+    transform: translateX(0rem)
+  100%
+    transform: translateX(29rem)
+
+@keyframes slide-left-tech
+  0%
+    transform: translateX(29rem)
+  100%
+    transform: translateX(0rem)
+
+.view-tech-container, .tech-show, .tech-hide
+  position: relative
+  width: 40rem
+  height: 15rem
+  right: 4rem
+  z-index: 0
+  top: 20rem
+  display: flex
+  align-items: flex-start
+.tech-show
+  animation: slide-right-tech 1s forwards
+.tech-hide
+  animation: slide-left-tech 1s
+
+.popup-tech
+  background: #003d3a
+  height: 15rem
+  width: 30rem
+  border-radius: 10px
+  display: flex
+  justify-content: center
+  flex-direction: row
+  align-items: flex-end
+  z-index: 1
+  box-shadow: 1px 2px 5px 0px rgba(0,0,0,0.4)
+  p
+    font-size: 3rem
+    color: #d1d1d1
+    position: absolute
+    top: 1rem
+.tech-icons
+  height: 5rem
+  width: 5rem
+  object-fit: contain
+  margin-left: 5px
+  margin-right: 5px
+  margin-bottom: 2rem
+
+.b-view-tech
+  box-shadow: 2px 8px 5px 0px rgba(0,0,0,0.4), inset 7px 0px 9px -4px rgba(0,0,0,0.4)
+  border: none
+  font-size: 2rem
+  width: 7rem
+  margin-top: 2rem
+  height: 10rem
+  border-top-right-radius: 5px
+  border-bottom-right-radius: 5px
+  background: #003d3a
+  color: white
+  cursor: pointer
+  display: flex
+  align-items: center
+  p
+    transform: rotate(90deg)
+
+.b-view-repo
+  box-shadow: 2px 8px 5px 0px rgba(0,0,0,0.4), inset 7px 0px 9px -4px rgba(0,0,0,0.4)
+  border: none
+  font-size: 2rem
+  width: 7rem
+  height: 13rem
+  position: absolute
+  right: 46rem
+  left: 26rem
+  top: 33rem
+  left: 26rem
+  bottom: 35rem
+  z-index: 1
+  font-weight: 500
+  color: #e4e4e4
+  background: #003d3a
+  cursor: pointer
+  border-bottom-right-radius: 5px
+  border-top-right-radius: 5px
+  display: flex
+  align-items: center
+  justify-content: center
+  p
+    position: absolute
+    transform: rotate(90deg)
+    width: 10rem

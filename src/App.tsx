@@ -9,7 +9,7 @@ import {
   Link
 } from "react-router-dom";
 import Technologies from './components/technologies/Technologies';
-import Projects from './components/new-projects/Projects';
+import Projects from './components/projects/Projects';
 import About from './components/about/About';
 import Contact from './components/contact/Contact';
 import './navbar.sass'

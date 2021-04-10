@@ -112,7 +112,9 @@ function Projects() {
 
       {active &&
         <Modals
-          accessor={accessor} images={images} setActive={setActive}
+          accessor={accessor}
+          images={images}
+          setActive={setActive}
         />
       }
     </div>

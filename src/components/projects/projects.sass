@@ -1,32 +1,24 @@
-.proj-omni-container
-  max-width: 100vw
-
 .project-container
+  width: 100%
+
+.project-city-bg
+  position: absolute
+  z-index: -1
+  filter: opacity(.2) saturate(0) brightness(.6) contrast(1)
+  height: 100%
+  width: 100%
+  background: url('../../assets/images/portfolio/city.jpeg')
+  background-repeat: no-repeat
+  background-size: cover
+
+.main-images
   display: flex
-  flex-direction: column
+  justify-content: center
   align-items: center
-
-.proj-cards-container
-  display: flex
-  flex-direction: column
-
-.top-label
-  text-align: center
-  padding-top: 10vh
-  padding-bottom: 10vh
-  font-size: 30px
-  font-family: Barlow-Bold
-  font-weight: bold
-  color: #646464
-
-.proj-hr
-  align-self: center
-  margin-top: 15rem
-  margin-bottom: 15rem
-  width: 94%
-  border: 1px solid #383838
-
-@media (max-width: 1000px)
-  .proj-hr
-    margin-top: 10rem
-    margin-bottom: 10rem
+  flex-wrap: wrap
+  img
+    height: 34rem
+    width: 60rem
+    margin: 5rem
+    object-fit: cover
+    border-radius: 20px
