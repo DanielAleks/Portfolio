@@ -12,6 +12,12 @@
   background: url('../../assets/images/portfolio/red-dice-cropped.png')
   background-repeat: no-repeat
   background-size: contain
+  @media (max-width: 1650px)
+    width: 60rem
+  @media (max-width: 1550px)
+    background: url('../../assets/images/portfolio/red-dice-flipped.png')
+    background-repeat: no-repeat
+    background-size: contain
 
 .triangle-green-container
   width: 0
@@ -29,47 +35,38 @@
   justify-content: center
   flex-direction: column
   align-items: flex-start
-  h1
+  div
     margin-top: 30rem
-    font-family: Rowdies
-    color: white
-    font-size: 6rem
-  p
-    color: white
-    font-size: 2rem
-    width: 60rem
-
-@media (max-width: 1650px)
-  .red-dice-bg
-    width: 60rem
-
-@media (max-width: 1550px)
-  .home-green-container
     h1
-      font-size: 4rem
+      font-family: Rowdies
+      color: white
+      font-size: 6rem
     p
+      color: white
       font-size: 2rem
-      width: 40rem
-      margin-top: 2rem
-
-  .red-dice-bg
-    background: url('../../assets/images/portfolio/red-dice-flipped.png')
-    background-repeat: no-repeat
-    background-size: contain
-
-@media (max-width: 1300px)
-  .home-green-container
+      width: 60rem
+  @media (max-width: 1550px)
+    div
+      h1
+        font-size: 4rem
+      p
+        font-size: 2rem
+        width: 40rem
+        margin-top: 2rem
+  @media (max-width: 1300px)
     width: 70%
-@media (max-width: 1200px)
-  .home-green-container
-    h1
-      font-size: 3rem
-    p
-      font-size: 1.8rem
-      width: 35rem
-@media (max-width: 1200px)
-  .home-green-container
+    div
+      h1
+        font-size: 3rem
+      p
+        font-size: 1.8rem
+        width: 35rem
+  @media (max-width: 1200px)
     width: 90%
+  @media (max-width: 1000px)
+    div
+      margin-left: -5rem
+
 @media (max-width: 900px)
   .home-container
     flex-direction: column-reverse
@@ -83,29 +80,60 @@
     box-shadow: 1px 2px 3px rgba(0, 0, 0, .4)
     margin-top: 8rem
     padding-bottom: 20%
+    position: relative
+    div
+      position: absolute
+      bottom: 5rem
+      margin: 0px
+      h1
+        font-size: 5rem
+      p
+        width: 50rem
   .red-dice-bg
-    left: 20vw
     height: 35rem
     width: 55rem
     background: url('../../assets/images/portfolio/red-dice-cropped.png')
     background-repeat: no-repeat
     background-size: contain
     position: absolute
-    bottom: 10rem
+    left: auto
+    bottom: 20rem
+    right: auto
+    display: flex
+    align-self: center
+    justify-self: flex-end
     padding: 0px
     margin: 0px
-    z-index: 1000
+    margin-bottom: -10rem
   .triangle-green-container
     display: none
+
 @media (max-width: 700px)
   .red-dice-bg
     height: 30rem
     width: 50rem
+  .home-green-container
+    div
+      h1
+        font-size: 4rem
+      p
+        width: 40rem
+
+@media (max-width: 600px)
+  .red-dice-bg
+    height: 30rem
+    width: 40rem
 @media (max-width: 500px)
   .red-dice-bg
     background: url('../../assets/images/portfolio/red-dice-flipped.png')
     background-repeat: no-repeat
     background-size: contain
-    bottom: 5rem
+    bottom: 15rem
     height: 40rem
     width: 30rem
+  .home-green-container
+    div
+      h1
+        font-size: 3.5rem
+      p
+        width: 40rem
