@@ -35,7 +35,7 @@ function Technologies() {
   ]
 
   return (
-    <div className='tech-container'>
+    <div className='tech-container'> 
       <div className="left-money-bg" />
       <div className='green-tech-container' />
 

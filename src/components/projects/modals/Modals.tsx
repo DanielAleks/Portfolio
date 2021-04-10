@@ -16,7 +16,7 @@ function Modals({ accessor, images, setActive }) {
       <DesktopPopup 
         images={images}
         accessor={accessor}
-      />
+      /> 
     </div >
   )
 }

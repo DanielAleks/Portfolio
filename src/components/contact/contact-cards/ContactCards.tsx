@@ -14,7 +14,7 @@ function ContactCards() {
       </div>
       <div className="contact-information">
         <img className='pass-go-bg' src={PassGo} />
-        <p>Email:</p>
+        <p>Gmail:</p>
         <p>daniel.aleksandrov73</p>
       </div>
       <div className="contact-information">
