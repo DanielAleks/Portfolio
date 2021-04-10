@@ -1,6 +1,5 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
-import Main from './components';
 import './components/style.sass'
 import {
   BrowserRouter as Router,
@@ -12,21 +11,46 @@ import Technologies from './components/technologies/Technologies';
 import Projects from './components/projects/Projects';
 import About from './components/about/About';
 import Contact from './components/contact/Contact';
-import './navbar.sass'
 import Home from './components/home/Home';
+import Navbar from './components/navbar/Navbar';
 
+function useWindowSize() {
+  const [windowSize, setWindowSize] = useState({
+    width: undefined,
+    height: undefined,
+  });
+
+  useEffect(() => {
+    function handleResize() {
+      setWindowSize({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+    }
+    window.addEventListener("resize", handleResize);
+    handleResize();
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  return windowSize;
+}
 
 function App() {
+  const size = useWindowSize()
+  const [isNav, setIsNav] = useState(false)
+
+  useEffect(() => {
+    size.width <= 900 ? setIsNav(false) : setIsNav(true)
+  }, [size])
+
   return (
     <Router>
-      <div >
-        <nav className='nav-container'>
-          <Link className='nav-item' to="/">Home</Link>
-          <Link className='nav-item' to="/about">About</Link>
-          <Link className='nav-item' to="/projects">Projects</Link>
-          <Link className='nav-item' to="/tech">Technologies</Link>
-          <Link className='nav-item' to="/contact">Contact</Link>
-        </nav>
+      <div>
+
+        <Navbar
+          setIsNav={setIsNav}
+          isNav={isNav} size={size}
+        />
 
         <Switch>
           <Route exact path="/">

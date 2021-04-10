@@ -7,6 +7,7 @@ function About() {
  
   return (
     <section id='about' className="about-section">
+      <div className="about-bg" />
       <div className='about-container'>  
         <p className='about-header'>About Me</p>
         <p className='about-desc'>
@@ -16,6 +17,6 @@ function About() {
       </div> 
     </section>
   )
-}
+} 
 
 export default About
