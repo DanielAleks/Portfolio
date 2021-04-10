@@ -59,6 +59,15 @@
     color: #d1d1d1
     position: absolute
     top: 1rem
+.tech-bg
+  position: absolute
+  height: 100%
+  width: 100%
+  object-fit: cover
+  z-index: -1
+  opacity: .3
+  filter: saturate(0)
+
 .tech-icons
   height: 5rem
   width: 5rem
@@ -81,6 +90,16 @@
   cursor: pointer
   display: flex
   align-items: center
+  z-index: 1
+  position: relative
+  img
+    position: absolute
+    object-fit: contain
+    height: 100%
+    width: 100%
+    z-index: 0
+    opacity: .3
+    // filter: saturate(0)
   p
     transform: rotate(90deg)
 

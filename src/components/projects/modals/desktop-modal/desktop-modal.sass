@@ -34,6 +34,7 @@
   right: -4rem
   display: flex
   align-items: flex-end
+  overflow: hidden
 .details-show
   animation: slide-left-details 1s forwards
 .details-hide
@@ -52,6 +53,12 @@
   border-top-right-radius: 0px
   border-bottom-right-radius: 0px
   box-shadow: 2px 3px 5px 0px rgba(0,0,0,0.4)
+  img
+    position: absolute
+    object-fit: cover
+    z-index: -1
+    opacity: .1
+    filter: saturate(0)
   h1
     font-size: 4rem
     color: #e4e4e4
@@ -78,6 +85,11 @@
   align-items: center
   justify-content: center
   margin-bottom: 1rem
+  img
+    object-fit: cover
+    opacity: .3
+    height: 100%
+    width: 100%
   p
     transform: rotate(-90deg)
     position: absolute
