@@ -36,19 +36,19 @@ function Technologies() {
 
   return (
     <div className='tech-container'> 
-      <div className="left-money-bg" />
+      <div className="money-bg" />
       <div className='green-tech-container' />
 
-      <p className="technology-text-header">Technologies</p>
+      <p className="tech-header">Technologies</p>
       <div className='inner-green-container'>
 
         {iconData.map((item, id) =>
           <div
             onMouseEnter={() => setIsDisplay(id)}
             onMouseLeave={() => setIsDisplay(21)}
-            className='icon-container1'>
+            className='icon-container'>
             {isDisplay === id && <p className='popup-icon-name'>{nameData[id]}</p>}
-            <img className="icon-image1" src={item} />
+            <img className="icon-image" src={item} />
           </div>
         )}
       </div>
