@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import Jail from '../../../../assets/images/portfolio/jailclear.png'
-import Chest from '../../../../assets/images/portfolio/chest.png'
+import Jail from '../../../../../assets/images/portfolio/jailclear.png'
+import Chest from '../../../../../assets/images/portfolio/chest.png'
 import './community-chest.sass'
 
 function CommunityChest({ images, accessor }) {
