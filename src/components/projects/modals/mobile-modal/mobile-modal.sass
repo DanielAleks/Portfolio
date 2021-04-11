@@ -8,7 +8,7 @@
   flex-direction: column
   background: #003d3a
   height: 100vh
-  z-index: 100
+  z-index: 7
   // overflow-y: scroll
   //!!!!!!!!! change scrollbar style
   box-shadow: 4px 0px 9px -4px rgba(0,0,0,0.4)
@@ -18,18 +18,6 @@
     margin: 3rem
     border-radius: 20px
     object-fit: cover
-
-@keyframes slide-right-tech
-  0%
-    transform: translateX(0rem)
-  100%
-    transform: translateX(29rem)
-
-@keyframes slide-left-tech
-  0%
-    transform: translateX(29rem)
-  100%
-    transform: translateX(0rem)
 
 .b-view-tech, .b-view-repo
   border: none
@@ -43,12 +31,10 @@
   cursor: pointer
   color: #e4e4e4
   background: #003d3a
-  z-index: 1
   box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.4), inset 7px 0px 9px -4px rgba(0,0,0,0.4)
   img
     position: absolute
     object-fit: cover
-    z-index: 0
     opacity: .3
     // filter: saturate(0)
   p
@@ -58,6 +44,7 @@
   margin-top: 2rem
   height: 10rem
   position: relative
+  z-index: 6
   img
     height: 100%
     width: 70%

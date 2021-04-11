@@ -3,9 +3,7 @@ import Jail from '../../../../../assets/images/portfolio/jailclear.png'
 import Chest from '../../../../../assets/images/portfolio/chest.png'
 import './community-chest.sass'
 
-function CommunityChest({ images, accessor }) {
-  const [details, setDetails] = useState(true)
-
+function CommunityChest({ images, accessor, details, setDetails, setTech }) {
   return (
     <div className={`'details-container' ${details ? 'details-show' : 'details-hide'}`}>
       <button onClick={() => setDetails(!details)} className='b-view-details'>

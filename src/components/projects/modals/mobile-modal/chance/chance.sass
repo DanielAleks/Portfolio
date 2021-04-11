@@ -3,20 +3,40 @@
   width: 40rem
   height: 15rem
   right: 4rem
-  z-index: 0
+  z-index: 5
   top: 20rem
   display: flex
   align-items: flex-start
 .tech-show
-  animation: slide-right-tech 1s forwards
+  animation: slide-right-tech 2s forwards
 .tech-hide
   animation: slide-left-tech 1s
+
+@keyframes slide-right-tech
+  0%
+    transform: translateX(0rem)
+    z-index: 5
+  50%
+    transform: translateX(30rem)
+    z-index: 5
+  100%
+    transform: translateX(30rem)
+    z-index: 11
+
+
+@keyframes slide-left-tech
+  0%
+    transform: translateX(30rem)
+  100%
+    transform: translateX(0rem)
 
 .popup-tech
   background: #003d3a
   height: 15rem
   width: 30rem
-  border-radius: 10px
+  border-top-right-radius: 10px
+  border-bottom-right-radius: 10px
+
   display: flex
   justify-content: center
   flex-direction: row
@@ -32,7 +52,7 @@
 .tech-bg
   position: absolute
   height: 100%
-  width: 100%
+  width: 80%
   object-fit: cover
   z-index: -1
   opacity: .3

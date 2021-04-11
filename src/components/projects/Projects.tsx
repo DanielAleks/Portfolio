@@ -119,13 +119,13 @@ function Projects() {
         />
       }
 
-      {active &&
+      {/* {active &&
         <HorozontalModal
           accessor={accessor}
           images={images}
           setActive={setActive}
         />
-      }
+      } */}
     </div>
   )
 }

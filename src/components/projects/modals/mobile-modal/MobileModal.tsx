@@ -2,7 +2,7 @@ import PassGo from '../../../../assets/images/portfolio/passGoClear.png'
 import Chance from './chance/Chance'
 import './mobile-modal.sass'
 
-function MobilePopup({ accessor, images }) {
+function MobilePopup({ accessor, images, tech, setTech, setDetails }) {
   return (
     <div className='mobile-outer-popup-container'>
       <div className='mobile-popup-container'>
@@ -17,7 +17,13 @@ function MobilePopup({ accessor, images }) {
         </button>
       </a>
 
-      <Chance images={images} accessor={accessor} />
+      <Chance
+        tech={tech}
+        setTech={setTech}
+        setDetails={setDetails}
+        images={images}
+        accessor={accessor}
+      />
     </div>
   )
 }

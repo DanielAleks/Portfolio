@@ -2,8 +2,7 @@ import Parking from '../../../../assets/images/portfolio/freeParkingClear.png'
 import CommunityChest from './community-chest/CommunityChest'
 import './desktop-modal.sass'
 
-function DesktopPopup({ accessor, images }) {
-
+function DesktopPopup({ accessor, images, details, setDetails, setTech }) {
   return (
     <div className='desktop-outer-popup-container'>
       <div className='desktop-popup-container'>
@@ -19,7 +18,13 @@ function DesktopPopup({ accessor, images }) {
         </button>
       </a>
 
-      <CommunityChest images={images} accessor={accessor} />
+      <CommunityChest
+        images={images}
+        accessor={accessor}
+        details={details}
+        setDetails={setDetails}
+        setTech={setTech}
+      />
     </div>
   )
 }
