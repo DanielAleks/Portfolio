@@ -8,7 +8,6 @@ function Contact() {
 
       <ContactCards />
 
-
       <div className='contact-form-900px-cancel'>
         <p className='OR'>OR</p>
         <ContactComponent />
