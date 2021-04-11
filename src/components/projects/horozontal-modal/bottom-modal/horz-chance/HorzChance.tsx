@@ -8,18 +8,23 @@ function HorzChance({ images, accessor }) {
 
   return (
     <div className={`'h-view-tech-container' ${tech ? 'h-tech-show' : 'h-tech-hide'}`}>
+      <button onClick={() => setTech(!tech)} className='h-view-tech'>
+        <img src={ChanceImg} />
+        <p>Chance</p>
+      </button>
+
       <div className='h-popup-tech'>
         <img className='h-tech-bg' src={Spaces} />
         <p>Technologies</p>
         {images[accessor].icons.map((item, id) =>
           <img className="h-tech-icons" src={item} />
         )}
+        <a href={images[accessor].repo}>
+          <button>View Repo</button>
+        </a>
       </div>
 
-      <button onClick={() => setTech(!tech)} className='h-view-tech'>
-        <img src={ChanceImg} />
-        <p>Chance</p>
-      </button>
+
     </div>
   )
 }
