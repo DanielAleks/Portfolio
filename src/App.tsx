@@ -15,7 +15,7 @@ import Home from './components/home/Home';
 import Navbar from './components/navbar/Navbar';
 import AnotherWay from './components/contact/another-way/AnotherWay';
 
-function useWindowSize() {
+export function useWindowSize() {
   const [windowSize, setWindowSize] = useState({
     width: undefined,
     height: undefined,
@@ -42,7 +42,7 @@ function App() {
 
   useEffect(() => {
     size.width <= 900 ? setIsNav(false) : setIsNav(true)
-  }, [size])
+  }, [size.width])
 
   return (
     <Router>
