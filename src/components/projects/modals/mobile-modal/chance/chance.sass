@@ -1,0 +1,47 @@
+.view-tech-container, .tech-show, .tech-hide
+  position: relative
+  width: 40rem
+  height: 15rem
+  right: 4rem
+  z-index: 0
+  top: 20rem
+  display: flex
+  align-items: flex-start
+.tech-show
+  animation: slide-right-tech 1s forwards
+.tech-hide
+  animation: slide-left-tech 1s
+
+.popup-tech
+  background: #003d3a
+  height: 15rem
+  width: 30rem
+  border-radius: 10px
+  display: flex
+  justify-content: center
+  flex-direction: row
+  align-items: flex-end
+  z-index: 1
+  box-shadow: 1px 2px 5px 0px rgba(0,0,0,0.4)
+  p
+    font-size: 3rem
+    color: #d1d1d1
+    position: absolute
+    top: 1rem
+
+.tech-bg
+  position: absolute
+  height: 100%
+  width: 100%
+  object-fit: cover
+  z-index: -1
+  opacity: .3
+  filter: saturate(0)
+
+.tech-icons
+  height: 5rem
+  width: 5rem
+  object-fit: contain
+  margin-left: 5px
+  margin-right: 5px
+  margin-bottom: 2rem

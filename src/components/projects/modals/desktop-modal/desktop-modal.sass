@@ -8,7 +8,7 @@
   flex-direction: column
   background: #003d3a
   height: 100vh
-  // overflow-y: scroll
+  overflow-y: scroll
   //!!!!!!!!! change scrollbar style
   box-shadow: 1px 0px 5px 0px rgba(0,0,0,0.4)
   img
@@ -28,104 +28,46 @@
       transform: translateX(-50rem)
     100%
       transform: translateX(0rem)
-.details-container, .details-show, .details-hide
-  height: 30rem
-  width: 57rem
-  position: absolute
-  bottom: 10rem
-  right: -4rem
-  display: flex
-  align-items: flex-end
-  overflow: hidden
-.details-show
-  animation: slide-left-details 1s forwards
-.details-hide
-  animation: slide-right-details 1s forwards
 
-.popup-details
-  height: 100%
-  width: 50rem
-  background: #003d3a
-  z-index: 1
-  display: flex
-  justify-content: center
-  flex-direction: column
-  align-items: center
-  border-radius: 10px
-  border-top-right-radius: 0px
-  border-bottom-right-radius: 0px
-  box-shadow: 2px 3px 5px 0px rgba(0,0,0,0.4)
-  img
-    position: absolute
-    object-fit: cover
-    z-index: -1
-    opacity: .1
-    filter: saturate(0)
-  h1
-    font-size: 4rem
-    color: #e4e4e4
-    margin-bottom: 2rem
-  p
-    width: 80%
-    font-size: 1.8rem
-    color: #a7a7a7
-
-.b-view-details
+.b-view-details, .b-visit-site
   border: none
   font-size: 2rem
-  height: 20rem
-  width: 7rem
-  font-weight: 500
-  color: #e4e4e4
-  background: #003d3a
-  cursor: pointer
-  z-index: 0
-  border-bottom-left-radius: 5px
-  box-shadow: 5px 2px 5px -1px rgba(0,0,0,0.4), inset -7px 0px 9px -4px rgba(0,0,0,0.4)
-  border-top-left-radius: 5px
   display: flex
   align-items: center
   justify-content: center
-  margin-bottom: 1rem
+  background: #003d3a
+  cursor: pointer
+  color: #e4e4e4
+  border-top-left-radius: 5px
+  border-bottom-left-radius: 5px
+  box-shadow: 5px 2px 5px -1px rgba(0,0,0,0.4), inset -7px 0px 9px -4px rgba(0,0,0,0.4)
   img
     object-fit: cover
     opacity: .3
-    height: 100%
     width: 100%
+    height: 100%
+    // filter: saturate(0)
   p
     transform: rotate(-90deg)
     position: absolute
+.b-view-details
+  height: 20rem
+  width: 7rem
+  z-index: 0
+  margin-bottom: 1rem
+  img
+  p
     width: 100%
 .b-visit-site
-  border: none
-  font-size: 2rem
-  height: 12rem
-  width: 7rem
   position: absolute
   right: 46rem
   bottom: 35rem
-  z-index: 1000
-  font-weight: 500
-  color: #e4e4e4
+  height: 12rem
+  width: 7rem
   z-index: 1
-  background: #003d3a
-  cursor: pointer
-  box-shadow: 5px 2px 5px -1px rgba(0,0,0,0.4), inset -7px 0px 9px -4px rgba(0,0,0,0.4)
-  border-bottom-left-radius: 5px
-  border-top-left-radius: 5px
-  display: flex
-  align-items: center
-  justify-content: center
   img
     position: absolute
-    object-fit: cover
     object-position: 0% 0%
-    height: 100%
-    width: 100%
     z-index: 0
-    opacity: .3
-    // filter: saturate(0)
   p
-    position: absolute
-    transform: rotate(-90deg)
     width: 10rem

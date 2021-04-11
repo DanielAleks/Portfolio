@@ -1,11 +1,8 @@
-import React, { useState } from 'react'
-import './desktop-modal.sass'
-import Jail from '../../../../assets/images/portfolio/jailclear.png'
-import Chest from '../../../../assets/images/portfolio/chest.png'
 import Parking from '../../../../assets/images/portfolio/freeParkingClear.png'
+import CommunityChest from './community-chest/CommunityChest'
+import './desktop-modal.sass'
 
 function DesktopPopup({ accessor, images }) {
-  const [details, setDetails] = useState(true)
 
   return (
     <div className='desktop-outer-popup-container'>
@@ -22,17 +19,7 @@ function DesktopPopup({ accessor, images }) {
         </button>
       </a>
 
-      <div className={`'details-container' ${details ? 'details-show' : 'details-hide'}`}>
-        <button onClick={() => setDetails(!details)} className='b-view-details'>
-          <img src={Chest} />
-          <p>Community Chest</p>
-        </button>
-        <div className='popup-details'>
-          <img src={Jail} />
-          <h1>{images[accessor].title}</h1>
-          <p>{images[accessor].desc}</p>
-        </div>
-      </div>
+      <CommunityChest images={images} accessor={accessor} />
     </div>
   )
 }
