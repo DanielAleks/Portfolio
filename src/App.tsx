@@ -13,6 +13,7 @@ import About from './components/about/About';
 import Contact from './components/contact/Contact';
 import Home from './components/home/Home';
 import Navbar from './components/navbar/Navbar';
+import AnotherWay from './components/contact/another-way/AnotherWay';
 
 function useWindowSize() {
   const [windowSize, setWindowSize] = useState({
@@ -67,6 +68,9 @@ function App() {
           </Route>
           <Route path="/contact">
             <Contact />
+          </Route>
+          <Route path="/another-way">
+            <AnotherWay />
           </Route>
         </Switch>
       </div>

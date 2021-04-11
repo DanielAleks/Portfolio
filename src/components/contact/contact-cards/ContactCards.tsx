@@ -4,6 +4,7 @@ import Boardwalk from '../../../assets/images/portfolio/boardwalk.jpg'
 import PassGo from '../../../assets/images/portfolio/passGo.jpg'
 import OutOfJail from '../../../assets/images/portfolio/outOfJail.jpg'
 import Chance from '../../../assets/images/portfolio/chanceclear.png'
+import { Link } from "react-router-dom";
 
 function ContactCards() {
 
@@ -45,11 +46,12 @@ function ContactCards() {
       )}
 
 
-
-      <div className="another-way-container">
-        <img src={Chance} />
-        <p>Another Way</p>
-      </div>
+      <Link to="another-way">
+        <div className="another-way-card">
+          <img src={Chance} />
+          <p>Another Way</p>
+        </div>
+      </Link>
 
     </div>
   )

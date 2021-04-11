@@ -17,6 +17,7 @@
   align-items: center
   position: relative
   transition: border-radius 1s, background .5s
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, .4)
   p
     text-align: start
     color: #000
@@ -24,40 +25,39 @@
     font-family: Rowdies
     z-index: 1
   &:hover
-    transition: border-radius 1s, background .5s
     background: #ffcd69
     border-radius: 0px
 
-.another-way-container
-  height: 20rem
-  width: 35rem
-  margin-left: 3rem
-  margin-right: 3rem
-  border-radius: 20px
-  background: #003D3A
+.another-way-card
   display: none
   justify-content: flex-start
-  z-index: 3
   flex-direction: column
   align-items: center
-  position: absolute
-  bottom: -10rem
+  height: 20rem
+  width: 35rem
+  background: #003D3A
+  z-index: 3
+  border-radius: 20px
   transition: border-radius 1s, background .5s
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, .4)
+  cursor: pointer
+  &:hover
+    background: #005a30
+    border-radius: 0px
   p
-    text-align: start
     margin-top: 10%
     color: #eeeeee
     font-size: 2.5rem
     font-family: Rowdies
+    z-index: 1
   img
-    height: 55%
-    filter: saturate(0)
-    width: 15%
+    height: 10%
+    width: 9%
     border-radius: 25px
     z-index: 0
     position: absolute
     object-fit: cover
-    opacity: .3
+    opacity: .5
 
 .boardwalk-bg, .pass-go-bg, .jail-free-bg
   height: 100%
@@ -97,8 +97,10 @@
   .contact-information
     height: 20rem
     width: 35rem
-    margin: 0rem
-    margin-bottom: 1rem
-    margin-top: 1rem
-  .another-way-container
+    margin: 0px
+    margin-bottom: 3vh
+    margin-top: 3vh
+  .another-way-card
+    margin-bottom: 3vh
+    margin-top: 3vh
     display: flex

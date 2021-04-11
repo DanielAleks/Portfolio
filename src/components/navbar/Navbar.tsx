@@ -1,8 +1,6 @@
 import React from 'react'
 import './navbar.sass'
-import {
-  Link
-} from "react-router-dom";
+import { Link } from "react-router-dom";
 import { GiHamburgerMenu } from 'react-icons/gi'
 
 function Navbar({ setIsNav, isNav, size }) {
