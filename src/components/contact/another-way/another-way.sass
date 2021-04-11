@@ -1,5 +1,39 @@
 .another-way-container
-  height: 30rem
-  width: 30rem
-  background: red
- 
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: column
+  width: 100%
+  height: 100vh
+
+.other-way-card
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  margin-bottom: -10rem
+  margin-top: 5rem
+  height: 20rem
+  width: 35rem
+  background: #003D3A
+  z-index: 3
+  border-radius: 20px
+  transition: border-radius 1s, background .5s
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, .4)
+  cursor: pointer
+  &:hover
+    background: #005a30
+    border-radius: 0px
+  p
+    color: #eeeeee
+    font-size: 2.5rem
+    font-family: Rowdies
+    z-index: 1
+  img
+    height: 20%
+    width: 20%
+    border-radius: 25px
+    z-index: 0
+    position: absolute
+    object-fit: cover
+    opacity: .5
