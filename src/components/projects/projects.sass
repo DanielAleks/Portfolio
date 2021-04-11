@@ -1,5 +1,9 @@
 .project-container
   width: 100%
+  height: 100vh
+  display: flex
+  justify-content: center
+  align-items: center
 
 .project-city-bg
   position: absolute
@@ -16,9 +20,116 @@
   justify-content: center
   align-items: center
   flex-wrap: wrap
+  height: 100%
   img
     height: 34rem
     width: 60rem
+    cursor: pointer
     margin: 5rem
     object-fit: cover
     border-radius: 20px
+  @media (max-width: 1600px)
+    height: 80%
+    img
+      height: 30rem
+      width: 53rem
+  @media (max-width: 1400px)
+    img
+      height: 27rem
+      width: 48rem
+      margin: 3rem
+  @media (max-width: 1150px)
+    height: 70%
+    img
+      height: 24rem
+      width: 43rem
+      margin: 2rem
+      margin-top: 4rem
+      margin-bottom: 4rem
+  @media (max-width: 1000px)
+    height: 60%
+    img
+      height: 23rem
+      width: 38rem
+
+@media (max-width: 1300px)
+  .main-images
+    margin-left: -5rem
+
+@media (max-width: 900px)
+  .main-images
+    height: 100%
+    margin-left: 0rem
+    width: 54rem
+    overflow-y: scroll
+    flex-direction: row
+    margin-top: 30rem
+    padding-bottom: 8rem
+    img
+      height: 28rem
+      width: 50rem
+      margin-bottom: 8rem
+      margin-top: 0px
+
+@media (max-width: 700px)
+  .main-images
+    margin-left: 0rem
+    width: 44rem
+    overflow-y: scroll
+    flex-direction: row
+    margin-top: 30rem
+    padding-bottom: 8rem
+    img
+      height: 23rem
+      width: 40rem
+      margin-bottom: 8rem
+      margin-top: 0px
+@media (max-width: 500px)
+  .main-images
+    width: 38rem
+    img
+      width: 35rem
+      height: 20rem
+      margin-bottom: 4rem
+
+@media (max-height: 700px) and (min-width: 1600px) and (max-width: 2000px)
+  .main-images
+    height: 85%
+    width: 120rem
+    img
+      height: 25rem
+      width: 45rem
+      margin-top: 1rem
+      margin-bottom: 1rem
+
+@media (max-height: 850px) and (min-width: 1400px) and (max-width: 2000px)
+  .main-images
+    height: 85%
+    width: 120rem
+    img
+      height: 25rem
+      width: 45rem
+      margin-top: 1rem
+      margin-bottom: 1rem
+
+@media (max-height: 750px) and (min-width: 900px) and (max-width: 1400px)
+  .main-images
+    height: 100%
+    width: 120rem
+    img
+      margin-top: 1rem
+      margin-bottom: 1rem
+
+@media (max-height: 700px) and (min-width: 501px) and (max-width: 900px)
+  .main-images
+    width: 44rem
+    img
+      height: 23rem
+      width: 42rem
+      margin-bottom: 3rem
+
+@media (max-height: 700px) and (max-width: 501px)
+  .main-images
+    margin-top: 25rem
+    img
+      margin-bottom: 3rem
