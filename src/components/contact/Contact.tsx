@@ -7,8 +7,12 @@ function Contact() {
     <div id='contact' className='ctt-container'>
 
       <ContactCards />
-      <p className='OR'>OR</p>
-      <ContactComponent />
+
+
+      <div className='contact-form-900px-cancel'>
+        <p className='OR'>OR</p>
+        <ContactComponent />
+      </div>
     </div>
   )
 }

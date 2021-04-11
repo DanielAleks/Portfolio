@@ -45,15 +45,18 @@ function ContactCards() {
             </div>
           </a>
         )}
+
+        <Link to="another-way">
+          <div className="another-way-card">
+            <img src={Chance} />
+            <p>Another Way</p>
+          </div>
+        </Link>
+
       </div>
 
 
-      <Link to="another-way">
-        <div className="another-way-card">
-          <img src={Chance} />
-          <p>Another Way</p>
-        </div>
-      </Link>
+
 
     </div>
   )
