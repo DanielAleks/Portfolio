@@ -1,13 +1,20 @@
 import MobilePopup from './mobile-modal/MobileModal'
 import DesktopPopup from './desktop-modal/DesktopModal'
 import './modals.sass'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useWindowSize } from '../../../App'
 
 function Modals({ accessor, images, setActive }) {
   const [tech, setTech] = useState(false)
   const [details, setDetails] = useState(false)
   const size = useWindowSize()
+
+  useEffect(() => {
+    if (size.width < 1130 && size.height < 800) {
+      setDetails(false)
+      setTech(false)
+    }
+  }, [size])
 
   return (
     <div className='popup-container'>
