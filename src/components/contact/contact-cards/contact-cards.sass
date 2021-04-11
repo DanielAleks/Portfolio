@@ -14,12 +14,17 @@
   flex-direction: column
   align-items: center
   position: relative
+  transition: border-radius 1s, background .5s
   p
     text-align: start
     color: #000
     font-size: 2.5rem
     font-family: Rowdies
     z-index: 1
+  &:hover
+    transition: border-radius 1s, background .5s
+    background: #ffcd69
+    border-radius: 0px
 
 .boardwalk-bg, .pass-go-bg, .jail-free-bg
   height: 100%
@@ -35,3 +40,6 @@
   opacity: .2
 .jail-free-bg
   opacity: .25
+.link
+.link:hover
+  color: red

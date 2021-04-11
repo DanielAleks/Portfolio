@@ -4,14 +4,14 @@ import { CgMail } from 'react-icons/cg'
 import ReactGA from 'react-ga'
 
 function Links() {
-  
+
   const onGmailHandler = () => {
     ReactGA.event({
       category: 'Contact-Gmail',
       action: 'went to my gmail'
     });
   }
-  
+
   const onGithubHandler = () => {
     ReactGA.event({
       category: 'Contact-Github',
@@ -19,21 +19,33 @@ function Links() {
     });
   }
 
+  const links = [
+    {
+      icon: CgMail,
+      delay: 0,
+      handler: onGmailHandler,
+      href: 'https://mail.google.com/mail/u/0/#search/daniel.aleksandrov73'
+    },
+    {
+      icon: AiFillGithub,
+      delay: 100,
+      handler: onGithubHandler,
+      href: 'https://github.com/DanielAleks'
+
+    }
+  ]
+
   return (
     <div className='links'>
-      <a data-aos="fade-up"
-        onClick={onGmailHandler}
-        href="https://mail.google.com/mail/u/0/#search/daniel.aleksandrov73"
-        target='_blank' className='link-margin'>
-        <CgMail size={30} />
-      </a>
-      <a data-aos="fade-up"
-        data-aos-delay='100'
-        onClick={onGithubHandler}
-        href="https://github.com/DanielAleks"
-        target='_blank' className='link-margin'>
-        <AiFillGithub size={30} />
-      </a>
+      {links.map((item) =>
+        <a data-aos="fade-up"
+          data-aos-delay={item.delay}
+          onClick={item.handler}
+          href={item.href}
+          target='_blank' className='link-margin'>
+          <item.icon size={30} />
+        </a>
+      )}
     </div>
   )
 }
