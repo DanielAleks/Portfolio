@@ -4,7 +4,7 @@ import './contact.sass'
 
 function Contact() {
   return (
-    <div id='contact' className='ctt-container contactC'>
+    <div id='contact' className='ctt-container'>
 
       <ContactCards />
       <p className='OR'>OR</p>

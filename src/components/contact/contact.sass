@@ -1,10 +1,17 @@
+.ctt-container
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+
 .contact-form
-  background: linear-gradient(180deg, rgba(0,61,58,1) 0%, #004946 50%, rgba(0,61,58,1) 100%);
+  background: linear-gradient(180deg, rgba(0,61,58,1) 0%, #004946 50%, rgba(0,61,58,1) 100%)
   position: absolute
   bottom: 0px
   padding-left: 20rem
   padding-right: 20rem
   border-radius: 2rem
+  z-index: 1
 
 .ctt-width
   width: 40vw
@@ -55,6 +62,8 @@
   margin-right: 3vw
 
 @media (max-width: 900px)
+  .ctt-container
+
   .contact-form
     background: none
     padding: 0px

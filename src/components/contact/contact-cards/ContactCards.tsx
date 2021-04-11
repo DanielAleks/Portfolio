@@ -13,7 +13,7 @@ function ContactCards() {
       style: 'boardwalk-bg',
       title: 'Phone Number:',
       link: '(503)-997-4024',
-      href: '(503)-997-4024'
+      href: null
     },
     {
       image: PassGo,
