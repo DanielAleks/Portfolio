@@ -48,6 +48,7 @@ import Spring from '../../assets/images/icons/react-spring.png'
 
 import './projects.sass'
 import Modals from './modals/Modals'
+import HorozontalModal from './horozontal-modal/HorozontalModal'
 
 const images: any = [
   {
@@ -112,6 +113,14 @@ function Projects() {
 
       {active &&
         <Modals
+          accessor={accessor}
+          images={images}
+          setActive={setActive}
+        />
+      }
+
+      {active &&
+        <HorozontalModal
           accessor={accessor}
           images={images}
           setActive={setActive}
