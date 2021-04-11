@@ -3,6 +3,7 @@ import './contact-cards.sass'
 import Boardwalk from '../../../assets/images/portfolio/boardwalk.jpg'
 import PassGo from '../../../assets/images/portfolio/passGo.jpg'
 import OutOfJail from '../../../assets/images/portfolio/outOfJail.jpg'
+import Chance from '../../../assets/images/portfolio/chanceclear.png'
 
 function ContactCards() {
 
@@ -33,7 +34,7 @@ function ContactCards() {
   return (
     <div className='contact-cards-container'>
       {card.map((item, id) =>
-        <a style={{cursor: id === 0 ? 'auto' : 'pointer'}} href={item.href} target='_blank'>
+        <a style={{ cursor: id === 0 ? 'auto' : 'pointer' }} href={item.href} target='_blank'>
           <div className="contact-information">
             <img className={item.style} src={item.image} />
             <p>{item.title}</p>
@@ -42,6 +43,14 @@ function ContactCards() {
           </div>
         </a>
       )}
+
+
+
+      <div className="another-way-container">
+        <img src={Chance} />
+        <p>Another Way</p>
+      </div>
+
     </div>
   )
 }

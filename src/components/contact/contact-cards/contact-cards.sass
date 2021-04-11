@@ -1,12 +1,14 @@
 .contact-cards-container
   display: flex
   margin-top: 8rem
+  align-items: center
+  justify-content: center
 
 .contact-information
   height: 20rem
+  width: 35rem
   margin-left: 3rem
   margin-right: 3rem
-  width: 35rem
   border-radius: 20px
   background: #E2AC3C
   display: flex
@@ -26,6 +28,37 @@
     background: #ffcd69
     border-radius: 0px
 
+.another-way-container
+  height: 20rem
+  width: 35rem
+  margin-left: 3rem
+  margin-right: 3rem
+  border-radius: 20px
+  background: #003D3A
+  display: none
+  justify-content: flex-start
+  z-index: 3
+  flex-direction: column
+  align-items: center
+  position: absolute
+  bottom: -10rem
+  transition: border-radius 1s, background .5s
+  p
+    text-align: start
+    margin-top: 10%
+    color: #eeeeee
+    font-size: 2.5rem
+    font-family: Rowdies
+  img
+    height: 55%
+    filter: saturate(0)
+    width: 15%
+    border-radius: 25px
+    z-index: 0
+    position: absolute
+    object-fit: cover
+    opacity: .3
+
 .boardwalk-bg, .pass-go-bg, .jail-free-bg
   height: 100%
   width: 100%
@@ -43,3 +76,29 @@
 .link
 .link:hover
   color: red
+
+@media (max-width: 1400px)
+  .contact-information
+    height: 18rem
+    width: 33rem
+    margin-left: 2rem
+    margin-right: 2rem
+
+@media (max-width: 1300px)
+  .contact-information
+    height: 16rem
+    width: 30rem
+    margin-left: 1.5rem
+    margin-right: 1.5rem
+
+@media (max-width: 900px)
+  .contact-cards-container
+    flex-direction: column
+  .contact-information
+    height: 20rem
+    width: 35rem
+    margin: 0rem
+    margin-bottom: 1rem
+    margin-top: 1rem
+  .another-way-container
+    display: flex
