@@ -36,22 +36,22 @@ function ContactCards() {
 
       <div className='cards-inner-container'>
         {card.map((item, id) =>
-          <a style={{ cursor: id === 0 ? 'auto' : 'pointer' }} href={item.href} target='_blank'>
-            <div className="contact-information">
+          <div className="contact-information">
+            <a style={{ cursor: id === 0 ? 'auto' : 'pointer' }} href={item.href} target='_blank'>
               <img className={item.style} src={item.image} />
               <p>{item.title}</p>
               <p
                 style={{ textDecoration: id === 0 ? 'none' : 'underline' }} >{item.link}</p>
-            </div>
-          </a>
+            </a>
+          </div>
         )}
 
-        <Link to="another-way">
-          <div className="another-way-card">
+        <div className="another-way-card">
+          <Link className='Link-another-styles' to="another-way">
             <img src={Chance} />
             <p>Another Way</p>
-          </div>
-        </Link>
+          </Link>
+        </div>
 
       </div>
 
