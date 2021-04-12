@@ -10,14 +10,14 @@
   height: 100vh
   z-index: 7
   box-shadow: 4px 0px 9px -4px rgba(0,0,0,0.4)
-  img
-    height: 45rem
-    width: 20rem
-    margin: 3rem
-    border-radius: 20px
-    object-fit: cover
-    opacity: 0
-    animation: slide-down-mobileimages 1s forwards
+.mobile-popup-image
+  height: 45rem
+  width: 20rem
+  margin: 3rem
+  border-radius: 20px
+  object-fit: cover
+  opacity: 0
+  animation: slide-down-mobileimages 1s forwards
 
 @keyframes slide-down-mobileimages
   0%
@@ -71,9 +71,8 @@
     width: 10rem
 
 @media (max-width: 1300px)
-  .mobile-popup-container
-    img
-      height: 100%
-      width: 15rem
+  .mobile-popup-image
+    height: 30rem
+    width: 15rem
   .b-view-repo
     left: 21rem

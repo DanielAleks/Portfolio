@@ -5,7 +5,6 @@ import { useEffect, useState } from 'react'
 import { useWindowSize } from '../../../App'
 
 function Modals({ accessor, images, setActive, tech, setTech, details, setDetails, isAnimated, setIsAnimated }) {
-
   const size = useWindowSize()
 
   useEffect(() => {
@@ -22,13 +21,13 @@ function Modals({ accessor, images, setActive, tech, setTech, details, setDetail
     }, 500)
   }
 
-
   return (
     <div className={isAnimated ? 'popup-container' : 'popup-container-off'}>
       <div className='active-overlay'
         onClick={closeModalHandler} />
 
-      < MobilePopup
+      <MobilePopup
+        size={size}
         images={images}
         accessor={accessor}
         tech={tech}
@@ -36,6 +35,7 @@ function Modals({ accessor, images, setActive, tech, setTech, details, setDetail
         setDetails={setDetails}
       />
       <DesktopPopup
+        size={size}
         images={images}
         accessor={accessor}
         details={details}
