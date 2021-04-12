@@ -15,6 +15,14 @@
   background-repeat: no-repeat
   background-size: cover
 
+@keyframes slide-right-mainimages
+  0%
+    opacity: 0
+    transform: translateX(-50rem)
+  100%
+    opacity: 1
+    transform: translateX(0rem)
+
 .main-images
   display: flex
   justify-content: center
@@ -28,6 +36,8 @@
     margin: 5rem
     object-fit: cover
     border-radius: 20px
+    opacity: 0
+    animation: slide-right-mainimages .8s forwards
   @media (max-width: 1600px)
     height: 80%
     img
@@ -70,6 +80,16 @@
       width: 50rem
       margin-bottom: 8rem
       margin-top: 0px
+      opacity: 0
+      animation: slide-down-mainimages 1s forwards
+
+@keyframes slide-down-mainimages
+  0%
+    opacity: 0
+    transform: translateY(-50rem)
+  100%
+    opacity: 1
+    transform: translateY(0rem)
 
 @media (max-width: 700px)
   .main-images

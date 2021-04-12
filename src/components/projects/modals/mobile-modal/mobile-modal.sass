@@ -9,8 +9,6 @@
   background: #003d3a
   height: 100vh
   z-index: 7
-  // overflow-y: scroll
-  //!!!!!!!!! change scrollbar style
   box-shadow: 4px 0px 9px -4px rgba(0,0,0,0.4)
   img
     height: 45rem
@@ -18,6 +16,16 @@
     margin: 3rem
     border-radius: 20px
     object-fit: cover
+    opacity: 0
+    animation: slide-down-mobileimages 1s forwards
+
+@keyframes slide-down-mobileimages
+  0%
+    opacity: 0
+    transform: translateY(-200rem)
+  100%
+    opacity: 1
+    transform: translateY(0rem)
 
 .b-view-tech, .b-view-repo
   border: none

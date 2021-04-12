@@ -6,8 +6,8 @@ function DesktopPopup({ accessor, images, details, setDetails, setTech }) {
   return (
     <div className='desktop-outer-popup-container'>
       <div className='desktop-popup-container'>
-        {images[accessor].desktop.map((item) =>
-          <img src={item} />
+        {images[accessor].desktop.map((item, id) =>
+          <img style={{ animationDelay: `${id * .1}s` }} src={item} />
         )}
       </div>
 

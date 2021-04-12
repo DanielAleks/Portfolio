@@ -9,7 +9,6 @@
   background: #003d3a
   height: 100vh
   overflow-y: scroll
-  //!!!!!!!!! change scrollbar style
   box-shadow: 1px 0px 5px 0px rgba(0,0,0,0.4)
   img
     height: 23rem
@@ -17,6 +16,16 @@
     border-radius: 20px
     width: 40rem
     object-fit: cover
+    opacity: 0
+    animation: slide-up-desktopimages 1s forwards
+
+@keyframes slide-up-desktopimages
+  0%
+    opacity: 0
+    transform: translateY(100rem)
+  100%
+    opacity: 1
+    transform: translateY(0rem)
 
 .b-view-details, .b-visit-site
   border: none

@@ -106,12 +106,34 @@ function Projects() {
     setAccessor(id)
   }
 
+  const imageAnimationHandler = (id) => {
+    if (size.width > 900) {
+      if (id === 0) {
+        return .2
+      } else if (id === 1) {
+        return .1
+      } else if (id === 2) {
+        return .4
+      } else if (id === 3) {
+        return .3
+      }
+    } else if (id === 0) {
+      return .4
+    } else if (id === 1) {
+      return .3
+    } else if (id === 2) {
+      return .2
+    } else if (id === 3) {
+      return .1
+    }
+  }
+
   return (
     <div className="project-container">
       <div className='project-city-bg' />
       <div className='main-images'>
         {images.map((item, id) =>
-          <img onClick={() => mainImageHandler(id)} src={item.main} />
+          <img style={{ animationDelay: `${imageAnimationHandler(id)}s` }} onClick={() => mainImageHandler(id)} src={item.main} />
         )}
       </div>
 
@@ -126,7 +148,6 @@ function Projects() {
           setActive={setActive}
         />
       }
-
 
       {active &&
         <HorozontalModal
