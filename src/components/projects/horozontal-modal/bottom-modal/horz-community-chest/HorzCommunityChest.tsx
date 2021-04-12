@@ -3,8 +3,7 @@ import Chest from '../../../../../assets/images/portfolio/chestClear.png'
 import Jail from '../../../../../assets/images/portfolio/jailclear.png'
 import './horz-community-chest.sass'
 
-function HorzCommunityChest({ images, accessor, Z, setZ }) {
-  const [details, setDetails] = useState(false)
+function HorzCommunityChest({ images, accessor, Z, setZ, details, setDetails }) {
 
   return (
     <div
@@ -23,7 +22,7 @@ function HorzCommunityChest({ images, accessor, Z, setZ }) {
         <a href={images[accessor].website}>
           <button>Visit Site</button>
         </a>
-      </div> 
+      </div>
     </div>
   )
 }

@@ -5,7 +5,7 @@ import HorzCommunityChest from './horz-community-chest/HorzCommunityChest'
 import Toggler from './toggler/Toggler'
 import './bottom-modal.sass'
 
-function BottomModal({ images, accessor }) {
+function BottomModal({ images, accessor, tech, setTech, details, setDetails }) {
   const [x, setX] = useState<number>(0)
   const [isM, setIsM] = useState(false)
   const [Z, setZ] = useState<number>(0)
@@ -39,8 +39,15 @@ function BottomModal({ images, accessor }) {
 
       </div>
 
-      <HorzChance images={images} accessor={accessor} />
+      <HorzChance
+        tech={tech}
+        setTech={setTech}
+        images={images}
+        accessor={accessor}
+      />
       <HorzCommunityChest
+        details={details}
+        setDetails={setDetails}
         Z={Z} setZ={setZ}
         images={images}
         accessor={accessor} />

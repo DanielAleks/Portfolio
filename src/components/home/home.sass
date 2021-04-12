@@ -12,12 +12,20 @@
   background: url('../../assets/images/portfolio/red-dice-cropped.png')
   background-repeat: no-repeat
   background-size: contain
+  opacity: 0
+  animation: opacity-dice 5s forwards
   @media (max-width: 1650px)
     width: 60rem
   @media (max-width: 1550px)
     background: url('../../assets/images/portfolio/red-dice-flipped.png')
     background-repeat: no-repeat
     background-size: contain
+
+@keyframes opacity-dice
+  0%
+    opacity: 0
+  100%
+    opacity: 1
 
 .triangle-green-container
   width: 0
@@ -26,6 +34,12 @@
   z-index: -1
   border-bottom: 100vh solid #003d3a
   border-left: 20rem solid transparent
+
+@keyframes slide-up-hometext
+  0%
+    transform: translateY(100rem)
+  100%
+    transform: translateY(0rem)
 
 .home-green-container
   height: 100vh
@@ -37,6 +51,7 @@
   align-items: flex-start
   div
     margin-top: 30rem
+    animation: slide-up-hometext 1s forwards
     h1
       font-family: Rowdies
       color: white
@@ -45,7 +60,6 @@
       color: white
       font-size: 2rem
       width: 60rem
-
   @media (max-width: 1550px)
     div
       h1
@@ -179,7 +193,6 @@
 @media (max-width: 1050px) and (max-height: 750px)
   .home-green-container
     width: 70%
-
 
 @media (max-width: 900px) and (max-height: 750px)
   .home-green-container

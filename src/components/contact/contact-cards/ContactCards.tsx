@@ -31,12 +31,23 @@ function ContactCards() {
     },
   ]
 
+  const cardDelay = (id) => {
+    if (id === 2) {
+      return (0)
+    } else if (id === 1) {
+      return (.1)
+    } else if (id === 0) {
+      return (.2)
+    }
+  }
+
+
   return (
     <div className='contact-cards-container'>
 
       <div className='cards-inner-container'>
         {card.map((item, id) =>
-          <div className="contact-information">
+          <div style={{ animationDelay: `${cardDelay(id)}s` }} className="contact-information">
             <a style={{ cursor: id === 0 ? 'auto' : 'pointer' }} href={item.href} target='_blank'>
               <img className={item.style} src={item.image} />
               <p>{item.title}</p>
@@ -52,12 +63,7 @@ function ContactCards() {
             <p>Another Way</p>
           </Link>
         </div>
-
       </div>
-
-
-
-
     </div>
   )
 }

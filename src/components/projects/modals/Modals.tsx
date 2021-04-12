@@ -4,9 +4,8 @@ import './modals.sass'
 import { useEffect, useState } from 'react'
 import { useWindowSize } from '../../../App'
 
-function Modals({ accessor, images, setActive }) {
-  const [tech, setTech] = useState(false)
-  const [details, setDetails] = useState(false)
+function Modals({ accessor, images, setActive, tech, setTech, details, setDetails }) {
+
   const size = useWindowSize()
 
   useEffect(() => {

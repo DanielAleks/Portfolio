@@ -22,9 +22,20 @@
   box-shadow: 4px 4px 10px rgba(0, 0, 0, .4)
   cursor: pointer
   position: relative
+  animation: slide-up-othercard 1s forwards 1s
+  opacity: 0
   &:hover
     background: #005a30
     border-radius: 0px
+
+@keyframes slide-up-othercard
+  0%
+    opacity: 0
+    transform: translateY(30rem)
+  100%
+    opacity: 1
+    transform: translateY(0rem)
+
 .Link-other-way
   position: absolute
   height: 100%

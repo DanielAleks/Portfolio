@@ -98,6 +98,8 @@ function Projects() {
   const size = useWindowSize()
   const [active, setActive] = useState(false)
   const [accessor, setAccessor] = useState(0)
+  const [tech, setTech] = useState(false)
+  const [details, setDetails] = useState(false)
 
   const mainImageHandler = (id): any => {
     setActive(!active)
@@ -115,6 +117,10 @@ function Projects() {
 
       {active &&
         <Modals
+          tech={tech}
+          setTech={setTech}
+          details={details}
+          setDetails={setDetails}
           accessor={accessor}
           images={images}
           setActive={setActive}
@@ -124,6 +130,10 @@ function Projects() {
 
       {active &&
         <HorozontalModal
+          tech={tech}
+          setTech={setTech}
+          details={details}
+          setDetails={setDetails}
           accessor={accessor}
           images={images}
           setActive={setActive}

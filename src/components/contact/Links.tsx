@@ -36,7 +36,7 @@ function Links() {
   ]
 
   return (
-    <div className='links'>
+    <div style={{animationDelay: '.4s'}} className='links'>
       {links.map((item) =>
         <a data-aos="fade-up"
           data-aos-delay={item.delay}

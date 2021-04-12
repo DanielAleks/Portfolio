@@ -3,8 +3,7 @@ import Spaces from '../../../../../assets/images/portfolio/spaces3ClearResized.p
 import ChanceImg from '../../../../../assets/images/portfolio/chanceclear.png'
 import './horz-chance.sass'
 
-function HorzChance({ images, accessor }) {
-  const [tech, setTech] = useState(false)
+function HorzChance({ images, accessor, tech, setTech }) {
 
   return (
     <div
