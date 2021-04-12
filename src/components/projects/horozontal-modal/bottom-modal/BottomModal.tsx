@@ -3,15 +3,22 @@ import HorzChance from './horz-chance/HorzChance'
 import { AiOutlineRightCircle, AiOutlineLeftCircle } from 'react-icons/ai'
 import HorzCommunityChest from './horz-community-chest/HorzCommunityChest'
 import Toggler from './toggler/Toggler'
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import './bottom-modal.sass'
 
 function BottomModal({ images, accessor, tech, setTech, details, setDetails }) {
-  const [x, setX] = useState<number>(0)
   const [isM, setIsM] = useState(false)
   const [Z, setZ] = useState<number>(0)
 
-  const addX = () => setX(x + 115)
-  const minusX = () => setX(x - 115)
+  var settings = {
+    dots: true,
+    infinite: true,
+    speed: 1000,
+    slidesToShow: 1,
+    slidesToScroll: 1
+  };
 
   return (
     <div className='bottom-modal-container'>
@@ -19,23 +26,18 @@ function BottomModal({ images, accessor, tech, setTech, details, setDetails }) {
 
         <Toggler isM={isM} setIsM={setIsM} />
 
-        {!isM &&
-          <>
-            <div className="left-arrow" onClick={addX}>
-              <AiOutlineLeftCircle size={50} />
-            </div>
-            <div className="right-arrow" onClick={minusX}>
-              <AiOutlineRightCircle size={50} />
-            </div>
-          </>
-        }
         {isM && images[accessor].mobile.map((item) =>
           <img className="mobile-image" src={item} />
         )}
-        {!isM && images[accessor].desktop.map((item) =>
-          <img className="desktop-image"
-            style={{ transform: `translateX(${x}%)` }} src={item} />
-        )}
+
+        {!isM &&
+          <Slider className='bottom-carousel-container' {...settings}>
+            {images[accessor].desktop.map((item) =>
+              <div className='poopsy' >
+                <img className="desktop-image" src={item} />
+              </div>
+            )}
+          </Slider>}
 
       </div>
 
