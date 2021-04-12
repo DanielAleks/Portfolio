@@ -6,35 +6,40 @@
   bottom: 0px
   display: flex
   align-items: flex-end
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, .4)
 
 .bottom-popup-container
   display: flex
   justify-content: center
   align-items: center
-  width: 200%
-  img
-    height: 23rem
-    margin: 3rem
-    border-radius: 20px
-    width: 40rem
-    object-fit: cover
-    transition: transform 1s
+  width: 100%
 
+.desktop-image
+  height: 23rem
+  margin: 3rem
+  border-radius: 20px
+  width: 40rem
+  object-fit: cover
+  transition: transform 1s
+
+.mobile-image
+  height: 23rem
+  width: 12rem
+  margin: 3rem
+  border-radius: 20px
+  object-fit: cover
+  transition: transform 1s
+
+.left-arrow, .right-arrow
+  position: fixed
+  z-index: 10
+  padding: 1rem
+  cursor: pointer
+  color: black
 .left-arrow
-  position: fixed
   left: 3rem
-  color: black
-  cursor: pointer
-  padding: 1rem
-  z-index: 10
-
 .right-arrow
-  position: fixed
-  z-index: 10
   right: 3rem
-  color: black
-  cursor: pointer
-  padding: 1rem
 
 .hb-view-tech, .hb-view-details
   font-size: 2rem

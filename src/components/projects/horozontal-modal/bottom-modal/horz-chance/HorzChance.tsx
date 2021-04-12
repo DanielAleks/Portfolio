@@ -7,7 +7,8 @@ function HorzChance({ images, accessor }) {
   const [tech, setTech] = useState(false)
 
   return (
-    <div className={`'h-view-tech-container' ${tech ? 'h-tech-show' : 'h-tech-hide'}`}>
+    <div
+      className={`'h-view-tech-container' ${tech ? 'h-tech-show' : 'h-tech-hide'}`}>
       <button onClick={() => setTech(!tech)} className='hb-view-tech'>
         <img src={ChanceImg} />
         <p>Chance</p>
@@ -19,7 +20,7 @@ function HorzChance({ images, accessor }) {
         {images[accessor].icons.map((item, id) =>
           <img className="h-tech-icons" src={item} />
         )}
-        <a href={images[accessor].repo}> 
+        <a href={images[accessor].repo}>
           <button>View Repo</button>
         </a>
       </div>

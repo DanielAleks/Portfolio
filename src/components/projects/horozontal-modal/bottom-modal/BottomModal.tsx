@@ -7,32 +7,43 @@ import './bottom-modal.sass'
 
 function BottomModal({ images, accessor }) {
   const [x, setX] = useState<number>(10)
-  const [isMobile, setIsMobile] = useState(false)
+  const [isM, setIsM] = useState(false)
+  const [Z, setZ] = useState(0)
 
   const addX = () => setX(x + 40)
   const minusX = () => setX(x - 40)
-
-
 
   return (
     <div className='bottom-modal-container'>
       <div className='bottom-popup-container'>
 
-        <Toggler isMobile={isMobile} setIsMobile={setIsMobile} />
+        <Toggler isM={isM} setIsM={setIsM} />
 
-        <div className="left-arrow" onClick={addX}>
-          <AiOutlineLeftCircle size={50} />
-        </div>
-        <div className="right-arrow" onClick={minusX}>
-          <AiOutlineRightCircle size={50} />
-        </div>
-        {images[accessor].desktop.map((item) =>
-          <img style={{ transform: `translateX(${x}vw)` }} src={item} />
+        {!isM &&
+          <>
+            <div className="left-arrow" onClick={addX}>
+              <AiOutlineLeftCircle size={50} />
+            </div>
+            <div className="right-arrow" onClick={minusX}>
+              <AiOutlineRightCircle size={50} />
+            </div>
+          </>
+        }
+        {isM && images[accessor].mobile.map((item) =>
+          <img className="mobile-image" src={item} />
         )}
+        {!isM && images[accessor].desktop.map((item) =>
+          <img className="desktop-image"
+            style={{ transform: `translateX(${x}vw)` }} src={item} />
+        )}
+
       </div>
 
       <HorzChance images={images} accessor={accessor} />
-      <HorzCommunityChest images={images} accessor={accessor} />
+      <HorzCommunityChest
+        Z={Z} setZ={setZ}
+        images={images}
+        accessor={accessor} />
     </div>
   )
 }

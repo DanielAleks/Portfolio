@@ -5,9 +5,10 @@
   bottom: 10rem
   right: 4rem
   display: flex
-  z-index: -1
   flex-direction: column
   align-items: flex-end
+  @media (max-width: 550px)
+    right: 0rem
 
 .h-details-show
   animation: slide-up-details 1s forwards
@@ -70,3 +71,5 @@
     width: 80%
     font-size: 1.8rem
     color: #a7a7a7
+
+  

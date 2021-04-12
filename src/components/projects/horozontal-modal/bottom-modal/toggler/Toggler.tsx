@@ -1,9 +1,9 @@
 import './toggler.sass'
 
-function Toggler({ isMobile, setIsMobile }) {
+function Toggler({ isM, setIsM }) {
 
   const toggleHandleLocation = () => {
-    if (isMobile) {
+    if (isM) {
       return (100)
     } else return (0)
   }
@@ -13,13 +13,13 @@ function Toggler({ isMobile, setIsMobile }) {
     <div className="outer-toggle-container">
       <div
         className='toggle-container'
-        onClick={() => setIsMobile(!isMobile)}>
+        onClick={() => setIsM(!isM)}>
         <div className='toggle-handle'
           style={{ transform: `translateX(${toggleHandleLocation()}%)` }}>
         </div>
       </div>
 
-      <p>{isMobile ? 'Mobile' : 'Desktop'}</p>
+      <p>{isM ? 'Mobile' : 'Desktop'}</p>
     </div >
   )
 }
