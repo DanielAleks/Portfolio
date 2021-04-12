@@ -51,6 +51,9 @@
     align-items: center
     justify-content: center
     button
+      position: absolute
+      right: 0rem
+      bottom: 2rem
       border: none
       background: #1875ee
       box-shadow: 2px 2px 7px rgba(0, 0, 0, .4)
@@ -72,4 +75,31 @@
     font-size: 1.8rem
     color: #a7a7a7
 
-  
+@media (max-height: 850px)
+  .h-details-show
+    animation: slide-high-details 1s forwards
+  .h-details-hide
+    animation: slide-low-details 1s forwards
+
+@keyframes slide-high-details
+  0%
+    transform: translateY(0rem)
+    z-index: -2
+  50%
+    transform: translateY(100rem)
+    z-index: -2
+  100%
+    transform: translateY(-2rem)
+    z-index: 11
+
+@keyframes slide-low-details
+  0%
+    transform: translateY(-2rem)
+    z-index: 11
+    
+  50%
+    transform: translateY(100rem)
+  100%
+    transform: translateY(0rem)
+    z-index: -2
+

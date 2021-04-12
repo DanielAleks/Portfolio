@@ -6,12 +6,12 @@ import Toggler from './toggler/Toggler'
 import './bottom-modal.sass'
 
 function BottomModal({ images, accessor }) {
-  const [x, setX] = useState<number>(10)
+  const [x, setX] = useState<number>(0)
   const [isM, setIsM] = useState(false)
-  const [Z, setZ] = useState(0)
+  const [Z, setZ] = useState<number>(0)
 
-  const addX = () => setX(x + 40)
-  const minusX = () => setX(x - 40)
+  const addX = () => setX(x + 115)
+  const minusX = () => setX(x - 115)
 
   return (
     <div className='bottom-modal-container'>
@@ -34,7 +34,7 @@ function BottomModal({ images, accessor }) {
         )}
         {!isM && images[accessor].desktop.map((item) =>
           <img className="desktop-image"
-            style={{ transform: `translateX(${x}vw)` }} src={item} />
+            style={{ transform: `translateX(${x}%)` }} src={item} />
         )}
 
       </div>
