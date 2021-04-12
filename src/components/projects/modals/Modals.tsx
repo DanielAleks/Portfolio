@@ -4,7 +4,7 @@ import './modals.sass'
 import { useEffect, useState } from 'react'
 import { useWindowSize } from '../../../App'
 
-function Modals({ accessor, images, setActive, tech, setTech, details, setDetails }) {
+function Modals({ accessor, images, setActive, tech, setTech, details, setDetails, isAnimated, setIsAnimated }) {
 
   const size = useWindowSize()
 
@@ -15,13 +15,20 @@ function Modals({ accessor, images, setActive, tech, setTech, details, setDetail
     }
   }, [size])
 
-  return (
-    <div className='popup-container'>
-      <div className='active-overlay'
-        onClick={() => setActive(false)}
-      />
+  const closeModalHandler = () => {
+    setIsAnimated(false)
+    setTimeout(() => {
+      setActive(false);
+    }, 500)
+  }
 
-      <MobilePopup
+
+  return (
+    <div className={isAnimated ? 'popup-container' : 'popup-container-off'}>
+      <div className='active-overlay'
+        onClick={closeModalHandler} />
+
+      < MobilePopup
         images={images}
         accessor={accessor}
         tech={tech}

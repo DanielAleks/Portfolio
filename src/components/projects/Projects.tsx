@@ -98,12 +98,14 @@ function Projects() {
   const size = useWindowSize()
   const [active, setActive] = useState(false)
   const [accessor, setAccessor] = useState(0)
+  const [isAnimated, setIsAnimated] = useState(false)
   const [tech, setTech] = useState(false)
   const [details, setDetails] = useState(false)
 
-  const mainImageHandler = (id): any => {
+  const openModal = (id): any => {
     setActive(!active)
     setAccessor(id)
+    setIsAnimated(true)
   }
 
   const imageAnimationHandler = (id) => {
@@ -133,12 +135,17 @@ function Projects() {
       <div className='project-city-bg' />
       <div className='main-images'>
         {images.map((item, id) =>
-          <img style={{ animationDelay: `${imageAnimationHandler(id)}s` }} onClick={() => mainImageHandler(id)} src={item.main} />
+          <img
+            style={{ animationDelay: `${imageAnimationHandler(id)}s` }}
+            onClick={() => openModal(id)}
+            src={item.main} />
         )}
       </div>
 
       {active &&
         <Modals
+          isAnimated={isAnimated}
+          setIsAnimated={setIsAnimated}
           tech={tech}
           setTech={setTech}
           details={details}

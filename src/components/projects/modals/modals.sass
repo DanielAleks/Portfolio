@@ -1,9 +1,28 @@
-.popup-container
+.popup-container, .popup-container-off
   position: fixed
   height: 100vh
   bottom: 0px
   width: 100%
   z-index: 3
+  opacity: 0
+  animation: opacity-popup 1s forwards
+
+.popup-container-off
+  animation: opacity-popupblop .5s forwards
+  opacity: 1
+
+@keyframes opacity-popupblop
+  0%
+    opacity: 1
+  100%
+    opacity: 0
+
+
+@keyframes opacity-popup
+  0%
+    opacity: 0
+  100%
+    opacity: 1
 
 .active-overlay
   position: absolute
