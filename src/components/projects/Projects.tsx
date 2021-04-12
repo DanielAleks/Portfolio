@@ -49,6 +49,7 @@ import Spring from '../../assets/images/icons/react-spring.png'
 import './projects.sass'
 import Modals from './modals/Modals'
 import HorozontalModal from './horozontal-modal/HorozontalModal'
+import { useWindowSize } from '../../App'
 
 const images: any = [
   {
@@ -94,6 +95,7 @@ const images: any = [
 ]
 
 function Projects() {
+  const size = useWindowSize()
   const [active, setActive] = useState(false)
   const [accessor, setAccessor] = useState(0)
 
@@ -118,6 +120,7 @@ function Projects() {
           setActive={setActive}
         />
       }
+
 
       {active &&
         <HorozontalModal

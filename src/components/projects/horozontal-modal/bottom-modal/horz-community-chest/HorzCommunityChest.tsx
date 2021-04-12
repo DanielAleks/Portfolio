@@ -23,7 +23,7 @@ function HorzCommunityChest({ images, accessor, Z, setZ }) {
         <a href={images[accessor].website}>
           <button>Visit Site</button>
         </a>
-      </div>
+      </div> 
     </div>
   )
 }
