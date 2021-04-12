@@ -1,11 +1,13 @@
 import React, { useState } from 'react'
-import './bottom-modal.sass'
 import HorzChance from './horz-chance/HorzChance'
 import { AiOutlineRightCircle, AiOutlineLeftCircle } from 'react-icons/ai'
 import HorzCommunityChest from './horz-community-chest/HorzCommunityChest'
+import Toggler from './toggler/Toggler'
+import './bottom-modal.sass'
 
 function BottomModal({ images, accessor }) {
   const [x, setX] = useState<number>(10)
+  const [isMobile, setIsMobile] = useState(false)
 
   const addX = () => setX(x + 40)
   const minusX = () => setX(x - 40)
@@ -15,6 +17,8 @@ function BottomModal({ images, accessor }) {
   return (
     <div className='bottom-modal-container'>
       <div className='bottom-popup-container'>
+
+        <Toggler isMobile={isMobile} setIsMobile={setIsMobile} />
 
         <div className="left-arrow" onClick={addX}>
           <AiOutlineLeftCircle size={50} />
