@@ -45,6 +45,14 @@
     transform: translateY(0rem)
     opacity: 1
 
+@keyframes slide-down-hometext
+  0%
+    transform: translateY(-50rem)
+    opacity: 0
+  100%
+    transform: translateY(0rem)
+    opacity: 1
+
 .home-green-container
   height: 100vh
   width: 50%
@@ -109,9 +117,12 @@
       bottom: 5rem
       margin: 0px
       h1
+        animation: slide-down-hometext 1s forwards .05s
         font-size: 5rem
       p
         width: 50rem
+        animation: slide-down-hometext 1s forwards
+
   .red-dice-bg
     height: 35rem
     width: 55rem

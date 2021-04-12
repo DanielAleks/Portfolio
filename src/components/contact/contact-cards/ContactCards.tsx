@@ -3,9 +3,12 @@ import PassGo from '../../../assets/images/portfolio/passGo.jpg'
 import OutOfJail from '../../../assets/images/portfolio/outOfJail.jpg'
 import Chance from '../../../assets/images/portfolio/chanceclear.png'
 import { Link } from "react-router-dom";
+import { Scrollbars } from 'react-custom-scrollbars';
 import './contact-cards.sass'
+import { useWindowSize } from '../../../App';
 
 function ContactCards() {
+  const size = useWindowSize()
 
   const card = [
     {
@@ -45,25 +48,27 @@ function ContactCards() {
   return (
     <div className='contact-cards-container'>
 
-      <div className='cards-inner-container'>
-        {card.map((item, id) =>
-          <div style={{ animationDelay: `${cardDelay(id)}s` }} className="contact-information">
-            <a style={{ cursor: id === 0 ? 'auto' : 'pointer' }} href={item.href} target='_blank'>
-              <img className={item.style} src={item.image} />
-              <p>{item.title}</p>
-              <p
-                style={{ textDecoration: id === 0 ? 'none' : 'underline' }} >{item.link}</p>
-            </a>
-          </div>
-        )}
+      <Scrollbars style={{ width: '100vw', height: '100%' }}>
+        <div className='cards-inner-container'>
+          {card.map((item, id) =>
+            <div style={{ animationDelay: `${cardDelay(id)}s` }} className="contact-information">
+              <a style={{ cursor: id === 0 ? 'auto' : 'pointer' }} href={item.href} target='_blank'>
+                <img className={item.style} src={item.image} />
+                <p>{item.title}</p>
+                <p
+                  style={{ textDecoration: id === 0 ? 'none' : 'underline' }} >{item.link}</p>
+              </a>
+            </div>
+          )}
 
-        <div className="another-way-card">
-          <Link className='Link-another-styles' to="another-way">
-            <img src={Chance} />
-            <p>Another Way</p>
-          </Link>
+          <div className="another-way-card">
+            <Link className='Link-another-styles' to="another-way">
+              <img src={Chance} />
+              <p>Another Way</p>
+            </Link>
+          </div>
         </div>
-      </div>
+      </Scrollbars>
     </div>
   )
 }

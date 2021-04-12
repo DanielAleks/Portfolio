@@ -1,10 +1,11 @@
 import ContactComponent from '../ContactComponent'
 import { Link, useHistory } from "react-router-dom";
 import Chance from '../../../assets/images/portfolio/chanceclear.png'
-import './another-way.sass'
-import '../contact-cards/contact-cards.sass'
-import { useWindowSize } from '../../../App';
+import { Scrollbars } from 'react-custom-scrollbars';
 import { useEffect } from 'react';
+import { useWindowSize } from '../../../App';
+import '../contact-cards/contact-cards.sass'
+import './another-way.sass'
 
 function AnotherWay() {
   const size = useWindowSize()
@@ -19,14 +20,16 @@ function AnotherWay() {
 
   return (
     <div className='another-way-container'>
-      <ContactComponent />
+      <Scrollbars style={{ width: 500, height: "100%" }}>
+        <ContactComponent />
 
-      <div className="other-way-card">
-        <Link className="Link-other-way" to="/contact">
-          <img src={Chance} />
-          <p>Wrong Way?</p>
-        </Link>
-      </div>
+        <div className="other-way-card">
+          <Link className="Link-other-way" to="/contact">
+            <img src={Chance} />
+            <p>Wrong Way?</p>
+          </Link>
+        </div>
+      </Scrollbars>
     </div>
   )
 }
