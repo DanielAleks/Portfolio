@@ -1,12 +1,11 @@
 import React, { useState } from 'react'
+import { Scrollbars } from 'react-custom-scrollbars';
 import Meditation1D from '../../assets/images/meditation/desktop/meditation1.jpg'
 import Meditation2D from '../../assets/images/meditation/desktop/meditation2.jpg'
 import Meditation3D from '../../assets/images/meditation/desktop/meditation3.jpg'
 import Meditation1M from '../../assets/images/meditation/mobile/meditation1.png'
 import Meditation2M from '../../assets/images/meditation/mobile/meditation2.png'
 import Meditation3M from '../../assets/images/meditation/mobile/meditation3.png'
-
-
 import BBHomeD from '../../assets/images/blueberries/desktop/homeD.png'
 import BBBenefitsD from '../../assets/images/blueberries/desktop/benefitsD.png'
 import BBFreezingD from '../../assets/images/blueberries/desktop/freezingD.png'
@@ -17,16 +16,12 @@ import BBFreezingM from '../../assets/images/blueberries/mobile/freezingM.png'
 import BBHomeM from '../../assets/images/blueberries/mobile/homeM.png'
 import BBRecipesM from '../../assets/images/blueberries/mobile/recipesM.png'
 import BBRecipesModalM from '../../assets/images/blueberries/mobile/recipesModalM.png'
-
-
 import AfghanistanD from '../../assets/images/weather/desktop/afghanistanD.png'
 import CaliD from '../../assets/images/weather/desktop/caliD.png'
 import JapanD from '../../assets/images/weather/desktop/japanD.png'
 import AfghanistanM from '../../assets/images/weather/mobile/afghanistanM.png'
 import CaliM from '../../assets/images/weather/mobile/caliM.png'
 import JapanM from '../../assets/images/weather/mobile/japanM.png'
-
-
 import WLHomeD from '../../assets/images/wildlife/desktop/homeD.png'
 import WLArticlesD from '../../assets/images/wildlife/desktop/articlesD.png'
 import WLGalleryD from '../../assets/images/wildlife/desktop/galleryD.png'
@@ -35,8 +30,6 @@ import WLHomeM from '../../assets/images/wildlife/mobile/homeM.png'
 import WLArticlesM from '../../assets/images/wildlife/mobile/articlesM.png'
 import WLGalleryM from '../../assets/images/wildlife/mobile/galleryM.png'
 import WLHomeBottomM from '../../assets/images/wildlife/mobile/homeBottomM.png'
-
-
 import ReactLogo from '../../assets/images/icons/react-Logo.png'
 import VueLogo from '../../assets/images/icons/vue.png'
 import AngularLogo from '../../assets/images/icons/angular.png'
@@ -133,14 +126,17 @@ function Projects() {
   return (
     <div className="project-container">
       <div className='project-city-bg' />
-      <div className='main-images'>
-        {images.map((item, id) =>
-          <img
-            style={{ animationDelay: `${imageAnimationHandler(id)}s` }}
-            onClick={() => openModal(id)}
-            src={item.main} />
-        )}
-      </div>
+      <Scrollbars className="me" style={{width: '100%', height: '100%'
+      }}>
+        <div className='main-images'>
+          {images.map((item, id) =>
+            <img
+              style={{ animationDelay: `${imageAnimationHandler(id)}s` }}
+              onClick={() => openModal(id)}
+              src={item.main} />
+          )}
+        </div>
+      </Scrollbars>
 
       {active &&
         <Modals

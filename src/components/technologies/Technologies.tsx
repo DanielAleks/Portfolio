@@ -20,6 +20,7 @@ import StyledC from '../../assets/images/icons/styled-Components.png'
 import Tailwind from '../../assets/images/icons/tailwind.png'
 import TS from '../../assets/images/icons/typescript.png'
 import Yarn from '../../assets/images/icons/yarn-logo.png'
+import { Scrollbars } from 'react-custom-scrollbars';
 
 function Technologies() {
   const [isDisplay, setIsDisplay] = useState<number>(21)
@@ -40,18 +41,20 @@ function Technologies() {
       <div className='green-tech-container' />
 
       <p className="tech-header">Technologies</p>
-      <div className='inner-green-container'>
+      <Scrollbars style={{ width: '100%', height: '100%' }}>
+        <div className='inner-green-container'>
 
-        {iconData.map((item, id) =>
-          <div
-            style={{ animationDelay: `${id * .05}s` }}
-            onMouseEnter={() => setIsDisplay(id)}
-            onMouseLeave={() => setIsDisplay(21)}
-            className='icon-container'>
-            <img className="icon-image" src={item} />
-          </div>
-        )}
-      </div>
+          {iconData.map((item, id) =>
+            <div
+              style={{ animationDelay: `${id * .05}s` }}
+              onMouseEnter={() => setIsDisplay(id)}
+              onMouseLeave={() => setIsDisplay(21)}
+              className='icon-container'>
+              <img className="icon-image" src={item} />
+            </div>
+          )}
+        </div>
+      </Scrollbars>
     </div>
   )
 }
