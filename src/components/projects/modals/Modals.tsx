@@ -4,7 +4,7 @@ import './modals.sass'
 import { useEffect, useState } from 'react'
 import { useWindowSize } from '../../../App'
 
-function Modals({ accessor, images, setActive, tech, setTech, details, setDetails, isAnimated, setIsAnimated }) {
+function Modals({ accessor, images, tech, setTech, details, setDetails, isAnimated, closeModalHandler }) {
   const size = useWindowSize()
 
   useEffect(() => {
@@ -13,13 +13,6 @@ function Modals({ accessor, images, setActive, tech, setTech, details, setDetail
       setTech(false)
     }
   }, [size])
-
-  const closeModalHandler = () => {
-    setIsAnimated(false)
-    setTimeout(() => {
-      setActive(false);
-    }, 500)
-  }
 
   return (
     <div className={isAnimated ? 'popup-container' : 'popup-container-off'}>

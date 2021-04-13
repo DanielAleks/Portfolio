@@ -2,10 +2,10 @@ import React from 'react'
 import BottomModal from './bottom-modal/BottomModal'
 import './horozontal-modal.sass'
 
-function HorozontalModal({ accessor, images, setActive, tech, setTech, details, setDetails }) {
+function HorozontalModal({ accessor, images, tech, setTech, details, setDetails, isAnimated, closeModalHandler }) {
   return (
-    <div className="horz-modal-container">
-      <div className="active-overlay" onClick={() => setActive(false)} />
+    <div className={isAnimated ? 'horz-modal-container' : 'horz-modal-container-off'}>
+      <div className="active-overlay" onClick={closeModalHandler} />
 
       <BottomModal
         tech={tech}

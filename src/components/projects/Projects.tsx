@@ -123,6 +123,13 @@ function Projects() {
     }
   }
 
+  const closeModalHandler = () => {
+    setIsAnimated(false)
+    setTimeout(() => {
+      setActive(false);
+    }, 500)
+  }
+
   return (
     <div className="project-container">
       <div className='project-city-bg' />
@@ -139,27 +146,27 @@ function Projects() {
 
       {active &&
         <Modals
+          closeModalHandler={closeModalHandler}
           isAnimated={isAnimated}
-          setIsAnimated={setIsAnimated}
           tech={tech}
           setTech={setTech}
           details={details}
           setDetails={setDetails}
           accessor={accessor}
           images={images}
-          setActive={setActive}
         />
       }
 
       {active &&
         <HorozontalModal
+          closeModalHandler={closeModalHandler}
+          isAnimated={isAnimated}
           tech={tech}
           setTech={setTech}
           details={details}
           setDetails={setDetails}
           accessor={accessor}
           images={images}
-          setActive={setActive}
         />
       }
     </div>
