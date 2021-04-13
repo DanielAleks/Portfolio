@@ -39,6 +39,7 @@ export function useWindowSize() {
 function App() {
   const size = useWindowSize()
   const [isNav, setIsNav] = useState(false)
+  const [isAnimated, setIsAnimated] = useState(false)
 
   useEffect(() => {
     size.width <= 900 ? setIsNav(false) : setIsNav(true)
@@ -47,8 +48,9 @@ function App() {
   return (
     <Router>
       <div>
-
         <Navbar
+          isAnimated={isAnimated}
+          setIsAnimated={setIsAnimated}
           setIsNav={setIsNav}
           isNav={isNav} size={size}
         />
