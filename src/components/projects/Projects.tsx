@@ -126,8 +126,7 @@ function Projects() {
   return (
     <div className="project-container">
       <div className='project-city-bg' />
-      <Scrollbars className="me" style={{width: '100%', height: '100%'
-      }}>
+      <Scrollbars style={{ width: '100%', height: '100%' }}>
         <div className='main-images'>
           {images.map((item, id) =>
             <img

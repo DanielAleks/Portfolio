@@ -12,8 +12,18 @@ function BottomModal({ images, accessor, tech, setTech, details, setDetails }) {
   const [isM, setIsM] = useState(false)
   const [Z, setZ] = useState<number>(0)
 
-  var settings = {
+  var mobileSettings = {
     dots: true,
+    arrows: false,
+    infinite: true,
+    speed: 10,
+    slidesToShow: 2,
+    slidesToScroll: 2
+  };
+
+  var desktopSettings = {
+    dots: true,
+    arrows: false,
     infinite: true,
     speed: 1000,
     slidesToShow: 1,
@@ -26,12 +36,17 @@ function BottomModal({ images, accessor, tech, setTech, details, setDetails }) {
 
         <Toggler isM={isM} setIsM={setIsM} />
 
-        {isM && images[accessor].mobile.map((item) =>
-          <img className="mobile-image" src={item} />
-        )}
+        {isM &&
+          <Slider className='bottom-carousel-container' {...mobileSettings}>
+            {isM && images[accessor].mobile.map((item) =>
+              <div>
+                <img className="mobile-image" src={item} />
+              </div>
+            )}
+          </Slider>}
 
         {!isM &&
-          <Slider className='bottom-carousel-container' {...settings}>
+          <Slider className='bottom-carousel-container' {...desktopSettings}>
             {images[accessor].desktop.map((item) =>
               <div className='poopsy' >
                 <img className="desktop-image" src={item} />
@@ -39,7 +54,7 @@ function BottomModal({ images, accessor, tech, setTech, details, setDetails }) {
             )}
           </Slider>}
 
-      </div>
+      </div >
 
       <HorzChance
         tech={tech}
@@ -53,7 +68,7 @@ function BottomModal({ images, accessor, tech, setTech, details, setDetails }) {
         Z={Z} setZ={setZ}
         images={images}
         accessor={accessor} />
-    </div>
+    </div >
   )
 }
 

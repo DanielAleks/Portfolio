@@ -19,11 +19,13 @@
   width: 41rem
   margin-bottom: 3rem
 
+.slick-dots li button:before
+  opacity: .3
+  color: white
 
-.slick-list
-
-.poopsy
-  background: red
+.slick-dots li.slick-active button:before
+  color: white !important
+  opacity: 1
 
 .desktop-image
   height: 23rem
@@ -33,10 +35,10 @@
   transition: transform 1s
 
 .mobile-image
-  height: 23rem
+  height: 23.5rem
   width: 12rem
   margin: 3rem
-  border-radius: 20px
+  border-radius: 10px
   object-fit: cover
   transition: transform 1s
 
