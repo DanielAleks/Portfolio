@@ -16,7 +16,9 @@ function BottomModal({ images, accessor, tech, setTech, details, setDetails }) {
     dots: true,
     arrows: false,
     infinite: true,
-    speed: 10,
+    autoplaySpeed: 2000,
+    autoplay: true,
+    speed: 1000,
     slidesToShow: 2,
     slidesToScroll: 2
   };
@@ -24,6 +26,8 @@ function BottomModal({ images, accessor, tech, setTech, details, setDetails }) {
   var desktopSettings = {
     dots: true,
     arrows: false,
+    autoplay: true,
+    autoplaySpeed: 2000,
     infinite: true,
     speed: 1000,
     slidesToShow: 1,
