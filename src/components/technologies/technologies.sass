@@ -26,6 +26,8 @@
   align-items: center
   height: 80vh
   margin-top: 12rem
+  position: absolute
+  right: 20%
   z-index: 1
 
 .money-bg
@@ -49,6 +51,7 @@
   font-size: 4rem
   color: white
   position: absolute
+  right: 40%
   font-family: Rowdies
   z-index: 1
   animation: slide-down-tech-header 1s forwards
@@ -89,12 +92,16 @@
   object-fit: contain
 
 @media (max-width: 1600px)
-  .inner-green-container, .tech-header
-    margin-left: 15rem
+  .tech-header
+    right: 40%
+  .inner-green-container
+    right: 15%
 
 @media (max-width: 1400px)
   .inner-green-container
     width: 80rem
+  .tech-header
+    right: 35%
 
 @media (max-width: 1100px)
   .inner-green-container
@@ -102,6 +109,8 @@
   .icon-container
     margin-left: 1rem
     margin-right: 1rem
+  .tech-header
+    right: 25%
 
 @media (max-width: 900px)
   .green-tech-container
@@ -110,11 +119,13 @@
     box-shadow: none
     background: #2E2E2E
   .inner-green-container
+    right: 0%
     width: 100%
     margin: 0px
     margin-top: 20rem
   .tech-header
     top: 12rem
+    right: 33%
     margin: 0px
   .icon-container
     margin: 1rem
@@ -124,9 +135,11 @@
     width: 100%
     bottom: 0px
 
+@media (max-width: 600px)
+  .tech-header
+    right: 25%
+
 @media (max-height: 600px)
-  .inner-green-container, .tech-header
-    margin-left: 25rem
   .inner-green-container
     width: 120rem
 
