@@ -2,8 +2,40 @@ import React, { useState } from 'react'
 import './navbar.sass'
 import { Link } from "react-router-dom";
 import { GiHamburgerMenu } from 'react-icons/gi'
+import ReactGA from 'react-ga'
 
 function Navbar({ setIsNav, isNav, size, isAnimated, setIsAnimated }) {
+
+
+  const onAboutHandler = () => {
+    ReactGA.event({
+      category: 'Route About',
+      action: 'went to route /about'
+    });
+  }
+  const onTechHandler = () => {
+    ReactGA.event({
+      category: 'Route Technology',
+      action: 'went to route /tech'
+    });
+  }
+  const onContactHandler = () => {
+    ReactGA.event({
+      category: 'Route Contact',
+      action: 'went to route /contact'
+    });
+  }
+
+  const GaHandler = (id) => {
+    if (id === 1) {
+      onAboutHandler()
+    } else if (id === 3) {
+      onTechHandler()
+    } else if (id === 4) {
+      onContactHandler()
+    }
+  }
+
 
   const closeMobileNav = () => {
     setIsAnimated(!isAnimated)
@@ -11,9 +43,9 @@ function Navbar({ setIsNav, isNav, size, isAnimated, setIsAnimated }) {
       if (!isNav) {
         setIsNav(!isNav)
       } else
-      setTimeout(() => {
-        setIsNav(!isNav)
-      }, 500)
+        setTimeout(() => {
+          setIsNav(!isNav)
+        }, 500)
     } else setIsNav(isNav)
   }
 
@@ -35,8 +67,6 @@ function Navbar({ setIsNav, isNav, size, isAnimated, setIsAnimated }) {
     } else return id * .1
   }
 
-  // size.width < 900 ? `${id * .05}s` : `${id * .1}s`
-
   const navItems = [
     { name: 'Home', to: '/' },
     { name: 'About', to: '/about' },
@@ -44,7 +74,6 @@ function Navbar({ setIsNav, isNav, size, isAnimated, setIsAnimated }) {
     { name: 'Technologies', to: '/tech' },
     { name: 'Contact', to: '/contact' }
   ]
-
 
   return (
     <>
@@ -67,6 +96,7 @@ function Navbar({ setIsNav, isNav, size, isAnimated, setIsAnimated }) {
           <>
             {navItems.map((item, id) =>
               <Link
+                onClick={() => GaHandler(id)}
                 style={{ animationDelay: `${animationDelayMe(id)}s` }}
                 className={isAnimated ? 'nav-item' : 'nav-item-off'}
                 to={item.to}>{item.name}</Link>

@@ -6,9 +6,39 @@ import { Link } from "react-router-dom";
 import { Scrollbars } from 'react-custom-scrollbars';
 import './contact-cards.sass'
 import { useWindowSize } from '../../../App';
+import ReactGA from 'react-ga'
 
 function ContactCards() {
   const size = useWindowSize()
+
+  const onGmailHandler = () => {
+    ReactGA.event({
+      category: 'Card Gmail',
+      action: 'Card Gmail was clicked'
+    });
+  }
+
+  const onGithubHandler = () => {
+    ReactGA.event({
+      category: 'Card Github',
+      action: 'Card Github was clicked'
+    });
+  }
+
+  const anotherWayHandler = () => {
+    ReactGA.event({
+      category: 'AnotherWay Clicked',
+      action: 'Card AnotherWay was clicked'
+    });
+  }
+
+  const GAHandler = (id) => {
+    if (id === 1) {
+      onGmailHandler()
+    } else if (id === 2) {
+      onGithubHandler()
+    }
+  }
 
   const card = [
     {
@@ -51,7 +81,7 @@ function ContactCards() {
         <div className='cards-inner-container'>
           {card.map((item, id) =>
             <div style={{ animationDelay: `${cardDelay(id)}s` }} className="contact-information">
-              <a style={{ cursor: id === 0 ? 'auto' : 'pointer' }} href={item.href} target='_blank'>
+              <a onClick={() => GAHandler(id)} style={{ cursor: id === 0 ? 'auto' : 'pointer' }} href={item.href} target='_blank'>
                 <img className={item.style} src={item.image} />
                 <p>{item.title}</p>
                 <p
@@ -61,7 +91,7 @@ function ContactCards() {
           )}
 
           <div className="another-way-card">
-            <Link className='Link-another-styles' to="another-way">
+            <Link onClick={anotherWayHandler} className='Link-another-styles' to="another-way">
               <img src={Chance} />
               <p>Another Way</p>
             </Link>
