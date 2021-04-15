@@ -79,7 +79,7 @@ function ContactCards() {
 
       <Scrollbars style={{ width: '100vw', height: '100%' }}>
         <div className='cards-inner-container'>
-          {card.map((item, id) =>
+          {card.map((item, id) => 
             <div style={{ animationDelay: `${cardDelay(id)}s` }} className="contact-information">
               <a onClick={() => GAHandler(id)} style={{ cursor: id === 0 ? 'auto' : 'pointer' }} href={item.href} target='_blank'>
                 <img className={item.style} src={item.image} />

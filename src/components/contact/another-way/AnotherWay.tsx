@@ -20,14 +20,20 @@ function AnotherWay() {
 
   return (
     <div className='another-way-container'>
-      <Scrollbars style={{ width: 500, height: "100%" }}>
-        <ContactComponent />
 
-        <div className="other-way-card">
-          <Link className="Link-other-way" to="/contact">
-            <img src={Chance} />
-            <p>Wrong Way?</p>
-          </Link>
+      <Scrollbars style={{ width: '100%', height: "100vh" }}>
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
+
+          <ContactComponent />
+
+          <div className='other-way-container'>
+            <div className="other-way-card">
+              <Link className="Link-other-way" to="/contact">
+                <img src={Chance} />
+                <p>Wrong Way?</p>
+              </Link>
+            </div>
+          </div>
         </div>
       </Scrollbars>
     </div>
