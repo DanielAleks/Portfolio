@@ -14,6 +14,7 @@ import Contact from './components/contact/Contact';
 import Home from './components/home/Home';
 import Navbar from './components/navbar/Navbar';
 import AnotherWay from './components/contact/another-way/AnotherWay';
+import ReactGa from 'react-ga';
 
 export function useWindowSize() {
   const [windowSize, setWindowSize] = useState({
@@ -44,6 +45,11 @@ function App() {
   useEffect(() => {
     size.width <= 900 ? setIsNav(false) : setIsNav(true)
   }, [size.width])
+
+  useEffect(() => {
+    ReactGa.initialize('UA-190747385-1')
+    ReactGa.pageview('/')
+  }, []);
 
   return (
     <Router>

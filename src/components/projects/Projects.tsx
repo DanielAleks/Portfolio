@@ -38,11 +38,11 @@ import Figma from '../../assets/images/icons/Figma.png'
 import StyledC from '../../assets/images/icons/styled-Components.png'
 import Css from '../../assets/images/icons/css.png'
 import Spring from '../../assets/images/icons/react-spring.png'
-
 import './projects.sass'
 import Modals from './modals/Modals'
 import HorozontalModal from './horozontal-modal/HorozontalModal'
 import { useWindowSize } from '../../App'
+import ReactGA from 'react-ga'
 
 const images: any = [
   {
@@ -99,7 +99,42 @@ function Projects() {
     setActive(!active)
     setAccessor(id)
     setIsAnimated(true)
+    if (id === 0) {
+      weatherApp()
+    } else if (id === 1) {
+      wildlifeApp()
+    } else if (id === 2) {
+      blueberryApp()
+    } else if (id === 3) {
+      meditationApp()
+    }
   }
+
+  const weatherApp = () => {
+    ReactGA.event({
+      category: 'weatherApp',
+      action: 'opened weatherApp modal'
+    });
+  }
+  const wildlifeApp = () => {
+    ReactGA.event({
+      category: 'wildlifeApp',
+      action: 'opened meditation modal'
+    });
+  }
+  const blueberryApp = () => {
+    ReactGA.event({
+      category: 'blueberryApp',
+      action: 'opened blueberryApp modal'
+    });
+  }
+  const meditationApp = () => {
+    ReactGA.event({
+      category: 'meditationApp',
+      action: 'opened meditationApp modal'
+    });
+  }
+
 
   const imageAnimationHandler = (id) => {
     if (size.width > 900) {
