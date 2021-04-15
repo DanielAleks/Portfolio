@@ -13,6 +13,12 @@ function Navbar({ setIsNav, isNav, size, isAnimated, setIsAnimated }) {
       action: 'went to route /about'
     });
   }
+  const onProjectsHandler = () => {
+    ReactGA.event({
+      category: 'Route Projects',
+      action: 'went to route /projects'
+    });
+  }
   const onTechHandler = () => {
     ReactGA.event({
       category: 'Route Technology',
@@ -29,13 +35,14 @@ function Navbar({ setIsNav, isNav, size, isAnimated, setIsAnimated }) {
   const GaHandler = (id) => {
     if (id === 1) {
       onAboutHandler()
+    } else if (id === 2) {
+      onProjectsHandler()
     } else if (id === 3) {
       onTechHandler()
     } else if (id === 4) {
       onContactHandler()
     }
   }
-
 
   const closeMobileNav = () => {
     setIsAnimated(!isAnimated)
