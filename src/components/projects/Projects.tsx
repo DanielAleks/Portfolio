@@ -168,16 +168,19 @@ function Projects() {
   return (
     <div className="project-container">
       <div className='project-city-bg' />
-      <Scrollbars style={{ width: '100%', height: '100%' }}>
-        <div className='main-images'>
-          {images.map((item, id) =>
-            <img
-              style={{ animationDelay: `${imageAnimationHandler(id)}s` }}
-              onClick={() => openModal(id)}
-              src={item.main} />
-          )}
-        </div>
-      </Scrollbars>
+
+        <Scrollbars style={{ width: '100%', height: '100%' }}>
+          <div className='main-images'>
+            <div className='inner-images-container'>
+            {images.map((item, id) =>
+              <img
+                style={{ animationDelay: `${imageAnimationHandler(id)}s` }}
+                onClick={() => openModal(id)}
+                src={item.main} />
+                )}
+                </div>
+          </div>
+        </Scrollbars>
 
       {active &&
         <Modals
