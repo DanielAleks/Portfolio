@@ -79,22 +79,24 @@ function ContactCards() {
 
       <Scrollbars style={{ width: '100vw', height: '100%' }}>
         <div className='cards-inner-container'>
-          {card.map((item, id) => 
-            <div style={{ animationDelay: `${cardDelay(id)}s` }} className="contact-information">
-              <a onClick={() => GAHandler(id)} style={{ cursor: id === 0 ? 'auto' : 'pointer' }} href={item.href} target='_blank'>
-                <img className={item.style} src={item.image} />
-                <p>{item.title}</p>
-                <p
-                  style={{ textDecoration: id === 0 ? 'none' : 'underline' }} >{item.link}</p>
-              </a>
-            </div>
-          )}
+          <div className='cards-innermost-container'>
+            {card.map((item, id) =>
+              <div style={{ animationDelay: `${cardDelay(id)}s` }} className="contact-information">
+                <a onClick={() => GAHandler(id)} style={{ cursor: id === 0 ? 'auto' : 'pointer' }} href={item.href} target='_blank'>
+                  <img className={item.style} src={item.image} />
+                  <p>{item.title}</p>
+                  <p
+                    style={{ textDecoration: id === 0 ? 'none' : 'underline' }} >{item.link}</p>
+                </a>
+              </div>
+            )}
 
-          <div className="another-way-card">
-            <Link onClick={anotherWayHandler} className='Link-another-styles' to="another-way">
-              <img src={Chance} />
-              <p>Another Way</p>
-            </Link>
+            <div className="another-way-card">
+              <Link onClick={anotherWayHandler} className='Link-another-styles' to="another-way">
+                <img src={Chance} />
+                <p>Another Way</p>
+              </Link>
+            </div>
           </div>
         </div>
       </Scrollbars>
