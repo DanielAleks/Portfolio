@@ -38,21 +38,22 @@ function Technologies() {
   return (
     <div className='tech-container'>
       <div className="money-bg" />
-      <div className='green-tech-container' />
+      <Scrollbars style={{ width: '100vw', height: '100vh' }}>
+        <div className='green-tech-container' >
 
-      <p className="tech-header">Technologies</p>
-      <Scrollbars style={{ width: '100%', height: '100%' }}>
-        <div className='inner-green-container'>
+          <div className='tech-content-container'>
+            <p className="tech-header">Technologies</p>
 
-          {iconData.map((item, id) =>
-            <div
-              style={{ animationDelay: `${id * .05}s` }}
-              onMouseEnter={() => setIsDisplay(id)}
-              onMouseLeave={() => setIsDisplay(21)}
-              className='icon-container'>
-              <img className="icon-image" src={item} />
+            <div className='inner-green-container'>
+              {iconData.map((item, id) =>
+                <div
+                  style={{ animationDelay: `${id * .05}s` }}
+                  className='icon-container'>
+                  <img className="icon-image" src={item} />
+                </div>
+              )}
             </div>
-          )}
+          </div>
         </div>
       </Scrollbars>
     </div>
