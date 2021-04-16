@@ -1,9 +1,26 @@
 import Parking from '../../../../assets/images/portfolio/freeParkingClear.png'
 import CommunityChest from './community-chest/CommunityChest'
 import { Scrollbars } from 'react-custom-scrollbars';
+import ReactGA from 'react-ga'
 import './desktop-modal.sass'
 
 function DesktopPopup({ accessor, images, details, setDetails, setTech, size }) {
+
+  const visitHandler = () => {
+    switch (accessor) {
+      case 0:
+        ReactGA.event({ category: 'Visited WeatherApp', action: 'clicked on visit in weather modal' }); break;
+      case 1:
+        ReactGA.event({ category: 'Visited WildlifeApp', action: 'clicked on visit in wildlife modal' }); break;
+      case 2:
+        ReactGA.event({ category: 'Visited BluberryApp', action: 'clicked on visit in blueberry modal' }); break;
+      case 3:
+        ReactGA.event({ category: 'Visited MeditationApp', action: 'clicked on visit in meditation modal' }); break;
+      default:
+        ReactGA.event({ category: 'Visited Site', action: 'clicked on visit in modal' });
+    }
+  }
+
   return (
     <div className='desktop-outer-popup-container'>
       <div className='desktop-popup-container'>
@@ -14,7 +31,7 @@ function DesktopPopup({ accessor, images, details, setDetails, setTech, size }) 
         </Scrollbars>
       </div>
 
-      <a href={images[accessor].website} target='_blank'>
+      <a href={images[accessor].website} onClick={visitHandler} target='_blank'>
         <button className='b-visit-site'>
           <img src={Parking} />
           <p>Visit Site</p>
