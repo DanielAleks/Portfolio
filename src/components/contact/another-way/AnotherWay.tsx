@@ -19,14 +19,14 @@ function AnotherWay() {
   }, [size.width])
 
   return (
-    <div className='another-way-container'>
+    <div className='other-way-omni-container'>
 
       <Scrollbars style={{ width: '100%', height: "100vh" }}>
-        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
-
-          <ContactComponent />
-
+        <div className='other-way-inner-container'>
           <div className='other-way-container'>
+
+            <ContactComponent />
+
             <div className="other-way-card">
               <Link className="Link-other-way" to="/contact">
                 <img src={Chance} />
