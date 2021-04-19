@@ -173,12 +173,10 @@ function Projects() {
         <div className='main-images'>
           <div className='inner-images-container'>
             {images.map((item, id) =>
-              <div className='project-image-container' onClick={() => openModal(id)}>
+              <div onClick={() => openModal(id)}>
                 <img
-                  className="project-main-image"
                   style={{ animationDelay: `${imageAnimationHandler(id)}s` }}
                   src={item.main} />
-                {/* <img src={Transparent} className='cardio' /> */}
               </div>
             )}
           </div>

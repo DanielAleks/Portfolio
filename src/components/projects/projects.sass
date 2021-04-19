@@ -31,38 +31,6 @@
   height: 100%
   width: 100%
 
-.project-image-container
-  height: 34rem
-  width: 60rem
-  cursor: pointer
-  margin: 5rem
-  transition: transform .3s
-
-.project-main-image
-  height: 100%
-  width: 100%
-  object-fit: cover
-  border-radius: 20px
-  opacity: 0
-  animation: slide-right-mainimages .8s forwards
-
-.project-image-container:hover
-  transform: scale(1.02)
-  transition: transform .3s
-.project-image-container:active
-  transform: scale(1.03)
-  transition: transform .3s
-
-.cardio
-  position: absolute
-  height: 100%
-  width: 100%
-  object-fit: cover
-  border-radius: 20px
-  // animation: slide-right-mainimages .8s forwards
-  opacity: .3
-  z-index: 11
-
 .inner-images-container
   display: flex
   flex-wrap: wrap
@@ -70,34 +38,53 @@
   align-items: center
   margin-right: 10rem
   width: 150rem
+  div
+    transition: transform .3s
+    &:hover
+      transform: scale(1.02)
+    &:active
+      transform: scale(1.03)
+    img
+      height: 34rem
+      width: 60rem
+      cursor: pointer
+      margin: 5rem
+      object-fit: cover
+      border-radius: 20px
+      opacity: 0
+      animation: slide-right-mainimages .8s forwards
 
 @media (max-width: 1600px)
-  .main-images
-    img
-      height: 30rem
-      width: 53rem
+  .inner-images-container
+    div
+      img
+        height: 30rem
+        width: 53rem
 
 @media (max-width: 1400px)
-  .main-images
-    img
-      height: 27rem
-      width: 48rem
-      margin: 3rem
+  .inner-images-container
+    div
+      img
+        height: 27rem
+        width: 48rem
+        margin: 3rem
 
 @media (max-width: 1200px)
-  .main-images
-    img
-      height: 24rem
-      width: 43rem
-      margin: 2rem
-      margin-top: 4rem
-      margin-bottom: 4rem
+  .inner-images-container
+    div
+      img
+        height: 24rem
+        width: 43rem
+        margin: 2rem
+        margin-top: 4rem
+        margin-bottom: 4rem
 
 @media (max-width: 1050px)
-  .main-images
-    img
-      height: 23rem
-      width: 38rem
+  .inner-images-container
+    div
+      img
+        height: 23rem
+        width: 38rem
 
 @media (max-width: 950px)
   .inner-images-container
@@ -111,15 +98,16 @@
     width: 100%
     margin-top: 12rem
     margin-bottom: 5rem
-    img
-      height: 28rem
-      width: 50rem
-      margin-bottom: 8rem
-      margin-top: 0px
-      opacity: 0
-      animation: slide-down-mainimages 1s forwards
   .inner-images-container
     margin: 0px
+    div
+      img
+        height: 28rem
+        width: 50rem
+        margin-bottom: 8rem
+        margin-top: 0px
+        opacity: 0
+        animation: slide-down-mainimages 1s forwards
 
 @keyframes slide-down-mainimages
   0%
@@ -134,26 +122,31 @@
     width: 100%
     margin-top: 12rem
     margin-bottom: 5rem
-    img
-      height: 23rem
-      width: 40rem
-      margin-bottom: 8rem
-      margin-top: 0px
+  .inner-images-container
+    div
+      img
+        height: 23rem
+        width: 40rem
+        margin-bottom: 8rem
+        margin-top: 0px
 @media (max-width: 500px)
   .main-images
     width: 100%
     margin-top: 12rem
     margin-bottom: 5rem
-    img
-      width: 35rem
-      height: 20rem
-      margin-bottom: 4rem
+  .inner-images-container
+    div
+      img
+        width: 35rem
+        height: 20rem
+        margin-bottom: 4rem
 
 @media (min-width: 1400px) and (max-width: 3000px) and (max-height: 850px)
-  .main-images
-    img
-      height: 27rem
-      width: 48rem
-      margin: 3rem
+  .inner-images-container
+    div
+      img
+        height: 27rem
+        width: 48rem
+        margin: 3rem
   .inner-images-container
     width: 115rem
