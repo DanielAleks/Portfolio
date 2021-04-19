@@ -30,15 +30,38 @@
   flex-wrap: wrap
   height: 100%
   width: 100%
-  img
-    height: 34rem
-    width: 60rem
-    cursor: pointer
-    margin: 5rem
-    object-fit: cover
-    border-radius: 20px
-    opacity: 0
-    animation: slide-right-mainimages .8s forwards
+
+.project-image-container
+  height: 34rem
+  width: 60rem
+  cursor: pointer
+  margin: 5rem
+  transition: transform .3s
+
+.project-main-image
+  height: 100%
+  width: 100%
+  object-fit: cover
+  border-radius: 20px
+  opacity: 0
+  animation: slide-right-mainimages .8s forwards
+
+.project-image-container:hover
+  transform: scale(1.02)
+  transition: transform .3s
+.project-image-container:active
+  transform: scale(1.03)
+  transition: transform .3s
+
+.cardio
+  position: absolute
+  height: 100%
+  width: 100%
+  object-fit: cover
+  border-radius: 20px
+  // animation: slide-right-mainimages .8s forwards
+  opacity: .3
+  z-index: 11
 
 .inner-images-container
   display: flex

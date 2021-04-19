@@ -30,6 +30,7 @@ import WLHomeM from '../../assets/images/wildlife/mobile/homeM.png'
 import WLArticlesM from '../../assets/images/wildlife/mobile/articlesM.png'
 import WLGalleryM from '../../assets/images/wildlife/mobile/galleryM.png'
 import WLHomeBottomM from '../../assets/images/wildlife/mobile/homeBottomM.png'
+import Transparent from '../../assets/images/portfolio/transparent.png'
 import ReactLogo from '../../assets/images/icons/react-Logo.png'
 import VueLogo from '../../assets/images/icons/vue.png'
 import AngularLogo from '../../assets/images/icons/angular.png'
@@ -139,7 +140,6 @@ function Projects() {
   const imageAnimationHandler = (id) => {
     if (size.width > 900) {
       if (id === 0) {
-        return .2
       } else if (id === 1) {
         return .1
       } else if (id === 2) {
@@ -169,18 +169,21 @@ function Projects() {
     <div className="project-container">
       <div className='project-city-bg' />
 
-        <Scrollbars style={{ width: '100%', height: '100%' }}>
-          <div className='main-images'>
-            <div className='inner-images-container'>
+      <Scrollbars style={{ width: '100%', height: '100%' }}>
+        <div className='main-images'>
+          <div className='inner-images-container'>
             {images.map((item, id) =>
-              <img
-                style={{ animationDelay: `${imageAnimationHandler(id)}s` }}
-                onClick={() => openModal(id)}
-                src={item.main} />
-                )}
-                </div>
+              <div className='project-image-container' onClick={() => openModal(id)}>
+                <img
+                  className="project-main-image"
+                  style={{ animationDelay: `${imageAnimationHandler(id)}s` }}
+                  src={item.main} />
+                {/* <img src={Transparent} className='cardio' /> */}
+              </div>
+            )}
           </div>
-        </Scrollbars>
+        </div>
+      </Scrollbars>
 
       {active &&
         <Modals
