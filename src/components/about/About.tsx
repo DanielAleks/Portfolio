@@ -3,20 +3,25 @@ import './about.sass'
 
 function About() {
 
+  const description = [
+    `I am a Self-taught Front-End Developer in Spokane, Washington. After being introduced to programming by my brother, I have come to love the world of code.`,
+    'I primarily work in React, Typescript, and Sass. I create websites that are both responsive and functional. I design and implement all the front-end into code.',
+    'Craving to understand everything there is to front-end, I challenged myself and dove into Vue and Angular. To my surprise, both frameworks were a breeze. After keeping myself accountable and dedicating every hour to study, I became a Developer. I love what I do and hope that my websites can one day inspire other web developers.'
 
- 
+  ]
+
   return (
     <section id='about' className="about-section">
       <div className="about-bg" />
-      <div className='about-container'>  
+      <div className='about-container'>
         <p className='about-header'>About Me</p>
-        <p className='about-desc'>
-          I am a Self-taught Front-End Developer in Spokane, Washington. After being introduced to programming by my brother, I have come to love the world of code. I began my journey with simple HTML and CSS, slowly honing in my UI/UX skill. Soon I came across javascript, wanting to give up on this ridiculous dream. I persisted, learning how to use arrays, maps, loops, and other fancy javascript. Eventually, it got easier and I began having fun again. I became a developer.
-          Programming has given me a second chance to make an impact on the world. Programming is my passion and a career I couldn't be happier to pursue.
-        </p >
-      </div> 
+        {description.map((item) =>
+            <p className='about-desc'>{"    " + item}</p >
+        )}
+
+      </div>
     </section>
   )
-} 
+}
 
 export default About
