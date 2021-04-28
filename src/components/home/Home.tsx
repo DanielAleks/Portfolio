@@ -2,6 +2,8 @@ import React from 'react'
 import './home.sass'
 
 function Home() {
+
+  const miniAbout = "Hi. I’m Daniel, a Front-end Developer that can code in any Framework and create awesome designs. If you're looking for someone that can write code in the front-end and still contribute with creative thinking and designing, I’m your guy. Check out “Projects” to see more of what I’ve created."
   return (
     <div className="home-container">
 
@@ -11,7 +13,7 @@ function Home() {
       <div className="home-green-container">
         <div>
           <h1>Front End Developer</h1>
-          <p>Hi. I’m Daniel, a Front-end Developer with proficient skills to make well designed websites with React.</p>
+          <p>{miniAbout}</p>
         </div>
       </div>
     </div>
