@@ -16,7 +16,7 @@ function About() {
       <Scrollbars style={{ width: '100%', height: '100%' }}>
         <div className='about-container'>
           <p className='about-header'>About Me</p>
-          {description.map((item, id) =>
+          {description.map((item, id) => 
             <p className='about-desc' style={{ animationDelay: `${.05 * id}s` }} >{item}</p >
           )}
         </div>
