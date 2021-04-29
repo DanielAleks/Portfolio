@@ -71,9 +71,9 @@ function App() {
           <Route path="/tech">
             <Technologies />
           </Route>
-          <Route path="/about">
+          {/* <Route path="/about">
             <About />
-          </Route>
+          </Route> */}
           <Route path="/contact">
             <Contact />
           </Route>

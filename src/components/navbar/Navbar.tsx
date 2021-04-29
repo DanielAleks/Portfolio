@@ -76,7 +76,6 @@ function Navbar({ setIsNav, isNav, size, isAnimated, setIsAnimated }) {
 
   const navItems = [
     { name: 'Home', to: '/' },
-    { name: 'About', to: '/about' },
     { name: 'Projects', to: '/projects' },
     { name: 'Technologies', to: '/tech' },
     { name: 'Contact', to: '/contact' }

@@ -1,7 +1,7 @@
 import { Scrollbars } from 'react-custom-scrollbars';
 import ReactGA from 'react-ga'
-import './desktop-modal.sass'
 import DetailsModal from './details-modal/DetailsModal';
+import './desktop-modal.sass'
 
 function DesktopPopup({ accessor, images, details, setDetails, setTech, size }) {
 
