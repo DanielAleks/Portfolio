@@ -1,8 +1,7 @@
-import Parking from '../../../../assets/images/portfolio/freeParkingClear.png'
-import CommunityChest from './community-chest/CommunityChest'
 import { Scrollbars } from 'react-custom-scrollbars';
 import ReactGA from 'react-ga'
 import './desktop-modal.sass'
+import DetailsModal from './details-modal/DetailsModal';
 
 function DesktopPopup({ accessor, images, details, setDetails, setTech, size }) {
 
@@ -33,12 +32,11 @@ function DesktopPopup({ accessor, images, details, setDetails, setTech, size }) 
 
       <a href={images[accessor].website} onClick={visitHandler} target='_blank'>
         <button className='b-visit-site'>
-          <img src={Parking} />
           <p>Visit Site</p>
         </button>
       </a>
 
-      <CommunityChest
+      <DetailsModal
         images={images}
         accessor={accessor}
         details={details}

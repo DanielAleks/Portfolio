@@ -1,9 +1,7 @@
-import Jail from '../../../../../assets/images/portfolio/jailclear.png'
-import Chest from '../../../../../assets/images/portfolio/chest.png'
-import './community-chest.sass'
 import { useWindowSize } from '../../../../../App'
+import './details-modal.sass'
 
-function CommunityChest({ images, accessor, details, setDetails, setTech }) {
+function DetailsModal({ images, accessor, details, setDetails, setTech }) {
   const size = useWindowSize()
 
   const detailsHandler = () => {
@@ -17,11 +15,9 @@ function CommunityChest({ images, accessor, details, setDetails, setTech }) {
   return (
     <div className={`'details-container' ${details ? 'details-show' : 'details-hide'}`}>
       <button onClick={detailsHandler} className='b-view-details'>
-        <img src={Chest} />
-        <p>Community Chest</p>
+        <p>More Details</p>
       </button>
       <div className='popup-details'>
-        <img src={Jail} />
         <h1>{images[accessor].title}</h1>
         <p>{images[accessor].desc}</p>
       </div>
@@ -29,4 +25,4 @@ function CommunityChest({ images, accessor, details, setDetails, setTech }) {
   )
 }
 
-export default CommunityChest
+export default DetailsModal

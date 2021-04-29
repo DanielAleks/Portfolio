@@ -167,7 +167,7 @@ function Projects() {
 
   return (
     <div className="project-container">
-      <div className='project-city-bg' />
+      <div className='project-rock-bg' />
 
       <Scrollbars style={{ width: '100%', height: '100%' }}>
         <div className='main-images'>

@@ -6,10 +6,12 @@
   position: absolute
   display: flex
   flex-direction: column
-  background: #003d3a
+  background: rgba(255, 255, 255, .2)
+  backdrop-filter: blur(4px)
   height: 100vh
   z-index: 7
   box-shadow: 4px 0px 9px -4px rgba(0,0,0,0.4)
+
 .mobile-popup-image
   height: 40rem
   width: 20rem
@@ -38,13 +40,9 @@
   border-top-right-radius: 5px
   cursor: pointer
   color: #e4e4e4
-  background: #003d3a
+  background: rgba(255, 255, 255, .2)
+  backdrop-filter: blur(4px)
   box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.4), inset 7px 0px 9px -4px rgba(0,0,0,0.4)
-  img
-    position: absolute
-    object-fit: cover
-    opacity: .3
-    // filter: saturate(0)
   p
     transform: rotate(90deg)
 

@@ -1,7 +1,7 @@
 import PassGo from '../../../../assets/images/portfolio/passGoClear.png'
-import Chance from './chance/Chance'
 import { Scrollbars } from 'react-custom-scrollbars';
 import './mobile-modal.sass'
+import TechModal from './tech-modal/TechModal';
 
 function MobilePopup({ accessor, images, tech, setTech, setDetails, size }) {
   return (
@@ -16,12 +16,11 @@ function MobilePopup({ accessor, images, tech, setTech, setDetails, size }) {
 
       <a href={images[accessor].repo} target='_blank'>
         <button className='b-view-repo'>
-          <img src={PassGo} />
           <p>View Repo</p>
         </button>
       </a>
 
-      <Chance
+      <TechModal
         tech={tech}
         setTech={setTech}
         setDetails={setDetails}
