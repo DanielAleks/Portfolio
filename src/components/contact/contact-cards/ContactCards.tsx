@@ -71,13 +71,13 @@ function ContactCards() {
         <div className='cards-inner-container'>
           <div className='cards-innermost-container'>
             {card.map((item, id) =>
-              <div style={{ animationDelay: `${cardDelay(id)}s` }} className="contact-information">
-                <a onClick={() => GAHandler(id)} style={{ cursor: id === 0 ? 'auto' : 'pointer' }} href={item.href} target='_blank'>
+              <a onClick={() => GAHandler(id)} style={{ cursor: id === 0 ? 'auto' : 'pointer' }} href={item.href} target='_blank'>
+                <div style={{ animationDelay: `${cardDelay(id)}s` }} className="contact-information">
                   <p>{item.title}</p>
                   <p
                     style={{ textDecoration: id === 0 ? 'none' : 'underline' }} >{item.link}</p>
-                </a>
-              </div>
+                </div>
+              </a>
             )}
 
             <div className="another-way-card">
@@ -89,7 +89,7 @@ function ContactCards() {
         </div>
       </Scrollbars>
     </div>
-  ) 
+  )
 }
 
 export default ContactCards

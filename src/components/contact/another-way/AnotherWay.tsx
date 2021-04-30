@@ -19,6 +19,7 @@ function AnotherWay() {
 
   return (
     <div className='other-way-omni-container'>
+      <div className='other-way-bg' />
 
       <Scrollbars style={{ width: '100%', height: "100vh" }}>
         <div className='other-way-inner-container'>

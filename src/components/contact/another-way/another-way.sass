@@ -13,8 +13,17 @@
   flex-direction: column
   height: 100vh
 
+.other-way-bg
+  background: url('../../../assets/images/portfolio/contactBg.jpeg')
+  background-size: cover
+  background-repeat: no-repeat
+  height: 100vh
+  width: 100%
+  position: absolute
+
+
 .other-way-container
-  height: 100%
+  height: 100vh
   display: flex
   flex-direction: column
   justify-content: center
@@ -25,10 +34,12 @@
   flex-direction: column
   justify-content: center
   align-items: center
-  margin-bottom: -10rem
+  margin-top: 2rem
+  margin-bottom: 2rem
   height: 20rem
   width: 35rem
-  background: #003D3A
+  background: rgba(255, 255, 255, .2) 
+  backdrop-filter: blur(10px)
   z-index: 3
   border-radius: 20px
   transition: border-radius 1s, background .5s

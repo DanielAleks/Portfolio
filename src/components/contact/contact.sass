@@ -9,6 +9,7 @@
 .contact-image-bg
   height: 100vh
   width: 100vw
+  opacity: .7
   position: absolute
   background-size: cover !important
   background-repeat: no-repeat
@@ -22,7 +23,7 @@
 
 .contact-form
   background: rgba(255, 255, 255, .2)
-  backdrop-filter: blur(15px)
+  backdrop-filter: blur(30px)
   position: absolute
   bottom: 0px
   left: 0px
@@ -38,27 +39,20 @@
     width: 60rem
   @media (max-width: 1250px)
     width: 50rem
-  
+
+.navbar-helper
+  position: absolute
+  right: 0px
+  height: 100vh
+  background: rgba(0, 0, 0, .2)
+  backdrop-filter: blur(5px)
+  width: 8rem
+  display: flex
+  @media (max-width: 900px)
+    display: none
 
 .ctt-width
   width: 40vw
-
-.OR
-  font-size: 4rem
-  margin-top: -2rem
-  font-family: Rowdies
-  color: #fff
-  z-index: 100
-  opacity: 0
-  animation: slide-right-OR 1s forwards
-
-@keyframes slide-right-OR
-  0%
-    opacity: 0
-    transform: translateX(-50rem)
-  100%
-    opacity: 1
-    transform: translateX(0rem)
 
 .header
   align-self: start
@@ -67,14 +61,14 @@
   font-family: Rowdies
   font-weight: bold
   font-size: 4rem
-  color: #dcdcdc
+  color: #eeeeee
   opacity: 0
   animation: slide-up-contact-form 1s forwards
 
 .label
   font-size: 1.7rem !important
-  color: #929196 !important
-  font-family: Barlow-medium !important
+  color: #b3b3b3 !important
+  font-family: Nunito-Regular !important
 
 @keyframes slide-up-contact-form
   0%
