@@ -1,4 +1,3 @@
-import React from 'react'
 import BottomModal from './bottom-modal/BottomModal'
 import './horozontal-modal.sass'
 

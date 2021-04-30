@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import HorzChance from './horz-chance/HorzChance'
-import { AiOutlineRightCircle, AiOutlineLeftCircle } from 'react-icons/ai'
 import HorzCommunityChest from './horz-community-chest/HorzCommunityChest'
 import Toggler from './toggler/Toggler'
 import Slider from "react-slick";

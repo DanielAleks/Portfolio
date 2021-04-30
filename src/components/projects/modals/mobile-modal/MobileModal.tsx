@@ -1,4 +1,3 @@
-import PassGo from '../../../../assets/images/portfolio/passGoClear.png'
 import { Scrollbars } from 'react-custom-scrollbars';
 import './mobile-modal.sass'
 import TechModal from './tech-modal/TechModal';

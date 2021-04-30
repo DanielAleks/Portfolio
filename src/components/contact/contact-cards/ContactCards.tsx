@@ -1,6 +1,3 @@
-import Boardwalk from '../../../assets/images/portfolio/boardwalk.jpg'
-import PassGo from '../../../assets/images/portfolio/passGo.jpg'
-import OutOfJail from '../../../assets/images/portfolio/outOfJail.jpg'
 import { Link } from "react-router-dom";
 import { Scrollbars } from 'react-custom-scrollbars';
 import { useWindowSize } from '../../../App';
@@ -41,22 +38,16 @@ function ContactCards() {
 
   const card = [
     {
-      image: Boardwalk,
-      style: 'boardwalk-bg',
       title: 'Phone Number:',
       link: '(503)-997-4024',
       href: null
     },
     {
-      image: PassGo,
-      style: 'pass-go-bg',
       title: 'Gmail:',
       link: 'daniel.aleksandrov73',
       href: 'https://mail.google.com/mail/u/0/#search/daniel.aleksandrov73'
     },
     {
-      image: OutOfJail,
-      style: 'jail-free-bg',
       title: 'Github:',
       link: 'DanielAleks',
       href: 'https://github.com/DanielAleks'
@@ -98,7 +89,7 @@ function ContactCards() {
         </div>
       </Scrollbars>
     </div>
-  )
+  ) 
 }
 
 export default ContactCards

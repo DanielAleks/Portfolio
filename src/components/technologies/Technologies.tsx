@@ -20,14 +20,15 @@ import StyledC from '../../assets/images/icons/styled-Components.png'
 import Tailwind from '../../assets/images/icons/tailwind.png'
 import TS from '../../assets/images/icons/typescript.png'
 import Yarn from '../../assets/images/icons/yarn-logo.png'
+import BootStrap from '../../assets/images/icons/bootstrap.png'
+import Netlify from '../../assets/images/icons/netlify.png'
 import { Scrollbars } from 'react-custom-scrollbars';
 
 function Technologies() {
-  const [isDisplay, setIsDisplay] = useState<number>(21)
 
   const iconData = [
-    ReactLogo, AngularLogo, VueLogo, Github, TS, Redux, Sass, Figma, Bulma, Yarn,
-    Paper, GA, Expo, Spring, Css, Html, Js, Npm, StyledC, Tailwind
+    ReactLogo, AngularLogo, VueLogo, Github, TS, Redux, Sass, BootStrap, Figma, Bulma, Yarn,
+    Paper, GA, Expo, Spring, Css, Html, Js, Npm, StyledC, Tailwind, Netlify
   ]
   const nameData = [
     'React', 'Angular', 'Vue', 'Github', 'Typescript', 'Redux', 'Sass', 'Figma', 'Bulma',

@@ -1,8 +1,5 @@
-import React, { useState } from 'react'
-import Spaces from '../../../../../assets/images/portfolio/spaces3ClearResized.png'
-import ChanceImg from '../../../../../assets/images/portfolio/chanceclear.png'
-import './tech-modal.sass'
 import { useWindowSize } from '../../../../../App'
+import './tech-modal.sass'
 
 function TechModal({ images, accessor, tech, setTech, setDetails }) {
   const size = useWindowSize()

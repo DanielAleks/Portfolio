@@ -17,7 +17,7 @@
   align-items: flex-start
   z-index: 1
   height: 100vh
-  width: 60%
+  width: 120rem
   box-shadow: 1px 1px 10px 1px black
 
 .tech-content-container
@@ -85,36 +85,53 @@
 @keyframes slide-left-icons
   0%
     opacity: 0
-    transform: translateX(200rem)
+    transform: translateY(200rem)
   100%
     opacity: 1
-    transform: translateX(0rem)
+    transform: translateY(0rem)
 
 .icon-image
   width: 5rem
   height: 5rem
   object-fit: contain
 
-@media (max-width: 1550px)
+@media (max-width: 1750px)
+  .green-tech-container
+    width: 110rem
+    justify-content: center
+    align-items: center
+    padding: 0px
+    margin: 0px
+    position: relative
   .inner-green-container
-    width: 80rem
+    position: absolute
+    right: 5rem
 
-@media (max-width: 1300px)
-  .tech-content-container
-    margin-left: 5rem
-
-@media (max-width: 1150px)
-  .tech-content-container
-    margin-left: 10rem
+@media (max-width: 1500px)
+  .green-tech-container
+    width: 100rem
   .inner-green-container
-    width: 60rem
-  .icon-container
-    margin-left: 2rem
-    margin-right: 2rem
+    right: 0px
 
-@media (max-width: 1050px)
-  .tech-content-container
-    margin-left: 5rem
+@media (max-width: 1350px)
+  .green-tech-container
+    width: 85rem
+  .inner-green-container
+    width: 100%
+    right: 0px
+    div
+      margin-left: 3rem
+      margin-right: 3rem
+
+@media (max-width: 1100px)
+  .green-tech-container
+    width: 70rem
+  .inner-green-container
+    right: 0px
+    display: flex
+    div
+      margin-left: 2rem
+      margin-right: 2rem
 
 @media (max-width: 900px)
   .tech-content-container
@@ -141,28 +158,6 @@
     margin-left: 0rem
   .tech-header
     margin: 0px
-
-@media (max-height: 600px)
-  .tech-content-container
-    margin: 0px
-  .inner-green-container
-    width: 100rem
-
-@media (max-width: 1450px) and (max-height: 600px)
-  .tect-content-container
-    margin-left: 20rem
-  .inner-green-container
-    width: 90rem
-  .icon-container
-    margin: 1rem
-
-@media (max-width: 1200px) and (max-height: 600px)
-  .inner-green-container
-    width: 80rem
-
-@media (max-width: 1050px) and (max-height: 650px)
-  .inner-green-container
-    width: 65rem
 
 @media (max-width: 900px) and (max-height: 600px)
   .inner-green-container
