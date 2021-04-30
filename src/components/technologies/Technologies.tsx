@@ -37,9 +37,9 @@ function Technologies() {
 
   return (
     <div className='tech-container'>
-      <div className="money-bg" />
-      <Scrollbars style={{ width: '100vw', height: '100vh' }}>
-        <div className='green-tech-container' >
+      <div className="coal-bg" />
+      <div className='green-tech-container' >
+        <Scrollbars style={{ width: '100%', height: '100vh' }}>
 
           <div className='tech-content-container'>
             <p className="tech-header">Technologies</p>
@@ -54,8 +54,8 @@ function Technologies() {
               )}
             </div>
           </div>
-        </div>
-      </Scrollbars>
+        </Scrollbars>
+      </div>
     </div>
   )
 }
