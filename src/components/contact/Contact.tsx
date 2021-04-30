@@ -6,14 +6,13 @@ import './contact.sass'
 function Contact() {
   return (
     <div id='contact' className='ctt-container'>
+      <div className='contact-image-bg' />
 
+      <ContactCards />
 
-        <ContactCards />
-
-        <div className='contact-form-900px-cancel'>
-          <p className='OR'>OR</p>
-          <ContactComponent />
-        </div>
+      <div className='contact-form-900px-cancel'>
+        <ContactComponent />
+      </div>
     </div>
   )
 }

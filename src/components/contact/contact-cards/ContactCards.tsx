@@ -1,12 +1,11 @@
 import Boardwalk from '../../../assets/images/portfolio/boardwalk.jpg'
 import PassGo from '../../../assets/images/portfolio/passGo.jpg'
 import OutOfJail from '../../../assets/images/portfolio/outOfJail.jpg'
-import Chance from '../../../assets/images/portfolio/chanceclear.png'
 import { Link } from "react-router-dom";
 import { Scrollbars } from 'react-custom-scrollbars';
-import './contact-cards.sass'
 import { useWindowSize } from '../../../App';
 import ReactGA from 'react-ga'
+import './contact-cards.sass'
 
 function ContactCards() {
   const size = useWindowSize()
@@ -83,7 +82,6 @@ function ContactCards() {
             {card.map((item, id) =>
               <div style={{ animationDelay: `${cardDelay(id)}s` }} className="contact-information">
                 <a onClick={() => GAHandler(id)} style={{ cursor: id === 0 ? 'auto' : 'pointer' }} href={item.href} target='_blank'>
-                  <img className={item.style} src={item.image} />
                   <p>{item.title}</p>
                   <p
                     style={{ textDecoration: id === 0 ? 'none' : 'underline' }} >{item.link}</p>
@@ -93,7 +91,6 @@ function ContactCards() {
 
             <div className="another-way-card">
               <Link onClick={anotherWayHandler} className='Link-another-styles' to="another-way">
-                <img src={Chance} />
                 <p>Another Way</p>
               </Link>
             </div>

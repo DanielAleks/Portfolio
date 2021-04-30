@@ -3,6 +3,16 @@
   flex-direction: column
   justify-content: center
   align-items: center
+  height: 100vh
+  width: 100%
+
+.contact-image-bg
+  height: 100vh
+  width: 100vw
+  position: absolute
+  background-size: cover !important
+  background-repeat: no-repeat
+  background: url('../../assets/images/portfolio/contactBg.jpeg')
 
 .contact-form-900px-cancel
   display: flex
@@ -11,12 +21,18 @@
   align-items: center
 
 .contact-form
-  background: linear-gradient(180deg, rgba(0,61,58,1) 0%, #004946 50%, rgba(0,61,58,1) 100%)
+  background: rgba(255, 255, 255, .2)
+  backdrop-filter: blur(15px)
   position: absolute
   bottom: 0px
-  padding-left: 20rem
-  padding-right: 20rem
-  border-radius: 2rem
+  left: 0px
+  height: 100vh
+  width: 80rem
+  display: flex
+  justify-content: center
+  align-items: center
+  padding-left: 7rem
+  padding-right: 7rem
   z-index: 1
 
 .ctt-width
@@ -30,7 +46,6 @@
   z-index: 100
   opacity: 0
   animation: slide-right-OR 1s forwards
-
 
 @keyframes slide-right-OR
   0%
