@@ -7,7 +7,6 @@ function Contact() {
   return (
     <div id='contact' className='ctt-container'>
       <div className='contact-image-bg' />
-      <div className='navbar-helper'/>
 
       <ContactCards />
 

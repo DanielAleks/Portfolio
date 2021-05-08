@@ -2,6 +2,7 @@
   width: 100%
   height: 100vh
   display: flex
+  background: linear-gradient(-135deg, rgba(143,38,38,1) 0%, rgba(184,40,40,1) 50%, rgba(143,38,38,1) 100%)
 
 .information-container
   width: 50%
@@ -9,13 +10,10 @@
 
 .glassy-container
   height: 100vh
-  background: rgba(0, 0, 0, .2)
-  backdrop-filter: blur(80px)
   position: relative
   display: flex
   flex-direction: column
   justify-content: center
-  padding-left: 5rem
   h1
     font-size: 10rem
     width: 1px
@@ -26,13 +24,12 @@
     letter-spacing: .5rem
     @media (max-width: 1600px)
       font-size: 8rem
-    @media (max-width: 1350px)
-      font-size: 6rem
-      line-height: 8rem
-    @media (max-width: 1100px)
-      font-size: 5rem
-      line-height: 7rem
-
+      @media (max-width: 1350px)
+        font-size: 6rem
+        line-height: 8rem
+      @media (max-width: 1100px)
+        font-size: 5rem
+        line-height: 7rem
   p
     line-height: 3.5rem
     font-size: 2rem
@@ -40,24 +37,86 @@
     color: #d1d1d1
     width: 80%
 
-.rock-under-bg
-  opacity: .8
-  background: url('../../assets/images/portfolio/blueRockBgTilted.jpg')
-  background-size: cover
-  background-position: 50% 50%
-  background-repeat: no-repeat
-  position: absolute
-  z-index: -1
+.inner-glassy-container
+  background: #1d1d1d
+  display: flex
+  justify-content: center
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, .4)
+  flex-direction: column
+  width: 90%
   height: 100%
-  width: 50%
+  padding-left: 5rem
+
+.desktopHome-images-container
+  height: 35rem
+  width: 40rem
+  display: flex
+  justify-content: center
+  align-items: center
+  position: relative
+.desktopHome-image
+  position: absolute
+  height: 100%
+  width: 100%
+.desktopHome-image-bg
+  position: absolute
+  top: 17px
+  height: 63%
+  width: 92.5%
+
+.mobileHome-images-container
+  height: 45rem
+  width: 22rem
+  margin-right: 10rem
+  display: flex
+  justify-content: center
+  align-items: center
+  position: relative
+.mobileHome-image
+  position: absolute
+  height: 100%
+  width: 100%
+.mobileHome-image-bg
+  position: absolute
+  height: 91%
+  width: 100%
+  border-radius: 20px
 
 .rock-bg
   width: 50%
   height: 100vh
-  background: url('../../assets/images/portfolio/blueRockBg.jpg')
   background-size: cover
   background-repeat: no-repeat
+  display: flex
+  align-items: center
   background-position: 50%
+
+.view-project-button
+  font-size: 2rem
+  font-family: Nunito-regular
+  color: #ebebeb
+  background: #1D1D1D
+  height: 5rem
+  border-radius: 5px
+  width: 15rem
+  position: absolute
+  bottom: 15rem
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, .4)
+  right: 50rem
+  cursor: pointer
+  animation: pulse-me 1s infinite
+  &:hover
+    background: #242424
+  &:active
+    background: #111111
+
+@keyframes pulse-me
+  0%
+    transform: scale(1)
+  50%
+    transform: scale(1.02)
+  100%
+    transform: scale(1)
 
 @media (max-width: 900px)
   .home-container
