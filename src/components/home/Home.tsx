@@ -16,7 +16,7 @@ function Home({ images, accessor, setAccessor, active, setActive }) {
             return state + 1;
           } else return (state = 0);
         }),
-      10000
+      5000
     );
     return () => clearInterval(accessorHandler);
   }, []);
