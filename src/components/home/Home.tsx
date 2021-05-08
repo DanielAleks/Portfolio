@@ -16,22 +16,21 @@ function Home({ images, accessor, setAccessor, active, setActive }) {
             return state + 1;
           } else return (state = 0);
         }),
-      3000
+      10000
     );
     return () => clearInterval(accessorHandler);
   }, []);
 
   const projectHandler = () => {
-    setAccessor(0)
-    setActive(true)
-  }
-  
+    setAccessor(0);
+    setActive(true);
+  };
 
   return (
     <div className="home-container">
       <div className="information-container">
         <div className="glassy-container">
-          <div className='inner-glassy-container'>
+          <div className="inner-glassy-container">
             <h1>Creative Development</h1>
             <p>{miniAbout}</p>
           </div>
@@ -39,24 +38,27 @@ function Home({ images, accessor, setAccessor, active, setActive }) {
       </div>
 
       <div className="rock-bg">
-        <div className="mobileHome-images-container">
-          <img
-            className="mobileHome-image-bg"
-            src={images[accessor].mobile[0]}
-          />
-          <img className="mobileHome-image" src={Mobile} />
-        </div>
 
-        <div className="desktopHome-images-container">
-          <img
-            className="desktopHome-image-bg"
-            src={images[accessor].desktop[0]}
-          />
-          <img className="desktopHome-image" src={Desktop} />
+        <div className="image-button-container">
+          <div className="mobileHome-images-container">
+            <img
+              className="mobileHome-image-bg"
+              src={images[accessor].mobile[0]}
+            />
+            <img className="mobileHome-image" src={Mobile} />
+          </div>
+
+          <div className="desktopHome-images-container">
+            <img
+              className="desktopHome-image-bg"
+              src={images[accessor].desktop[0]}
+            />
+            <img className="desktopHome-image" src={Desktop} />
+          </div>
+          <a href="projects">
+            <button className="view-project-button">View Projects</button>
+          </a>
         </div>
-        <a href="projects">
-        <button className="view-project-button">View Projects</button>
-        </a>
       </div>
     </div>
   );

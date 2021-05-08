@@ -22,14 +22,18 @@
     margin-bottom: 3rem
     line-height: 10rem
     letter-spacing: .5rem
-    @media (max-width: 1600px)
+    @media (max-width: 1800px)
       font-size: 8rem
-      @media (max-width: 1350px)
-        font-size: 6rem
-        line-height: 8rem
-      @media (max-width: 1100px)
-        font-size: 5rem
-        line-height: 7rem
+    @media (max-width: 1500px)
+      font-size: 6rem
+      line-height: 8rem
+    @media (max-width: 1250px)
+      font-size: 5rem
+      line-height: 7rem
+    @media (max-width: 1050px)
+      font-size: 4rem
+      line-height: 6rem
+
   p
     line-height: 3.5rem
     font-size: 2rem
@@ -47,6 +51,11 @@
   height: 100%
   padding-left: 5rem
 
+.image-button-container
+  display: flex
+  align-items: center
+  position: relative
+
 .desktopHome-images-container
   height: 35rem
   width: 40rem
@@ -60,7 +69,7 @@
   width: 100%
 .desktopHome-image-bg
   position: absolute
-  top: 17px
+  top: 16px
   height: 63%
   width: 92.5%
 
@@ -98,11 +107,11 @@
   background: #1D1D1D
   height: 5rem
   border-radius: 5px
-  width: 15rem
   position: absolute
-  bottom: 15rem
+  bottom: -5rem
+  left: 40%
+  width: 15rem
   box-shadow: 2px 2px 4px rgba(0, 0, 0, .4)
-  right: 50rem
   cursor: pointer
   animation: pulse-me 1s infinite
   &:hover
@@ -124,22 +133,77 @@
   .glassy-container
     margin-top: 80px
     height: 45rem
-    padding-left: 10rem
     width: 100vw
     h1
+      width: 100%
     p
+  .inner-glassy-container
+    padding-left: 10rem
+    width: 100%
   .rock-bg
     margin-top: 9rem
     width: 100%
     position: absolute
-    z-index: -1
-  .rock-under-bg
-    display: none
+    z-index: 1
+    bottom: 8rem
+    display: flex
+    justify-content: center
+    align-items: flex-end
+  .mobileHome-images-container
+    height: 30rem
+    width: 15rem
+  .desktopHome-images-container
+    height: 30rem
+    width: 30rem
+  .desktopHome-image-bg
+    top: 14px
+
+  .view-project-button
+    bottom: -5rem
+    right: 3rem
+
+@media (max-width: 1650px)
+  .image-button-container
+    margin-left: 10rem
+    flex-direction: column
+  .mobileHome-images-container
+    margin-bottom: 6rem
+    height: 30rem
+    width: 15rem
+  .desktopHome-images-container
+    height: 28rem
+    width: 35rem
+  .desktopHome-image-bg
+    top: 13px
+  .view-project-button
+    top: 25rem
+    right: -5rem
+    left: auto
+
+@media (max-width: 1250px)
+  .image-button-container
+    margin-left: 2rem
+
+@media (max-width: 900px)
+  .image-button-container
+    flex-direction: row
 
 @media (max-width: 800px)
-  .glassy-container
+  .inner-glassy-container
     padding-left: 5rem
     p
       font-size: 1.8rem
       line-height: 2.7rem
       width: 90%
+
+@media (max-height: 700px)
+  .desktopHome-images-container
+    height: 30rem
+    width: 35rem
+
+  .mobileHome-images-container
+    height: 35rem
+    width: 18rem
+  .view-project-button
+    bottom: -7rem
+    left: 35%
